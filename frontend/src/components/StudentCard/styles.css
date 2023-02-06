@@ -13,6 +13,9 @@
 .card-top-container img {
     width: 200px;
     height: 200px;
+
+    border-radius: 50%;
+    border: 3px solid rgba(156, 151, 151, 0.541);
 }
 
 .card-bottom-container{
@@ -41,9 +44,22 @@
     margin-left: 5px;
 }
 
+.graduated-zone {
+    display: flex;
+    flex-direction: row;
+}
+
+.graduated-zone img{
+    margin-left: 7px;
+}
+
 .courses-zone{
     display: flex;
     flex-direction: row;
     text-align: center;
+}
+
+.courses-list-zone{
+    text-align: left;
 }
 

@@ -22,7 +22,7 @@ function Students(){
           url: "/students",
           params: {
             page: 0,
-            size: 12
+            size: 30
           },
         }
     

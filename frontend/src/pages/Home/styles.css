@@ -5,12 +5,12 @@
     align-items: center;
     justify-content: space-evenly;
     font-size: 36px;
+
+    max-height: 835px;
 }
 
 .image-container {
     display:none;
-    padding: 20px;
-    border-radius: 20px;
 }
 
 .content-container{
@@ -43,15 +43,11 @@
     color: rgb(173, 170, 170);
     font-size: 0.6em;
     margin-bottom: 30px;
-
-    opacity: 100%;
 }
 
 .content-container button {
     font-size: 0.45em;
     width: 210px;
-
-    opacity: 100%;
     border-radius: 15px;
     border: 1px solid white;
 }
@@ -88,14 +84,15 @@
 }
 
 @media(min-width:768px){
+    .main-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .image-container {
         display:flex;
-        flex-direction: column;
-
-
-        margin-top: 80px;
-        margin-bottom: 80px;
-
+        flex-direction: row-reverse;
         align-items: flex-start;
         justify-content: flex-start;
     }
@@ -103,14 +100,15 @@
     .image-container img{
         width: 150px;
         height: auto;
-        opacity: 0.3;
-
+        margin-right: 25px;
+        margin-bottom: 500px;
     }
 
     .content-container{
-        height: 392px;
+        height: 400px;
         margin-top: 80px;
         margin-bottom: 80px;
+        margin-right: 200px;
     }
 
 }
@@ -136,8 +134,8 @@
 @media(min-width:1700px){
 
     .main-container{
-        padding: 140px;
         margin-top: 15px;
+        padding-bottom: 200px;
     }
 
 }

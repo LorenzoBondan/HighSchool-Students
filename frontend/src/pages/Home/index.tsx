@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 function Home() {
@@ -13,7 +14,9 @@ function Home() {
                     <h1>Terceirão 2016</h1>
                     <p>A resume of 1999's class</p>
 
-                    <button className='btn btn-primary'>Students</button>
+                    <Link to="/students">
+                        <button className='btn btn-primary'>Students</button>
+                    </Link>
                 </div>
 
                 

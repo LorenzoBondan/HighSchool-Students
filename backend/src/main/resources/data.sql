@@ -43,4 +43,5 @@ INSERT INTO tb_student_course (student_id, course_id) VALUES (6, 10);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (7, 1);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (7, 2);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (8, 7);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (9, 10);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (10, 6);

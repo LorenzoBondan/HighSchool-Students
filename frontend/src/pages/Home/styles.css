@@ -42,7 +42,7 @@
 }
 
 .content-container button {
-    width: 100%;
+    width: 210px;
     font-size: 0.45em;
 }
 
@@ -60,6 +60,10 @@
     
     .content-container p{
         margin-bottom: 40px;
+    }
+
+    .content-container button {
+        width: 280px;
     }
 
     .image-container {
@@ -99,6 +103,10 @@
 
     .content-container{
         padding: 80px;
+    }
+
+    .content-container button {
+        width: 340px;
     }
 
 }

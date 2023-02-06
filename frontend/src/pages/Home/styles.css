@@ -29,12 +29,14 @@
 
 .content-container h1{
     color: rgb(255, 255, 255);
-    font-family: 'Anton';
-    font-size: 1em;
+    font-family: 'Courier Prime';
+    font-size: 0.8em;
+    font-weight: 700;
     margin-top: 40px;
     margin-bottom: 10px;
 
     opacity: 100%;
+    text-transform: uppercase;
 }
 
 .content-container p{
@@ -45,13 +47,18 @@
     opacity: 100%;
 }
 
-.content-container button, .content-container button:hover{
+.content-container button {
     font-size: 0.45em;
     width: 210px;
 
     opacity: 100%;
     border-radius: 15px;
     border: 1px solid white;
+}
+
+.content-container button:hover{
+    border: 1px solid white;
+    opacity: 0.8;
 }
 
 
@@ -94,7 +101,7 @@
     }
 
     .image-container img{
-        width: 200px;
+        width: 150px;
         height: auto;
         opacity: 0.3;
 

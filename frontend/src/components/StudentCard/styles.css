@@ -1,6 +1,7 @@
 .product-card{
     margin-bottom: 30px;
     text-decoration: none;
+    max-height: 453px;
 }
 
 .card-top-container{

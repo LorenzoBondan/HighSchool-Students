@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import '@popperjs/core';
 import 'bootstrap/js/src/collapse';
+import logoTerceirao from 'assets/images/logo-terceirao.png';
 
 import './styles.css';
 
@@ -10,6 +11,7 @@ function Navbar() {
             <div className="container-fluid">
                 
                 <Link to="/" className="nav-logo-text">
+                    <img src={logoTerceirao} alt="logo" />
                     <h4>High School Students</h4>
                 </Link>
 

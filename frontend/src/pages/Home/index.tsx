@@ -1,13 +1,21 @@
 import { Link } from 'react-router-dom';
 import './styles.css';
+import background from 'assets/images/turma.jpg';
+import logoTerceirao from 'assets/images/logo-terceirao.png';
+import logoSagrado from 'assets/images/logo-sagrado.png';
 
 function Home() {
     return (
         <>
-            <div className="base-card main-container">
-
+            <div className="base-card main-container"  style={{backgroundImage: `url(${background})`,
+                                                            backgroundRepeat: "no-repeat",
+                                                            backgroundSize: "cover",
+                                                            }}>
+                                                                
                 <div className="image-container">
-                    <img src="https://talken.com.br/wp-content/uploads/2018/01/colegio_sagrado.jpg" alt="logosagrado" />
+                    <img src={logoSagrado} alt="logosagrado" />
+                    <img src={logoTerceirao} alt="logo" />
+                    
                 </div>
 
                 <div className="content-container">
@@ -19,10 +27,7 @@ function Home() {
                     </Link>
                 </div>
 
-                
-
             </div>
-            
             
         </>
     );

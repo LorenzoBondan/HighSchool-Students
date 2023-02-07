@@ -2,6 +2,18 @@
     margin-bottom: 30px;
     text-decoration: none;
     max-height: 453px;
+    min-width: 280px;
+}
+
+.card-title-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-title-button button{
+    margin-right: 5px;
+    border-radius: 50%;
 }
 
 .card-top-container{

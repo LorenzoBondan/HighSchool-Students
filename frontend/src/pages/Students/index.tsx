@@ -40,8 +40,8 @@ function Students(){
         <>
         <div className="container my-4 catalog-container">
 
-          <div className="row catalog-title-container">
-            <h1>All Students</h1>
+          <div className="catalog-title-container">
+            <h1>All Students from 3º1 class</h1>
           </div>
 
             <div className="row">

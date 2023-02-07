@@ -19,7 +19,14 @@ function StudentCard( {student} : Props ) {
 
             <div className='card-bottom-container'>
               <>
-                <h3>{student.nickname}</h3>
+                <div className='card-title-button'>
+                  <h3>{student.nickname}</h3>
+                  <div className='button-zone'>
+                      <button className='btn btn-primary'>Details</button>
+                  </div>
+                </div>
+                
+                
                 <h6>Name: {student.name}</h6>
                 <h6>Age: {student.age}</h6>
 
@@ -44,6 +51,8 @@ function StudentCard( {student} : Props ) {
                     {student.courses.map(course => (<h5>{course.name}</h5>))}
                   </div>
                 </div>
+                
+
                 
 
                 </>

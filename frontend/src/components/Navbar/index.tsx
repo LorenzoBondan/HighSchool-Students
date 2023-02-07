@@ -11,7 +11,10 @@ function Navbar() {
             <div className="container-fluid">
                 
                 <Link to="/" className="nav-logo-text">
-                    <img src={logoTerceirao} alt="logo" />
+                    <div className='navbar-brand'>
+                        <img src={logoTerceirao} alt="logo" />
+                    </div>
+                    
                     <h4>High School Students</h4>
                 </Link>
 

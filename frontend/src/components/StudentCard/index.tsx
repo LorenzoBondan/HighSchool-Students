@@ -10,6 +10,13 @@ type Props = {
 
 function StudentCard( {student} : Props ) {
 
+    // Idade atual através da birthDate (time.now - birthDate)
+    function ageCalc(date: string | undefined){
+      var miliseconds = date? new Date().getTime() - new Date(date).getTime() : new Date().getTime();
+      var years = miliseconds / (31556952000);
+      return Math.trunc(years).toString();
+  }
+
     return (
       <>
         <div className='base-card product-card'>
@@ -28,7 +35,7 @@ function StudentCard( {student} : Props ) {
                 
                 
                 <h6>Name: {student.name}</h6>
-                <h6>Age: {student.birthDate}</h6>
+                <h6>Age: {ageCalc(student?.birthDate)}</h6>
 
                 <div className='graduated-zone'>
                   {student.graduated ? (

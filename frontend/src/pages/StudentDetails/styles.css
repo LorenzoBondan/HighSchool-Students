@@ -150,6 +150,22 @@
 
 }
 
+.birthdate-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.birthdate-container img {
+    height: 20px;
+    margin: 0 5px 3px 5px;
+}
+
+.birthdate-container h6 {
+    margin-bottom: 0;
+}
+
 @media(min-width : 576px){
 
     .student-details-img-container img {

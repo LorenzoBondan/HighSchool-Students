@@ -97,7 +97,14 @@ function StudentDetails(){
             
                             <h6>Name: {student?.name}</h6>
                             
-                            <h6>Age: {ageCalc(student?.birthDate)}</h6>
+                            <div className='birthdate-container'>
+                                <h6>Age: {ageCalc(student?.birthDate)}</h6>
+                                <img src="https://em-content.zobj.net/thumbs/160/apple/118/birthday-cake_1f382.png" alt="" />
+                                <h6>{student?.birthDate.substring(0,10)}</h6>
+                            </div>
+
+                            
+                            
                             
                             <div className='graduated-zone'>
                                 {student?.graduated ? (

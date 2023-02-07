@@ -91,6 +91,20 @@ function StudentDetails(){
                         <h2>Student's description</h2>
                         <p>123456</p>
                     </div>
+
+                    <div className='contact-container'>
+                        <div className='contact-container-text'>
+                            <h2>Contact</h2>
+                        </div>
+                        
+                        <div className='contact-container-imgs'>
+                                <a href="tel:+5554-996570555"><img src="https://cdn-icons-png.flaticon.com/512/552/552489.png" alt="phone" /></a>
+                                <a href="https://gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/2504/2504727.png" alt="gmail" /></a>  
+                                <a href="https://instagram.com"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram" /></a>   
+                        </div>
+                        
+                        
+                    </div>
                 </div>
                     
             </div>

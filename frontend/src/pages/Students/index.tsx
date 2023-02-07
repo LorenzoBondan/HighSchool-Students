@@ -49,7 +49,7 @@ function Students(){
               {isLoading ? <CardLoader/> : ( // se o isLoading for verdadeiro, carregando, se for falso, o restante
                 page?.content.map(student => (
                   <div className="col-sm-6 col-lg-4 col-xl-3 students-column" key={student.id}>
-                    <Link to="/student/1">
+                    <Link to="/students/1">
                       <StudentCard student={student} />
                     </Link>
                   </div>

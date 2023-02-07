@@ -114,14 +114,22 @@
 
 .current-location-container-text{
     display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.current-location-container-text img{
+    height: 25px;
 }
 
 .current-location-container-text h6 {
     color: #9E9E9E;
+    margin: 0;
+    font-size: 0.7em;
 }
 
 .current-location-container-text h5 {
-    font-size: 15px;
+    font-size: 0.7em;
     margin-bottom: 0;
     margin-left: 5px;
     color: #A00909;

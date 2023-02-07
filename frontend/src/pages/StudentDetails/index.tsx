@@ -1,4 +1,5 @@
 import {ReactComponent as ArrowIcon} from 'assets/images/Seta.svg';
+import locationIcon from 'assets/images/location-icon.png';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
@@ -17,11 +18,11 @@ function StudentDetails(){
     // Idade atual através da birthDate (time.now - birthDate)
     function ageCalc(date: Date){
         var miliseconds = new Date().getTime() - new Date(date).getTime();
-        var years = miliseconds / 31556952000;
+        var years = miliseconds / (31556952000);
         return Math.trunc(years).toString();
     }
 
-    const exampleDate = "02/02/2020";
+    const exampleDate = "02/08/2020"; // mês/dia/ano
 
     const { studentId } = useParams<UrlParams>();
 
@@ -146,6 +147,7 @@ function StudentDetails(){
 
                     <div className='current-location-container'>
                         <div className='current-location-container-text'>
+                            <img src={locationIcon} alt="icon" />
                             <h6>Current Location:</h6>
                             <h5>{student?.name}</h5>
                         </div>

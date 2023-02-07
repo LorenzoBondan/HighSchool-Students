@@ -1,0 +1,38 @@
+.footer-container h6 {
+    font-family: 'Playfair Display';
+    color: #263238;
+    font-size: 12px;
+}
+
+.footer-container p {
+    font-family: 'Playfair Display';
+    color: #6b7b83;
+    font-size: 12px;
+}
+
+.footer-container h5 {
+    font-family: 'Playfair Display';
+    color: #A00909;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media(min-width:576px){
+    .footer-container h6 {
+        font-family: 'Playfair Display';
+        color: #263238;
+        font-size: 16px;
+    }
+    
+    .footer-container p {
+        font-family: 'Playfair Display';
+        color: #6b7b83;
+        font-size: 14px;
+    }
+    
+    .footer-container h5 {
+        font-family: 'Playfair Display';
+        color: #A00909;
+        font-size: 18px;
+    }
+}

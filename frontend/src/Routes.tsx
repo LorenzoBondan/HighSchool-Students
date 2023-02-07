@@ -5,6 +5,7 @@ import Admin from 'pages/Admin';
 import Auth from 'pages/Admin/Auth';
 import Students from 'pages/Students';
 import StudentDetails from 'pages/StudentDetails';
+import Footer from 'components/Footer';
 
 
 const Routes = () => (
@@ -35,6 +36,7 @@ const Routes = () => (
         </Route>
   
       </Switch>
+      <Footer/>
     </BrowserRouter>
   );
   

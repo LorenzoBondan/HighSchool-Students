@@ -1,6 +1,7 @@
 package com.lorenzo.highschoolstudents.entities;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -14,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -27,10 +29,22 @@ public class Student implements Serializable{
 	private Long id;
 	private String name;
 	private String nickname;
-	private Integer age;
+
 	private Boolean graduated;
 	@Column(columnDefinition = "TEXT")
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
+	private String description;
+	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant birthDate;
+	
+	private String location;
+	
+	@OneToOne
+	@JoinColumn(name = "contact_id")
+	private Contact contact;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_student_course",
@@ -41,14 +55,17 @@ public class Student implements Serializable{
 	
 	public Student() {}
 
-	public Student(Long id, String name, String nickname, Integer age, Boolean graduated, String imgUrl) {
+	public Student(Long id, String name, String nickname, Integer age, Boolean graduated, String imgUrl, String description, Instant birthDate, String location, Contact contact) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.nickname = nickname;
-		this.age = age;
 		this.graduated = graduated;
 		this.imgUrl = imgUrl;
+		this.description = description;
+		this.birthDate = birthDate;
+		this.location = location;
+		this.contact = contact;
 	}
 
 	public Long getId() {
@@ -75,14 +92,6 @@ public class Student implements Serializable{
 		this.nickname = nickname;
 	}
 
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-
 	public Boolean getGraduated() {
 		return graduated;
 	}
@@ -98,9 +107,43 @@ public class Student implements Serializable{
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
+	
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Instant getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(Instant birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
 
 	public Set<Course> getCourses() {
 		return courses;
+	}
+	
+
+	public Contact getContact() {
+		return contact;
+	}
+
+	public void setContact(Contact contact) {
+		this.contact = contact;
 	}
 
 	@Override

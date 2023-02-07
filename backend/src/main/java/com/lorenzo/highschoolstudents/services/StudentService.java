@@ -81,9 +81,11 @@ public class StudentService {
 
 		entity.setName(dto.getName());
 		entity.setNickname(dto.getNickname());
-		entity.setAge(dto.getAge());
 		entity.setGraduated(dto.getGraduated());
 		entity.setImgUrl(dto.getImgUrl());
+		entity.setDescription(dto.getDescription());
+		entity.setBirthDate(dto.getBirthDate());
+		entity.setLocation(dto.getLocation());
 
 		entity.getCourses().clear();
 

@@ -16,14 +16,13 @@ type UrlParams = {
 function StudentDetails(){
     
     // Idade atual através da birthDate (time.now - birthDate)
-    function ageCalc(date: Date){
-        var miliseconds = new Date().getTime() - new Date(date).getTime();
+    function ageCalc(date: string | undefined){
+        var miliseconds = date? new Date().getTime() - new Date(date).getTime() : new Date().getTime();
         var years = miliseconds / (31556952000);
         return Math.trunc(years).toString();
     }
 
-    const exampleDate = "02/08/2020"; // mês/dia/ano
-
+    
     const { studentId } = useParams<UrlParams>();
 
     const [student, setStudent] = useState<Student>();
@@ -69,8 +68,7 @@ function StudentDetails(){
         return cityImgs;
     }
 
-    const studentCity = currentCity(student?.name);
-    const exampleCity = currentCity("Bento Gonçalves");
+    const getCity = currentCity(student?.location);
 
     return(
         <>
@@ -98,7 +96,8 @@ function StudentDetails(){
                             </div>
             
                             <h6>Name: {student?.name}</h6>
-                            <h6>Age: {ageCalc(new Date(exampleDate))}</h6>
+                            
+                            <h6>Age: {ageCalc(student?.birthDate)}</h6>
                             
                             <div className='graduated-zone'>
                                 {student?.graduated ? (
@@ -129,7 +128,7 @@ function StudentDetails(){
                 <div className='col-xl-6'>
                     <div className='description-container'>
                         <h2>Student's description</h2>
-                        <p>123456</p>
+                        <p>{student?.description}</p>
                     </div>
 
                     <div className='contact-container'>
@@ -138,9 +137,9 @@ function StudentDetails(){
                         </div>
                         
                         <div className='contact-container-imgs'>
-                                <a href="tel:+5554-996570555"><img src="https://cdn-icons-png.flaticon.com/512/552/552489.png" alt="phone" /></a>
-                                <a href="https://gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/2504/2504727.png" alt="gmail" /></a>  
-                                <a href="https://instagram.com"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram" /></a>   
+                                <a href={student?.contact.phone}><img src="https://cdn-icons-png.flaticon.com/512/1384/1384055.png" alt="whatsapp" /></a>
+                                <a href={student?.contact.instagram}><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram" /></a> 
+                                <a href={student?.contact.facebook}><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="facebook" /></a>  
                         </div>
                         
                     </div>
@@ -149,10 +148,10 @@ function StudentDetails(){
                         <div className='current-location-container-text'>
                             <img src={locationIcon} alt="icon" />
                             <h6>Current Location:</h6>
-                            <h5>{student?.name}</h5>
+                            <h5>{student?.location}</h5>
                         </div>
                         <div className='current-location-container-imgs'>
-                            {exampleCity.map(city => <img src={city} alt="city" />)}
+                            {getCity.map(city => <img src={city} alt="city" />)}
                         </div>
                     </div>
                 </div>

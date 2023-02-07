@@ -28,7 +28,7 @@ function StudentCard( {student} : Props ) {
                 
                 
                 <h6>Name: {student.name}</h6>
-                <h6>Age: {student.age}</h6>
+                <h6>Age: {student.birthDate}</h6>
 
                 <div className='graduated-zone'>
                   {student.graduated ? (

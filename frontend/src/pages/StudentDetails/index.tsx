@@ -8,6 +8,7 @@ import { BASE_URL } from 'util/requests';
 import Check from 'assets/images/checked.png';
 import Uncheck from 'assets/images/unchecked.png';
 import './styles.css';
+import StudentDetailsLoader from './StudentDetailsLoader';
 
 type UrlParams = {
     studentId: string;
@@ -74,7 +75,9 @@ function StudentDetails(){
         <div className='student-details-container'>
 
             <div className='base-card student-details-card'>
-
+            {isLoading ? <StudentDetailsLoader/> : 
+            
+                <>
                 <Link to="/students">
                     <div className='goback-container'>
                         <ArrowIcon />
@@ -142,7 +145,7 @@ function StudentDetails(){
                             <h2>Contact</h2>
                         </div>
                         
-                        <div className='contact-container-imgs'>
+                        <div className='contact-container-imgs' >
                                 <a href={student?.contact.phone}><img src="https://cdn-icons-png.flaticon.com/512/1384/1384055.png" alt="whatsapp" /></a>
                                 <a href={student?.contact.instagram}><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram" /></a> 
                                 <a href={student?.contact.facebook}><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="facebook" /></a>  
@@ -161,9 +164,11 @@ function StudentDetails(){
                         </div>
                     </div>
                 </div>
-                    
+                 
             </div>
 
+            </>
+            }
             </div>
         </div>
     );

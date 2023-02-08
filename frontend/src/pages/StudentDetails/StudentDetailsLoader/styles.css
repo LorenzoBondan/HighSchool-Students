@@ -1,0 +1,10 @@
+.student-loader-container{
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width:992px){
+    .student-loader-container{
+        flex-direction: row;
+    }
+}

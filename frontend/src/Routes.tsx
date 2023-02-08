@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
+import { Switch, Route, Redirect, Router } from 'react-router-dom';
 import Navbar from 'components/Navbar';
 import Home from 'pages/Home';
 import Admin from 'pages/Admin';
@@ -6,10 +6,11 @@ import Auth from 'pages/Admin/Auth';
 import Students from 'pages/Students';
 import StudentDetails from 'pages/StudentDetails';
 import Footer from 'components/Footer';
+import history from 'util/history';
 
 
 const Routes = () => (
-    <BrowserRouter> 
+    <Router history={history}> 
       <Navbar />
       <Switch>
         
@@ -42,7 +43,7 @@ const Routes = () => (
   
       </Switch>
       <Footer/>
-    </BrowserRouter>
+    </Router>
   );
   
   export default Routes;

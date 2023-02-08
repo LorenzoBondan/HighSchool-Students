@@ -71,7 +71,6 @@ function StudentDetails(){
     const getCity = currentCity(student?.location);
 
     return(
-        <>
         <div className='student-details-container'>
 
             <div className='base-card student-details-card'>
@@ -123,7 +122,7 @@ function StudentDetails(){
 
                             <div className='courses-zone'>
                                 <h6>Courses: </h6>
-                                <div className='courses-list-zone'>
+                                <div className='courses-list-zone' key={student?.id}>
                                     {student?.courses.map(course => (<h5>{course.name}</h5>))}
                                 </div>
                             </div>
@@ -157,7 +156,7 @@ function StudentDetails(){
                             <h6>Current Location:</h6>
                             <h5>{student?.location}</h5>
                         </div>
-                        <div className='current-location-container-imgs'>
+                        <div className='current-location-container-imgs' key={student?.id}>
                             {getCity.map(city => <img src={city} alt="city" />)}
                         </div>
                     </div>
@@ -167,7 +166,6 @@ function StudentDetails(){
 
             </div>
         </div>
-        </>
     );
 }
 

@@ -50,11 +50,11 @@
     width: 210px;
     border-radius: 15px;
     border: 1px solid white;
+    text-decoration: none;
 }
 
 .content-container button:hover{
     border: 1px solid white;
-    opacity: 0.8;
 }
 
 
@@ -116,8 +116,8 @@
 @media(min-width:1200px){
 
     .main-container{
-        padding: 80px;
-        margin: 40px;
+        padding: 20px;
+        margin: 40px 150px 40px 150px;
         font-size: 60px;
     }
 
@@ -134,8 +134,17 @@
 @media(min-width:1700px){
 
     .main-container{
-        margin-top: 15px;
+        margin: 30px 270px 40px 270px;
         padding-bottom: 200px;
+    }
+
+    .content-container{
+        padding: 30px;
+        margin-right: 20px;
+    }
+
+    .image-container{
+        padding-top: 100px;
     }
 
 }

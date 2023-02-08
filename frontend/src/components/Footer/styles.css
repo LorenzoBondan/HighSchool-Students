@@ -17,6 +17,12 @@
     font-weight: 700;
 }
 
+.github-logo img{
+    height: 20px;
+    width: auto;
+    margin-left: 8px;
+}
+
 @media(min-width:576px){
     .footer-container h6 {
         font-family: 'Playfair Display';

@@ -22,9 +22,8 @@ function Footer() {
               </h6>
               <h5>Lorenzo Bondan</h5>
               <p>Software Engineer</p>
-              <a href='#!' className='me-4 text-reset'>
-                <MDBIcon fab icon="facebook-f" />
-                </a>
+              
+
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-1">
@@ -57,6 +56,10 @@ function Footer() {
               </p>
               <p>
                 <MDBIcon icon="phone" className="" /> +55 54 99657-0555
+              </p>
+              <p className="github-logo">
+                Github
+                <a href="https://github.com/LorenzoBondan"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github" /></a>
               </p>
             </MDBCol>
           </MDBRow>

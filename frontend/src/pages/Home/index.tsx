@@ -20,7 +20,7 @@ function Home() {
 
                 <div className="content-container">
                     <h1>Terceirão 2016</h1>
-                    <p>A resume of the 1999's class</p>
+                    <p>A summary of the class of 1999</p>
 
                     <Link to="/students">
                         <button className='btn btn-primary'>Students</button>

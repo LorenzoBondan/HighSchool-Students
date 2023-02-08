@@ -79,7 +79,7 @@ function StudentDetails(){
                 <Link to="/students">
                     <div className='goback-container'>
                         <ArrowIcon />
-                        <h6>VOLTAR</h6>
+                        <h6>BACK</h6>
                     </div>
                 </Link>
                 

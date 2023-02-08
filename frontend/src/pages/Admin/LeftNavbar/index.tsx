@@ -6,7 +6,7 @@ import './styles.css';
 const LeftNavbar = () => {
     return(
         <nav className='admin-nav-container'>
-            <ul>
+            <ul className='ul-container'>
                 {hasAnyRoles(['ROLE_OPERATOR']) && (
                 <>
                 <li>

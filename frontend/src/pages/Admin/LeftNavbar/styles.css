@@ -1,9 +1,15 @@
-ul{
+.ul-container{
     display: flex;
     justify-content: space-around;
     list-style-type: none;
+    padding-left: 0px;
     margin: 0;
-    padding: 0;
+    
+}
+
+.ul-container p {
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .admin-nav-container{
@@ -27,6 +33,7 @@ ul{
     font-weight: bold;
     letter-spacing: -0.015em;
     color: #9e9e9e;
+    text-decoration: none;
 }
 
 .admin-nav-item.active {

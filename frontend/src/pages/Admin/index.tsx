@@ -2,6 +2,7 @@ import { Switch } from "react-router-dom";
 import PrivateRoute from "components/PrivateRoute";
 import './styles.css';
 import LeftNavbar from "./LeftNavbar";
+import Users from "./User";
 
 function Admin(){
     return(
@@ -20,7 +21,7 @@ function Admin(){
                     </PrivateRoute>
 
                     <PrivateRoute path="/admin/users">
-                        <h1>users</h1>
+                        <Users/>
                     </PrivateRoute>
                 </Switch>
 

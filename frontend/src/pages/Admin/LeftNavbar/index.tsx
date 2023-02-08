@@ -25,7 +25,7 @@ const LeftNavbar = () => {
                 { hasAnyRoles(['ROLE_ADMIN']) && ( //SOMENTE ADMIN
                     <li>
                         <NavLink to="/admin/users" className='admin-nav-item'>
-                            <p>Usuários</p>
+                            <p>Users</p>
                         </NavLink>
                     </li>   
                 )}

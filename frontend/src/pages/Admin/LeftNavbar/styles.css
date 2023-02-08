@@ -8,7 +8,7 @@
 }
 
 .ul-container p {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
 }
 
@@ -51,6 +51,11 @@
 @media(min-width:768px){
     .admin-nav-item {
         min-width: 220px;
+    }
+
+    .ul-container p {
+        font-size: 25px;
+        font-weight: 400;
     }
 }
 

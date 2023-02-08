@@ -36,6 +36,27 @@
     font-weight: bold;
 }
 
+.nav-login-logout {
+    display: none;
+}
+
+.nav-username {
+    display: none;
+}
+
+.nav-login-logout a {
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 14px;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+}
+
+.nav-login-logout a:hover{
+    color: wheat;
+}
+
 @media(min-width:576px){
 
     .nav-logo-text img {
@@ -49,6 +70,23 @@
     .nav-logo-text img {
         height: 40px;
         margin-right: 3px;
+    }
+
+    .nav-login-logout {
+        display: unset;
+        color: white;
+        margin-right: 20px;
+    }
+}
+
+@media(min-width:992px){
+    .nav-login-logout {
+        margin-right: 40px;
+    }
+
+    .nav-username {
+        display: unset;
+        margin-right: 20px;
     }
 }
 

@@ -3,9 +3,48 @@ import '@popperjs/core';
 import 'bootstrap/js/src/collapse';
 import logoTerceirao from 'assets/images/logo-terceirao.png';
 
+import { AuthContext } from 'AuthContext';
+import { useContext, useEffect } from 'react';
+import { getTokenData, isAuthenticated } from 'util/auth';
+import { removeAuthData } from 'util/storage';
+import history from 'util/history';
+
 import './styles.css';
 
 function Navbar() {
+
+    // se estiver deslogado -> botão de login aparece na navbar. se estiver logado -> botão de logout
+
+    // verificação de credenciais
+    const { authContextData, setAuthContextData } = useContext(AuthContext);
+
+    useEffect(() => {
+        if(isAuthenticated()){
+          setAuthContextData({
+            authenticated: true,
+            tokenData: getTokenData()
+          })
+        }
+        else{
+          setAuthContextData({
+            authenticated: false,
+          })
+        }
+      }, [setAuthContextData]);
+
+      // evento de logout
+      const handleLogoutClick = (event : React.MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault(); // não há a navegação no link
+        
+        removeAuthData(); //apagar o token do localStorage -> requests.ts
+    
+        setAuthContextData({
+          authenticated: false,
+        })
+    
+        history.replace('/'); // redireciona pra página home
+    }
+
     return(
         <nav className="navbar navbar-expand-md navbar-dark bg-primary main-nav">
             <div className="container-fluid">
@@ -46,6 +85,20 @@ function Navbar() {
                         </li>
 
                     </ul>
+                </div>
+
+
+                <div className='nav-login-logout'>
+                    { authContextData.authenticated ? (
+                        <>
+                        <span className='nav-username'>{authContextData.tokenData?.user_name}</span>
+                        <a href="#logout" onClick={handleLogoutClick}>LOGOUT</a>
+                        </>
+                    ) : (
+                        <Link to="/admin/auth">LOGIN</Link>
+                    )
+
+                    }
                 </div>
                 
             </div>

@@ -12,6 +12,7 @@ import history from 'util/history';
 const Routes = () => (
     <Router history={history}> 
       <Navbar />
+      
       <Switch>
         
         <Route path="/" exact>
@@ -30,11 +31,6 @@ const Routes = () => (
         <Route path="/admin/auth">
           <Auth />
         </Route>
-  
-        <Redirect from='/admin/auth' to='/admin/auth/login' exact />
-        <Route path="/admin/auth">
-          <Auth />
-        </Route>
 
         <Redirect from="/admin" to="/admin/students" exact />
         <Route path="/admin">
@@ -42,6 +38,7 @@ const Routes = () => (
         </Route>
   
       </Switch>
+
       <Footer/>
     </Router>
   );

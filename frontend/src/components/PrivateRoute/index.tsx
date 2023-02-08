@@ -21,7 +21,7 @@ const PrivateRoute = ({ children, path, roles = [] }: Props) => {
           }} /> 
         ) : 
           !hasAnyRoles(roles) ? (
-          <Redirect to="/admin/students" /> // rota que todos tem acesso
+          <Redirect to="/" /> // rota que todos tem acesso
           ) : ( // renderiza o children passado caso esteja autenticado, se não estiver, joga p tela de login
           children
         )

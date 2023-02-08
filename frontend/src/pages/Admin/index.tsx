@@ -1,7 +1,6 @@
 import { Switch } from "react-router-dom";
 import PrivateRoute from "components/PrivateRoute";
 import './styles.css';
-import Login from "./Auth/Login";
 import LeftNavbar from "./LeftNavbar";
 
 function Admin(){
@@ -12,11 +11,11 @@ function Admin(){
             <div className="admin-content">
                 
                 <Switch>
-                    <PrivateRoute path="/admin/products">
+                    <PrivateRoute path="/admin/students">
                         <h1>students CRUD</h1>
                     </PrivateRoute>
 
-                    <PrivateRoute path="/admin/categories">
+                    <PrivateRoute path="/admin/courses">
                         <h1>courses CRUD</h1>
                     </PrivateRoute>
 

@@ -7,12 +7,15 @@ const LeftNavbar = () => {
     return(
         <nav className='admin-nav-container'>
             <ul>
+                {hasAnyRoles(['ROLE_OPERATOR']) && (
+                <>
                 <li>
                     <NavLink to="/admin/students" className='admin-nav-item'>
                         <p>Students</p>
                     </NavLink>
                 </li>
                 
+
                 <li>
                     <NavLink to="/admin/courses" className='admin-nav-item'>
                         <p>Courses</p>
@@ -25,6 +28,8 @@ const LeftNavbar = () => {
                             <p>Usuários</p>
                         </NavLink>
                     </li>   
+                )}
+                </>
                 )}
 
             </ul>

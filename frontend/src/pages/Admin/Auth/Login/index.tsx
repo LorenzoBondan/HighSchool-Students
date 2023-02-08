@@ -115,7 +115,7 @@ const Login = () => {
                     </Link>
 
                     <div className="login-submit">
-                        <button>FAZER LOGIN</button>
+                        <button className='btn btn-primary'>FAZER LOGIN</button>
                     </div>
 
                     <div className="signup-container">

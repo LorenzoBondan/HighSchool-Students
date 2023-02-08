@@ -50,7 +50,7 @@ function Students(){
                 page?.content.map(student => (
                   <div className="col-sm-6 col-lg-4 col-xl-3 students-column" key={student.id}>
                     <Link to="/students/1">
-                      <StudentCard student={student} />
+                      <StudentCard student={student} key={student.id}/>
                     </Link>
                   </div>
                 )

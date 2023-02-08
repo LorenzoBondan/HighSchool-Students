@@ -3,6 +3,8 @@ import PrivateRoute from "components/PrivateRoute";
 import './styles.css';
 import LeftNavbar from "./LeftNavbar";
 import Users from "./User";
+import Courses from "./Course";
+import Students from "./Student";
 
 function Admin(){
     return(
@@ -13,11 +15,11 @@ function Admin(){
                 
                 <Switch>
                     <PrivateRoute path="/admin/students">
-                        <h1>students CRUD</h1>
+                        <Students/>
                     </PrivateRoute>
 
                     <PrivateRoute path="/admin/courses">
-                        <h1>courses CRUD</h1>
+                        <Courses/>
                     </PrivateRoute>
 
                     <PrivateRoute path="/admin/users">

@@ -75,7 +75,7 @@ public class UserDTO implements Serializable {
 	// construtor implantado na classe UserService
 	public UserDTO(User entity) {
 		this.id = entity.getId();
-		
+		this.name = entity.getName();
 		this.email = entity.getEmail();
 
 		entity.getRoles().forEach(rol -> this.roles.add(new RoleDTO(rol)));

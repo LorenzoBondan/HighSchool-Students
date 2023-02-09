@@ -24,8 +24,9 @@ const Routes = () => (
           <Students />
         </Route>
   
-        <Route path="/students/:studentId">
+        <Route path="/students/:studentId" exact>
           <StudentDetails />
+          
         </Route>
 
         <Route path="/students/:studentId/reviews">

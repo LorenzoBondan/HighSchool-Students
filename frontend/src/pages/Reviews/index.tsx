@@ -1,12 +1,14 @@
 import { AxiosRequestConfig } from "axios";
+import ReviewCard from "components/ReviewCard";
 /*import ReviewCard from "components/ReviewCard";
 import ReviewForm from "components/ReviewForm";*/
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Review } from "types/review";
-/*import { Review } from "types/review";*/
 import { hasAnyRoles } from "util/auth";
 import { requestBackend } from "util/requests";
+
+import './styles.css';
 
 type UrlParams = {
     studentId: string;
@@ -44,18 +46,17 @@ const Reviews = () => {
 
         
     return (
-        <div className="page-container">
-          <h1>Tela de listagem de filmes id: {studentId}</h1>
+        <div className="page-container text-primary">
+          <h1>Student's reviews:</h1>
 
           {//hasAnyRoles(["ROLE_OPERATOR"]) && ( // form de inserir avaliação SOMENTE PARA MEMBROS
             //<ReviewForm movieId={studentId} onInsertReview={handleInsertReview} />
           //)}
             }
 
-          <div style={{backgroundColor: "#6C6C6C", paddingBottom: "28px", paddingTop: "5px", borderRadius: "4px"}}>
+          <div>
           {page?.map((rev) => (
-            //<ReviewCard key={rev.id} review={rev} /> //uso a lista de reviews para renderizar card a card.
-            <p key={rev.id}>{rev.text}</p>
+            <ReviewCard key={rev.id} review={rev} /> //uso a lista de reviews para renderizar card a card.
           ))}
           </div>
           

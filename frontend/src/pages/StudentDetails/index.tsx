@@ -9,6 +9,7 @@ import Check from 'assets/images/checked.png';
 import Uncheck from 'assets/images/unchecked.png';
 import './styles.css';
 import StudentDetailsLoader from './StudentDetailsLoader';
+import Reviews from 'pages/Reviews';
 
 type UrlParams = {
     studentId: string;
@@ -176,7 +177,14 @@ function StudentDetails(){
             </>
             }
             </div>
+
+            <div className='student-details-reviews-container'>
+                <Reviews/>
+            </div>
+            
         </div>
+        
+        
     );
 }
 

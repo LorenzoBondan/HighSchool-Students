@@ -52,19 +52,24 @@ const Reviews = ( {studentUsername} : Props ) => {
         
     return (
         <div className="page-container text-primary">
-          <h1>{studentUsername}'s reviews:</h1>
 
-          {//hasAnyRoles(["ROLE_OPERATOR"]) && ( // form de inserir avaliação SOMENTE PARA MEMBROS
-            //<ReviewForm movieId={studentId} onInsertReview={handleInsertReview} />
-          //)}
+            {page.length===0 ? <h1 style={{fontSize: "18px"}}>This user still don't have any reviews.</h1>
+             : 
+            <>
+                <h1>{studentUsername}'s reviews:</h1>
+
+                {//hasAnyRoles(["ROLE_OPERATOR"]) && ( // form de inserir avaliação SOMENTE PARA MEMBROS
+                //<ReviewForm movieId={studentId} onInsertReview={handleInsertReview} />
+                //)}
+                }
+
+                <div>
+                    {page?.map((rev) => (
+                    <ReviewCard key={rev.id} review={rev} /> //uso a lista de reviews para renderizar card a card.
+                    ))}
+                </div>
+            </>
             }
-
-          <div>
-          {page?.map((rev) => (
-            <ReviewCard key={rev.id} review={rev} /> //uso a lista de reviews para renderizar card a card.
-          ))}
-          </div>
-          
         </div>
       );
 }

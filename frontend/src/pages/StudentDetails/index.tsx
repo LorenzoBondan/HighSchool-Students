@@ -180,6 +180,7 @@ function StudentDetails(){
             </div>
 
             <div className='student-details-reviews-container'>
+                
                 <Reviews studentUsername={student?.nickname}/>
             </div>
             

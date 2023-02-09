@@ -151,6 +151,11 @@ public class Student implements Serializable{
 	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
+	
+
+	public List<Review> getReviews() {
+		return reviews;
+	}
 
 	@Override
 	public int hashCode() {

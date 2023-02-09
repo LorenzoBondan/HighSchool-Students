@@ -7,6 +7,7 @@ import Students from 'pages/Students';
 import StudentDetails from 'pages/StudentDetails';
 import Footer from 'components/Footer';
 import history from 'util/history';
+import Reviews from 'pages/Reviews';
 
 
 const Routes = () => (
@@ -25,6 +26,10 @@ const Routes = () => (
   
         <Route path="/students/:studentId">
           <StudentDetails />
+        </Route>
+
+        <Route path="/students/:studentId/reviews">
+          <Reviews/>
         </Route>
   
         <Redirect from='/admin/auth' to='/admin/auth/login' exact />

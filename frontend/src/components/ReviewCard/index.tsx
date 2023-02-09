@@ -11,6 +11,7 @@ const ReviewCard = ({ review }: Props) => {
       <div className="review-details">
 
         <div className="reviewer-name">
+          <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user-icon" />
           <h4>{review.user.name}</h4>
         </div>
 

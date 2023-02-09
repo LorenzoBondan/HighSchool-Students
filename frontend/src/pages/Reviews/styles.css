@@ -3,16 +3,40 @@
     font-size: 25px;
 }
 
+.sign-in-review-card{
+    background-color: #99978E;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 30px;
+    margin-top: 20px;
+}
+
+.sign-in-review-card h2{
+    font-size: 16px;
+    font-family: 'Times New Roman';
+}
+
 @media(min-width:576px){
     .page-container h1{
         margin: 25px 0px 20px 30px;
         font-size: 25px;
     }
+
+    .sign-in-review-card{
+        margin: 20px 20px 0 20px;
+    }
+    
 }
 
 @media(min-width:992px){
     .page-container h1{
         margin: 25px 0px 20px 230px;
+    }
+
+    .sign-in-review-card{
+        margin: 20px 200px 0 200px;
     }
 }
 
@@ -20,10 +44,18 @@
     .page-container h1{
         margin: 25px 0px 20px 130px;
     }
+
+    .sign-in-review-card{
+        margin: 20px 100px 0 100px;
+    }
 }
 
 @media(min-width:1400px){
     .page-container h1{
         margin: 25px 0px 20px 230px;
+    }
+
+    .sign-in-review-card{
+        margin: 20px 200px 0 200px;
     }
 }

@@ -1,12 +1,9 @@
 import { AxiosRequestConfig } from "axios";
 import ReviewCard from "components/ReviewCard";
 import ReviewForm from "components/ReviewForm";
-/*import ReviewCard from "components/ReviewCard";
-import ReviewForm from "components/ReviewForm";*/
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Review } from "types/review";
-import { Student } from "types/student";
 import { hasAnyRoles } from "util/auth";
 import { requestBackend } from "util/requests";
 
@@ -30,7 +27,7 @@ const Reviews = ( {studentUsername} : Props ) => {
     useEffect(() => {
         const params: AxiosRequestConfig = {
           url: `/students/${studentId}/reviews`,
-          withCredentials: true,
+          withCredentials: false,
           params: {
             page: 0,
             size: 30,
@@ -54,9 +51,9 @@ const Reviews = ( {studentUsername} : Props ) => {
     return (
         <div className="page-container text-primary">
 
-            {hasAnyRoles(["ROLE_OPERATOR"]) && ( // form de inserir avaliação SOMENTE PARA MEMBROS
+            {hasAnyRoles(["ROLE_OPERATOR"])?  ( // form de inserir avaliação SOMENTE PARA MEMBROS
                 <ReviewForm studentId={studentId} onInsertReview={handleInsertReview} />
-            )}
+            ) : (<div className="sign-in-review-card"><h2>Sign In or Sign Up to write any review</h2></div>)}
 
             {page.length===0 ? <div className="reviews-main-title"><h1 style={{fontSize: "18px"}}>This student still don't have any reviews.</h1></div>
              : 

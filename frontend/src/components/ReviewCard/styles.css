@@ -28,6 +28,7 @@
     margin: 0px;
     color: #9E9E9E;
     font-weight: 400;
+    font-size: 16px;
 }
 
 .reviewer-name {
@@ -44,6 +45,10 @@
 @media(min-width:576px){
     .review-details{
         margin: 0 30px 20px 30px;
+    }
+
+    .review-details-box h4 {
+        font-size: 18px;
     }
 }
 

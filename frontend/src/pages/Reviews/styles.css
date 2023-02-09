@@ -1,10 +1,12 @@
 .page-container h1{
     margin: 25px 0px 20px 10px;
+    font-size: 25px;
 }
 
 @media(min-width:576px){
     .page-container h1{
         margin: 25px 0px 20px 30px;
+        font-size: 25px;
     }
 }
 

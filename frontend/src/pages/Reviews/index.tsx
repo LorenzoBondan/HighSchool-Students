@@ -1,5 +1,6 @@
 import { AxiosRequestConfig } from "axios";
 import ReviewCard from "components/ReviewCard";
+import ReviewForm from "components/ReviewForm";
 /*import ReviewCard from "components/ReviewCard";
 import ReviewForm from "components/ReviewForm";*/
 import { useEffect, useState } from "react";
@@ -53,22 +54,21 @@ const Reviews = ( {studentUsername} : Props ) => {
     return (
         <div className="page-container text-primary">
 
-            {page.length===0 ? <h1 style={{fontSize: "18px"}}>This user still don't have any reviews.</h1>
-             : 
-            <>
-                <h1>{studentUsername}'s reviews:</h1>
+            {hasAnyRoles(["ROLE_OPERATOR"]) && ( // form de inserir avaliação SOMENTE PARA MEMBROS
+                <ReviewForm studentId={studentId} onInsertReview={handleInsertReview} />
+            )}
 
-                {//hasAnyRoles(["ROLE_OPERATOR"]) && ( // form de inserir avaliação SOMENTE PARA MEMBROS
-                //<ReviewForm movieId={studentId} onInsertReview={handleInsertReview} />
-                //)}
-                }
+            {page.length===0 ? <div className="reviews-main-title"><h1 style={{fontSize: "18px"}}>This student still don't have any reviews.</h1></div>
+             : 
+                <>
+                <h1>{studentUsername}'s reviews:</h1>
 
                 <div>
                     {page?.map((rev) => (
                     <ReviewCard key={rev.id} review={rev} /> //uso a lista de reviews para renderizar card a card.
                     ))}
                 </div>
-            </>
+                </>
             }
         </div>
       );

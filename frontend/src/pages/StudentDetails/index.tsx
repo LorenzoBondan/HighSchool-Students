@@ -72,8 +72,6 @@ function StudentDetails(){
 
     const getCity = currentCity(student?.location);
 
-    const reviewPath = "/students/"+{studentId}+"/reviews";
-
 
     return(
         <div className='student-details-container'>
@@ -97,14 +95,9 @@ function StudentDetails(){
 
                         <div className='card-bottom-container'>
                         <>
-                            <div className='card-title-button'>
-                                <h3>{student?.nickname}</h3>
-                                <Link to={reviewPath}>
-                                    <button className='btn btn-primary'>Reviews</button>
-                                </Link>
-                               
-                            </div>
-            
+
+                            <h3>{student?.nickname}</h3>
+
                             <h6>Name: {student?.name}</h6>
                             
                             <div className='birthdate-container'>
@@ -180,7 +173,6 @@ function StudentDetails(){
             </div>
 
             <div className='student-details-reviews-container'>
-                
                 <Reviews studentUsername={student?.nickname}/>
             </div>
             

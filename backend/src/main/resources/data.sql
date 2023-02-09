@@ -132,5 +132,6 @@ INSERT INTO tb_student_course (student_id, course_id) VALUES (30, 1);
 
 
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('Very nice girl, with a great future', 1, 1);
-
+INSERT INTO tb_review (text, user_id, student_id) VALUES ('I love the way she laugh', 2, 1);
+INSERT INTO tb_review (text, user_id, student_id) VALUES ('Very funny guy', 2, 2);
 

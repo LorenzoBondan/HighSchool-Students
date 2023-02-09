@@ -5,6 +5,7 @@ import ReviewForm from "components/ReviewForm";*/
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Review } from "types/review";
+import { Student } from "types/student";
 import { hasAnyRoles } from "util/auth";
 import { requestBackend } from "util/requests";
 
@@ -12,10 +13,14 @@ import './styles.css';
 
 type UrlParams = {
     studentId: string;
-  };
+};
+
+type Props = {
+    studentUsername?: string | undefined;
+}
 
   //reviews
-const Reviews = () => {
+const Reviews = ( {studentUsername} : Props ) => {
 
     const [page, setPage] = useState<Review[]>([]); //recebe a lista de reviews obtida na requisição.
     const { studentId } = useParams<UrlParams>();
@@ -47,7 +52,7 @@ const Reviews = () => {
         
     return (
         <div className="page-container text-primary">
-          <h1>Student's reviews:</h1>
+          <h1>{studentUsername}'s reviews:</h1>
 
           {//hasAnyRoles(["ROLE_OPERATOR"]) && ( // form de inserir avaliação SOMENTE PARA MEMBROS
             //<ReviewForm movieId={studentId} onInsertReview={handleInsertReview} />

@@ -74,6 +74,7 @@ function StudentDetails(){
 
     const reviewPath = "/students/"+{studentId}+"/reviews";
 
+
     return(
         <div className='student-details-container'>
 
@@ -179,7 +180,7 @@ function StudentDetails(){
             </div>
 
             <div className='student-details-reviews-container'>
-                <Reviews/>
+                <Reviews studentUsername={student?.nickname}/>
             </div>
             
         </div>

@@ -2,7 +2,9 @@ package com.lorenzo.highschoolstudents.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -15,6 +17,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -52,6 +55,9 @@ public class Student implements Serializable{
 				inverseJoinColumns = @JoinColumn(name = "course_id")
 			)
 	private Set<Course> courses = new HashSet<>();
+	
+	@OneToMany(mappedBy = "student")
+	private List<Review> reviews = new ArrayList<>();
 	
 	public Student() {}
 

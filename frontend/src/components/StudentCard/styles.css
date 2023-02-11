@@ -74,5 +74,6 @@
 
 .courses-list-zone{
     text-align: left;
+    flex-wrap: wrap;
 }
 

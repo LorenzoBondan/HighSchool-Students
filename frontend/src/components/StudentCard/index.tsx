@@ -3,6 +3,7 @@ import Check from 'assets/images/checked.png';
 import Uncheck from 'assets/images/unchecked.png';
  
 import { Student } from 'types/student';
+import { Link } from 'react-router-dom';
 
 type Props = {
   student : Student;
@@ -28,9 +29,13 @@ function StudentCard( {student} : Props ) {
               <>
                 <div className='card-title-button'>
                   <h3>{student.nickname}</h3>
-                  <div className='button-zone'>
+
+                  <Link to={`/students/${student.id}`}>
+                    <div className='button-zone'>
                       <button className='btn btn-primary'>Details</button>
-                  </div>
+                    </div>
+                  </Link>
+                  
                 </div>
                 
                 

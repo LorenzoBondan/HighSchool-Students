@@ -67,7 +67,7 @@ const Login = () => {
 
                 { hasError && (
                     <div className="alert alert-danger">
-                        Erro ao tentar efetuar o login
+                       Error when trying to login
                     </div>
                 )}
 
@@ -111,18 +111,18 @@ const Login = () => {
 
 
                     <Link to="/admin/auth/recover" className="login-link-recover">
-                        Esqueci a senha
+                        Forgot the password?
                     </Link>
 
                     <div className="login-submit">
-                        <button className='btn btn-primary'>FAZER LOGIN</button>
+                        <button className='btn btn-primary'>LOGIN</button>
                     </div>
 
                     <div className="signup-container">
-                        <span className="not-registered">Não tem Cadastro?</span>
+                        <span className="not-registered">Don't have an account?</span>
 
                         <Link to="/admin/auth/register" className="login-link-register">
-                            CADASTRAR
+                            REGISTER NOW
                         </Link>
                     </div>
 

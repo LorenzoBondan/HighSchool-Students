@@ -24,4 +24,19 @@
     .catalog-container{
         font-size: 26px;
     }
-}   
+}
+
+@media(min-width: 1200px){
+    .catalog-title-container{
+        display: flex;
+        align-items: center;
+    }
+
+    .catalog-title-container h1{
+        margin-right: 25px;
+    }
+
+    .students-search-bar-container{
+        flex: 1;
+    }
+}

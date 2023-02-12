@@ -24,6 +24,11 @@ function Students(){
     //manter o estado de todos os componentes que fazem a listagem
     const [controlComponentsData, setControlComponentsData] = useState<ControlComponentsData>({activePage:0, filterData: { name: '', course: null },});
 
+    const handlePageChange = (pageNumber : number) => {
+      setControlComponentsData({activePage: pageNumber, filterData: controlComponentsData.filterData});
+      //mantém o que está no filtro e muda só a página
+    }
+
     const getStudents = useCallback(() => {
       const params : AxiosRequestConfig = {
         method:"GET",
@@ -88,7 +93,7 @@ function Students(){
             <Pagination 
                 pageCount={(page) ? page.totalPages : 0} 
                 range={2}
-                onChange={getStudents}
+                onChange={handlePageChange}
                 forcePage={page?.number}
                 />
         </div>

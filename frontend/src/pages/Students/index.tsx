@@ -1,5 +1,6 @@
 
 import { AxiosRequestConfig } from 'axios';
+import Pagination from 'components/Pagination';
 import StudentCard from 'components/StudentCard';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -14,27 +15,29 @@ function Students(){
     const [page, setPage] = useState<SpringPage<Student>>();
     const [isLoading, setIsLoading] = useState(false);
 
+    const getStudents = (pageNumber : number) => {
+      const params : AxiosRequestConfig = {
+        method:"GET",
+        url: "/students",
+        params: {
+          page: 0,
+          size: 8
+        },
+      }
+  
+      setIsLoading(true); // antes da requisição, está carregando
+      requestBackend(params) // função criada no requests.ts
+        .then(response => {
+          setPage(response.data);
+        })
+        .finally(() => {
+          setIsLoading(false); // terminou a requisição, isLoading = false
+        });
+    }
 
     useEffect(() => {
-    
-        const params : AxiosRequestConfig = {
-          method:"GET",
-          url: "/students",
-          params: {
-            page: 0,
-            size: 30
-          },
-        }
-    
-        setIsLoading(true); // antes da requisição, está carregando
-        requestBackend(params) // função criada no requests.ts
-          .then(response => {
-            setPage(response.data);
-          })
-          .finally(() => {
-            setIsLoading(false); // terminou a requisição, isLoading = false
-          });
-      }, []);
+      getStudents(0);
+    }, []);
 
     return(
         <>
@@ -58,7 +61,11 @@ function Students(){
 
             </div>
 
-
+            <Pagination 
+                pageCount={(page) ? page.totalPages : 0} 
+                range={2}
+                onChange={getStudents}
+                />
         </div>
         
       </>

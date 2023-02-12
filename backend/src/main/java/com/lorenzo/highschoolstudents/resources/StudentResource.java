@@ -38,7 +38,7 @@ public class StudentResource {
 
 	@GetMapping
 	public ResponseEntity<Page<StudentDTO>> findAll(
-			@RequestParam(value = "courseID", defaultValue = "0") Long courseId, 
+			@RequestParam(value = "courseId", defaultValue = "0") Long courseId, 
 			@RequestParam(value = "name", defaultValue = "") String name, 
 			Pageable pageable) {
 		Page<StudentDTO> list = service.findAllPaged(courseId, name.trim(), pageable);	

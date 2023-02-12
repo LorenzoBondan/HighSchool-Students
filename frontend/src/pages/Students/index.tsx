@@ -20,7 +20,7 @@ function Students(){
         method:"GET",
         url: "/students",
         params: {
-          page: 0,
+          page: pageNumber,
           size: 8
         },
       }
@@ -29,6 +29,7 @@ function Students(){
       requestBackend(params) // função criada no requests.ts
         .then(response => {
           setPage(response.data);
+          window.scrollTo(0, 0);
         })
         .finally(() => {
           setIsLoading(false); // terminou a requisição, isLoading = false

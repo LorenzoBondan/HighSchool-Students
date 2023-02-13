@@ -21,7 +21,7 @@ function Home() {
                     </Link>
 
                     <Link to="/students">
-                        <button className='btn btn-primary'>The best of each year</button>
+                        <button className='btn btn-primary'>The best of the year</button>
                     </Link>
 
                     <Link to="/students">
@@ -35,6 +35,7 @@ function Home() {
                     <Link to="/students">
                         <button className='btn btn-primary'>ADMIN</button>
                     </Link>
+
 
                 </div>
 

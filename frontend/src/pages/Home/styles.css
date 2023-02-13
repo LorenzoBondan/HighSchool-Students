@@ -131,12 +131,7 @@
 @media(min-width:1700px){
 
     .main-container{
-        margin: 30px 270px 40px 270px;
-        padding-bottom: 200px;
-    }
-
-    .image-container{
-        padding-top: 100px;
+        margin: 30px 270px 30px 270px;
     }
 
 }

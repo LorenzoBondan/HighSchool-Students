@@ -8,6 +8,7 @@ import StudentDetails from 'pages/StudentDetails';
 import Footer from 'components/Footer';
 import history from 'util/history';
 import Reviews from 'pages/Reviews';
+import CountDown from 'pages/CountDown';
 
 
 const Routes = () => (
@@ -41,6 +42,10 @@ const Routes = () => (
         <Redirect from="/admin" to="/admin/students" exact />
         <Route path="/admin">
           <Admin />
+        </Route>
+
+        <Route path="/countdown">
+          <CountDown/>
         </Route>
   
       </Switch>

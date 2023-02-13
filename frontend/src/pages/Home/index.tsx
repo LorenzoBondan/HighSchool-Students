@@ -28,7 +28,7 @@ function Home() {
                         <button className='btn btn-primary'>Unsolved Mysteries</button>
                     </Link>
 
-                    <Link to="/students">
+                    <Link to="/countdown">
                         <button className='btn btn-primary'>Countdown to Isabel's party</button>
                     </Link>
 

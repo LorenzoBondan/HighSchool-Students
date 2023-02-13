@@ -44,14 +44,14 @@ function StudentCrudCard( {student, onDelete} : Props ) {
             </div>
 
             <div className='student-crud-card-buttons-container'>
-              <button className='btn btn-outline-danger studant-crud-card-button studant-crud-card-button-first'
+              <button className='btn btn-outline-danger student-crud-card-button student-crud-card-button-first'
                 onClick={() => handleDelete(student.id)}
                 >
                   EXCLUIR
                 </button>
 
                 <Link to={`/admin/students/${student.id}`}>
-                  <button className='btn btn-outline-secondary studant-crud-card-button'>
+                  <button className='btn btn-outline-secondary student-crud-card-button'>
                     EDITAR
                   </button>
                 </Link>

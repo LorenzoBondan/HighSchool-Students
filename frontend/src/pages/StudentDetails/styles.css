@@ -3,6 +3,11 @@
     font-size: 20px;
 }
 
+.student-details-buttons-container{
+    display: flex;
+    justify-content: space-between;
+}
+
 .student-details-card {
     padding: 10px;
 }
@@ -34,6 +39,28 @@
     text-decoration: none;
 }
 
+.gonext-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.gonext-container svg {
+    color: #407BFF;
+    margin-left: 5px;
+}
+
+.gonext-container h6 {
+    margin-right: 5px;
+    letter-spacing: -0.035em;
+    font-size: 1.20em;
+    color: #407BFF;
+    
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
 .student-details-img-container {
     text-align: center;
 
@@ -43,7 +70,7 @@
 }
 
 .student-details-img-container img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 50%;
     border: 3px solid rgba(156, 151, 151, 0.541);
 }

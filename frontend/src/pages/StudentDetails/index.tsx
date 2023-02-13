@@ -80,12 +80,27 @@ function StudentDetails(){
             {isLoading ? <StudentDetailsLoader/> : 
             
                 <>
-                <Link to="/students">
-                    <div className='goback-container'>
-                        <ArrowIcon />
-                        <h6>BACK</h6>
-                    </div>
-                </Link>
+                <div className='student-details-buttons-container'>
+
+                    { parseInt(studentId) > 1 && (
+                        <Link to={`/students/${(parseInt(studentId) - 1).toString()}`}>
+                            <div className='goback-container'>
+                                <ArrowIcon />
+                                <h6>PREVIOUS</h6>
+                            </div>
+                        </Link>
+                    )}
+
+                    { parseInt(studentId) < 30 && (
+                    <Link to={`/students/${(parseInt(studentId) + 1).toString()}`}>
+                        <div className='gonext-container'>
+                            <h6>NEXT</h6>
+                            <ArrowIcon className='next-arrow' />
+                        </div>
+                    </Link>
+                    )}
+                </div>
+                
                 
                 <div className='row'>
                     <div className='col-xl-6'>
@@ -137,7 +152,7 @@ function StudentDetails(){
 
                 <div className='col-xl-6'>
                     <div className='description-container'>
-                        <h2>Student's description</h2>
+                        <h2>Remembered by</h2>
                         <p>{student?.description}</p>
                     </div>
 

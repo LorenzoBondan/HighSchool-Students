@@ -62,7 +62,8 @@ function Students(){
     const handleSubmitFilter = (data : StudentFilterData) => {
       setControlComponentsData({activePage: 0, filterData: data});
       // efetua o filtro e volta pra primeira página
- }
+    }
+
     return(
         <>
         <div className="container my-4 catalog-container">
@@ -73,7 +74,7 @@ function Students(){
             <div className='students-search-bar-container'>
               <StudentFilter onSubmitFilter={handleSubmitFilter} />
             </div>
-
+            
           </div>
 
             <div className="row">
@@ -103,3 +104,4 @@ function Students(){
 }
 
 export default Students;
+

@@ -12,12 +12,6 @@ function Home() {
                                                             backgroundSize: "cover",
                                                             }}>
                                                                 
-                <div className="image-container">
-                    <img src={logoSagrado} alt="logosagrado" />
-                    <img src={logoTerceirao} alt="logo" />
-                    
-                </div>
-
                 <div className="content-container">
                     <h1>Terceirão 2016</h1>
                     <p>A summary of the class of 1999</p>
@@ -25,7 +19,32 @@ function Home() {
                     <Link to="/students">
                         <button className='btn btn-primary'>Students</button>
                     </Link>
+
+                    <Link to="/students">
+                        <button className='btn btn-primary'>The best of each year</button>
+                    </Link>
+
+                    <Link to="/students">
+                        <button className='btn btn-primary'>Unsolved Mysteries</button>
+                    </Link>
+
+                    <Link to="/students">
+                        <button className='btn btn-primary'>Countdown to Isabel's party</button>
+                    </Link>
+
+                    <Link to="/students">
+                        <button className='btn btn-primary'>ADMIN</button>
+                    </Link>
+
                 </div>
+
+                
+                <div className="image-container">
+                    <img src={logoSagrado} alt="logosagrado" />
+                    <img src={logoTerceirao} alt="logo" />
+                </div>
+
+                
 
             </div>
             

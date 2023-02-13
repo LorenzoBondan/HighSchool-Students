@@ -79,7 +79,7 @@ const StudentFilter = ( {onSubmitFilter} : Props) => {
                             render = {( {field} ) => (
                             <Select 
                                 {...field}
-                                options={selectCourses}
+                                options={selectCourses?.sort()}
                                 isClearable
                                 classNamePrefix="student-filter-select"
                                 placeholder="Course"

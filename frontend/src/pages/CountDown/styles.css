@@ -1,22 +1,30 @@
+.coutn-down-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .count-down-page-container{
     margin: 10px;
     padding: 10px 10px 80px 10px ;
-    color:black;
+    color: #263238;
     font-size: 26px;
     text-align: center;
 }
-
 
 .count-down-page-title h1{
     font-size: 0.8em;
     margin-top: 10px;
     font-weight: 400;
+    text-shadow: 2px 2px 2px;
+    color: aqua;
 }
 
 .count-down-page-title p{
     font-size: 0.45em;
     margin-top: 10px;
     font-weight: 400;
+    text-shadow: 0.5px 0.5px 0.5px;
 }
 
 .count-down-page-emojis{
@@ -35,5 +43,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media(min-width:576px){
+
+    .count-down-page-container{
+        margin: 20px;
+        min-width: 550px;
+    }
+    
+    .count-down-page-title h1{
+        font-size: 1em;
+    }
+    
+    .count-down-page-title p{
+        font-size: 0.6em;
+    }
+    
+    .count-down-page-emojis img{
+        height: 1em;
+    }
+}
+
+@media(min-width:768px){
+
+    .count-down-page-container{
+        margin: 40px;
+        min-width: 740px;
+    }
+    
+    .count-down-page-title h1{
+        font-size: 1.2em;
+    }
+    
+    .count-down-page-emojis img{
+        height: 1.2em;
+    }
+}
+
+@media(min-width:1200px){
+
+    .count-down-page-container{
+        margin: 80px;
+        padding-bottom: 120px;
+        min-width: 1120px;
+        height: 718px;
+    }
+    
+    .count-down-page-title h1{
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+
+    .count-down-page-title p{
+        font-size: 0.8em;
+    }
+    
+    .count-down-page-emojis img{
+        height: 1.2em;
+    }
 }
 

@@ -5,10 +5,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(270deg, #E6E3D5, #99978E);
+    background: linear-gradient(270deg, #080E1E, #063B63);
     height: 100px;
     max-width: 270px;
-    color: #A00909;
+    color: #19C1FF;
     text-shadow: 1px 1px 1px;
     border-radius: 15px;
     border: 2px solid silver;
@@ -27,12 +27,12 @@
 .clock section p{
     font-size: 1.2rem;
     margin-bottom: 0;
-    color: black;
+    color: #C9C9C9;
     font-family: 'Playfair Display';
 }
 
 .clock section small{
-    color: black;
+    color: #C9C9C9;;
     text-shadow: none;
     font-size: 0.8rem;
     font-family: 'Playfair Display';
@@ -50,17 +50,10 @@
 
     .clock section p{
         font-size: 2rem;
-        margin-bottom: 0;
-        color: black;
-        font-family: 'Playfair Display';
     }
     
     .clock section small{
-        color: black;
-        text-shadow: none;
         font-size: 1rem;
-        font-family: 'Playfair Display';
-        letter-spacing: -0.03em;
     }
 
 }

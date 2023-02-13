@@ -1,6 +1,6 @@
 .count-down-page-container{
     margin: 10px;
-    padding: 10px;
+    padding: 10px 10px 80px 10px ;
     color:black;
     font-size: 26px;
     text-align: center;
@@ -29,5 +29,11 @@
     height: 0.8em;
     margin-right: 5px;
     margin-bottom: 15px;
+}
+
+.count-down-page-clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

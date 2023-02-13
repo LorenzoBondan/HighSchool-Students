@@ -4,7 +4,7 @@ import './styles.css';
 import LeftNavbar from "./LeftNavbar";
 import Users from "./User";
 import Courses from "./Course";
-import Students from "./Student";
+import Students from "./Students";
 
 function Admin(){
     return(

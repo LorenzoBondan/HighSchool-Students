@@ -1,0 +1,59 @@
+.student-crud-card{
+    margin-bottom: 30px;
+    text-decoration: none;
+    max-height: 453px;
+    min-width: 280px;
+}
+
+.student-crud-card-top-container{
+    text-align: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #E1E1E1;
+    text-decoration: none;
+}
+
+.student-crud-card-top-container img {
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+    border: 3px solid rgba(156, 151, 151, 0.541);
+}
+
+.student-crud-card-bottom-container{
+    padding: 15px 20px 10px 20px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.student-crud-card-bottom-container h3{
+    font-size: 30px;
+    color: #263238;
+    text-decoration: none;
+}
+
+.student-crud-card-buttons-container {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.studant-crud-card-button-first{
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.studant-crud-card-button{
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: -0.015em;
+    border-radius: 10px;
+    width: 110px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+
+
+
+

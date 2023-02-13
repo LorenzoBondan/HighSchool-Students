@@ -89,6 +89,9 @@
 
 @media(min-width:992px){
 
+    .student-crud-card{
+        min-width: 400px;
+    }
     .student-crud-card-button {
         width: 120px;
     }

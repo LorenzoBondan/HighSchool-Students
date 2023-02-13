@@ -2,10 +2,5 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-@media(min-width:768px){
-    .students-crud-container{
-        align-items: flex-start;
-    }
+    justify-content: center;
 }

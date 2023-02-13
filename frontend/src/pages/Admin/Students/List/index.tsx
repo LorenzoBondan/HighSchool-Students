@@ -1,4 +1,5 @@
 import { AxiosRequestConfig } from 'axios';
+import Pagination from 'components/Pagination';
 import { StudentFilterData } from 'components/StudentFilter';
 import { useCallback, useEffect, useState } from 'react';
 import { Student } from 'types/student';
@@ -18,6 +19,11 @@ const List = () => {
   const [page, setPage] = useState<SpringPage<Student>>();
 
   const [controlComponentsData, setControlComponentsData] = useState<ControlComponentsData>({activePage:0, filterData: { name: '', course: null },});
+
+  const handlePageChange = (pageNumber : number) => {
+    setControlComponentsData({activePage: pageNumber, filterData: controlComponentsData.filterData});
+    //mantém o que está no filtro e muda só a página
+  }
 
   const getStudents = useCallback(() => {
     const params: AxiosRequestConfig = {
@@ -56,7 +62,12 @@ const List = () => {
 
       </div>
       
-        
+        <Pagination 
+            pageCount = {(page) ? page.totalPages : 0} 
+            range = {3}
+            onChange = {handlePageChange}
+            forcePage={page?.number}
+        />
       
     </div>
   );

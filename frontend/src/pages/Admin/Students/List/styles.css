@@ -4,3 +4,36 @@
     align-items: center;
     justify-content: center;
 }
+
+.student-crud-bar-container{
+    width: 100%;
+}
+
+.btn-crud-add{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 20px;
+}
+
+@media(min-width:768px){
+    .student-crud-bar-container{
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .students-crud-bar-filter-container{
+        flex: 1;
+        margin-left: 20px;
+    }
+
+    .btn-crud-add{
+        height: 60px;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+}

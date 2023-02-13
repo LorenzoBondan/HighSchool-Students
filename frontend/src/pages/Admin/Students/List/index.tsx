@@ -1,7 +1,8 @@
 import { AxiosRequestConfig } from 'axios';
 import Pagination from 'components/Pagination';
-import { StudentFilterData } from 'components/StudentFilter';
+import StudentFilter, { StudentFilterData } from 'components/StudentFilter';
 import { useCallback, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Student } from 'types/student';
 import { SpringPage } from 'types/vendor/spring';
 import { requestBackend } from 'util/requests';
@@ -49,18 +50,40 @@ const List = () => {
   }, [getStudents]);
 
 
+  // função do componente ProductFilter
+ const handleSubmitFilter = (data : StudentFilterData) => {
+    setControlComponentsData({activePage: 0, filterData: data});
+    // efetua o filtro e volta pra primeira página
+   }
+
+
   return (
     <div className='students-crud-container'>
 
-      <div className='row'>
+        <div className="student-crud-bar-container">
 
-      {page?.content.map((item) => (
-        <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <StudentCrudCard student={item} onDelete={() => getStudents()} key={item.id}/>
+            <Link to="/admin/students/create">
+                <button className="btn btn-primary btn-crud-add">
+                    ADICIONAR
+                </button>
+            </Link>
+            
+            <div className='students-crud-bar-filter-container'>
+                <StudentFilter onSubmitFilter={handleSubmitFilter} />
+            </div>
+            
+
         </div>
-      ))}
 
-      </div>
+        <div className='row'>
+
+            {page?.content.map((item) => (
+                <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <StudentCrudCard student={item} onDelete={() => getStudents()} key={item.id}/>
+                </div>
+            ))}
+
+        </div>
       
         <Pagination 
             pageCount = {(page) ? page.totalPages : 0} 

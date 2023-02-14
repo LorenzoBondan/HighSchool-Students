@@ -217,7 +217,7 @@ const Form = () => {
                                     })}
                                     type="text"
                                     className={`form-control base-input ${errors.imgUrl ? 'is-invalid' : ''}`}
-                                    placeholder="URL da imagem do Produto"
+                                    placeholder="URL of Student's image"
                                     name="imgUrl"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.imgUrl?.message}</div>
@@ -260,7 +260,7 @@ const Form = () => {
                                     })}
                                     type="text"
                                     className={`form-control base-input ${errors.contact?.instagram ? 'is-invalid' : ''}`}
-                                    placeholder="Instagram"
+                                    placeholder="Instagram URL"
                                     name="contact.instagram"
                                 />
 
@@ -273,7 +273,7 @@ const Form = () => {
                                     })}
                                     type="text"
                                     className={`form-control base-input ${errors.contact?.facebook ? 'is-invalid' : ''}`}
-                                    placeholder="Facebook"
+                                    placeholder="Facebook URL"
                                     name="contact.facebook"
                                 />
 

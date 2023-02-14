@@ -63,6 +63,8 @@ INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99676-16
 INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99186-9689', 'https://www.instagram.com/rodrigochultz_/', 'https://www.facebook.com');
 INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99168-2015', 'https://www.instagram.com/thomazcantoni/', 'https://www.facebook.com/thomaz.cantoni');
 INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99612-1643', 'https://www.instagram.com/viniciusguidolin/', 'https://www.facebook.com/vini.guido.56');
+INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99999-9999', 'https://www.instagram.com/iuri_engel/', 'https://www.facebook.com');
+INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99999-9999', 'https://www.instagram.com/raphapompermayer/', 'https://www.facebook.com');
 
 
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Ana Paula Reginatto Tubiana', 'Ana', 1, 'Porto Alegre', 'Always with a great performance and high QI level, and her way of being mad and laugh at the same time', TIMESTAMP WITH TIME ZONE '1999-06-04', false, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.18169-9/25348737_806171129566756_77180276428041200_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_ohc=NnhcHzqS4VAAX-4UkIl&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfDvBbAPobSQK7alSWcj6RAcoPrExNkzcXU6e7aNDUQyQw&oe=6408ADD7');
@@ -82,6 +84,7 @@ INSERT INTO tb_student (name, nickname, contact_id, location, description, birth
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Giovanni Guidolin', 'Gio', 15, 'Bento Gonçalves', 'Xbox boy', TIMESTAMP WITH TIME ZONE '1999-08-27', true, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.6435-9/184048682_3914993608586264_6404145089839178106_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=mHiFvVyaqbgAX_PeSsI&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfA5z6gMnpBTUdSbfXKnYV5j9Z8gEhixY-LCN_exVw2c7Q&oe=64088ABF');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Guilherme Heuser de Almeida', 'Almeida', 16, 'São Paulo', 'For a while, was knew as Santo Antônio, because of his hair', TIMESTAMP WITH TIME ZONE '1999-02-20', false, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.18169-9/15442265_804053033069453_3683611457378239886_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=lSA0MRVSR00AX-9ydOp&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfBnMbcd-nb1XVHoecg50ypudCIWA38PW57ZChm0AOGfPw&oe=64088C97');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Guilherme Picoli Bauce', 'Bauce', 17, 'Porto Alegre', 'Our DJ, always with his untouchable hair', TIMESTAMP WITH TIME ZONE '1999-07-01', false, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.18169-9/21077796_1454098041363703_2815202368848562161_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=qiw-wIMg8UgAX_4i4eP&_nc_oc=AQnQK9rJiVOP10xr-XhNRu5GBiSaVzXogIOKmiSy18sBJ9FijVh3reoZew83IlEd889W-6C46lXfMD-dlSCMj-ph&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfBW_UHeCi5Jmgovxm0wtTRcLUEKKRCPWxGfa6y9d1relg&oe=64076BB1');
+INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Iuri Matheus Engel', 'Iuri', 31, 'Pelotas', 'Used to be mad when called by Iurinelson or Yuri Mamuth', TIMESTAMP WITH TIME ZONE '1999-01-01', false, 'https://i.ibb.co/LCtkqd7/iuri.png');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Jonathan Guidolin Franceschini', 'Johny', 18, 'Bento Gonçalves', 'Hacker skills and looks like the spider man actor', TIMESTAMP WITH TIME ZONE '1999-03-02', false, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.6435-9/86174446_1986638281482169_1712315298121515008_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=MxTruQypFooAX_UAP_y&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfCZXkO3AmcznY753X7iPeEQKo5sanVk2LPIEsZ3YGT9-g&oe=64088B90');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Julia Dalla Costa', 'Julia', 19, 'Porto Alegre', 'Always joked and went back saying HÃÃ. Fear of butterflies', TIMESTAMP WITH TIME ZONE '1999-10-04', false, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.18169-9/16266097_1094938443947879_8350991413155619446_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=DK9PVlrB26sAX9gODRR&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfDWgQQjfSa3QGX-IuN5ch2YPnj-wFvgAlzPXD5Jfxk8pQ&oe=6408AEF0');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Julia Gheno Pertile', 'Pertile', 20, 'Bento Gonçalves', 'Our girl from Garibaldi, also knew as piradinha', TIMESTAMP WITH TIME ZONE '1999-09-21', true, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t39.30808-6/280602678_1643524042674751_4616928669852349079_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=6EMNYBvbTBYAX-iFyki&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfCpizrwH2gwXQfRtsnYQsIW1JjJeZ2ZwfDNK2kRpKJFyQ&oe=63E60D49');
@@ -92,6 +95,7 @@ INSERT INTO tb_student (name, nickname, contact_id, location, description, birth
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Maicon Gava', 'Maicon', 25, 'Bento Gonçalves', 'His way of say BOTI and his shave trimmed in Planalto´s Barber Shop', TIMESTAMP WITH TIME ZONE '1999-08-11', false, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.6435-9/153084162_117255650403052_1374379745059009673_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=N93i-nH4qqYAX-iqevR&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfDOWBOS0678pPc5r8WWgHGVRdKhYWRwo0pyfx1WPokJdg&oe=640786DA');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Maurício Todescatto Baudassarelli', 'Mauri', 26, 'Bento Gonçalves', 'Also knew as Dennis Pimentinha. At the class, just said PESADO', TIMESTAMP WITH TIME ZONE '1999-06-20', false, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t39.30808-6/217030220_4129638593793650_5025777492262532397_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ih52knN5Bu4AX-GMbHz&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfDOinJ7pkDLCjE8KNTRO4X4DXhSkvXPIqO83ZWtr80u3A&oe=63E639CB');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Nicole Tabaldi Sanson', 'Nicole', 27, 'Bento Gonçalves', 'Sweet way to sneeze', TIMESTAMP WITH TIME ZONE '1999-11-08', true, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.6435-9/81647903_2813188665405185_6169119568879943680_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=wEtfejU1w50AX9uHEG1&tn=ifq07eqRiQkYdwV8&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfCZrBHn8FewY6bsfoZdSvHkZ_mFCSIaVO_KT9yw-ewfOw&oe=6408A060');
+INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Raphaella Gava Pompermayer', 'Rapha', 32, 'São Paulo', 'Official chopp girl with her ainnn', TIMESTAMP WITH TIME ZONE '1999-01-01', false, 'https://i.ibb.co/kG5DWg6/raphaella.png');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Rodrigo Chultz', 'Rodrigo', 28, 'Porto Alegre', 'Sings and does parkour in his free time', TIMESTAMP WITH TIME ZONE '1999-03-04', false, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.6435-9/74908168_2639417009442348_7264608461567033344_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=yf7bJHibmp4AX9peix4&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfD06itLcGGHuu44WUaM6IJtVgJNzO5kTCoKd53t-yPTRg&oe=64088BFD');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Thomaz Cantoni', 'Thomaz', 29, 'Bento Gonçalves', 'The one who will replace Mister M with his magic tricks', TIMESTAMP WITH TIME ZONE '1999-07-19', true, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t39.30808-6/287540190_5397690173603208_5416714295533154648_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JtydJU3PKhMAX-m-cv6&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfCngwd1wE47Hq5YXIOgsCYys0ZET3RBR6eIB7MVsgEa2w&oe=63E5C635');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Vinicius Mocelin Guidolin', 'Vini', 30, 'Bento Gonçalves', 'His very funny way to sing VAI TOMA and imitate the Faustão', TIMESTAMP WITH TIME ZONE '2000-12-28', false, 'https://scontent.fcxj12-1.fna.fbcdn.net/v/t1.6435-9/29314369_1223877654423672_2554521959249477632_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=-6wpsIsZwBUAX8yXBem&tn=ifq07eqRiQkYdwV8&_nc_ht=scontent.fcxj12-1.fna&oh=00_AfCR6LeBCA8xe2Z7R7k2P_ncRI3M8ZrHNla3oGHS6nYukg&oe=640888C0');
@@ -116,19 +120,21 @@ INSERT INTO tb_student_course (student_id, course_id) VALUES (15, 20);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (16, 8);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (17, 16);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (18, 7);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (19, 6);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (20, 10);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (21, 2);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (21, 1);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (22, 22);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (23, 12);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (24, 18);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (25, 22);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (26, 1);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (27, 11);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (28, 8);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (29, 21);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (30, 1);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (19, 7);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (20, 6);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (21, 10);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (22, 2);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (22, 1);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (23, 22);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (24, 12);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (25, 18);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (26, 22);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (27, 1);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (28, 11);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (29, 8);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (30, 8);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (31, 21);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (32, 1);
 
 
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('Very nice girl, with a great future', 1, 1);

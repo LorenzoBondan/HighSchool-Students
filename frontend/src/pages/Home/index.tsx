@@ -32,7 +32,7 @@ function Home() {
                         <button className='btn btn-primary'>Countdown to Isabel's party</button>
                     </Link>
 
-                    <Link to="/students">
+                    <Link to="/admin">
                         <button className='btn btn-primary'>ADMIN</button>
                     </Link>
 

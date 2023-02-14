@@ -15,6 +15,7 @@ const DiaryCard = ( {diary} : Props) => {
 
             <div className='diary-card-date-container'>
                 <h2 className='text-primary'>{diary.date}</h2>
+                <h3 className='text-primary'>{diary.year}</h3>
             </div>
         </div>
     );

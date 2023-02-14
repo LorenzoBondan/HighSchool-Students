@@ -11,24 +11,47 @@ const DiaryPage = () => {
 
     const [page, setPage] = useState<SpringPage<Diary>>();
 
-    useEffect(() => {
+    const beginWithThisYear = () => {
         const params : AxiosRequestConfig = {
-          url: '/diaries',
-          params: {
-            page: 0,
-            size: 120,
-          },
-        };
-    
-        requestBackend(params).then((response) => {
-          setPage(response.data);
-        });
+            url: '/diaries',
+            params: {
+              page: 0,
+              size: 119,
+            },
+          };
+      
+          requestBackend(params).then((response) => {
+            setPage(response.data);
+          });
+    }
+
+    useEffect(() => {
+        beginWithThisYear();
       }, []);
+
+      const handleChangeYear = () => {
+
+            const params : AxiosRequestConfig = {
+              url: '/diaries',
+              params: {
+                page: 1,
+                size: 119,
+              },
+            };
+        
+            requestBackend(params).then((response) => {
+              setPage(response.data);
+            });
+
+      }
 
     return(
        <div className='diary-main-page-container'>
-            <h1>2016</h1>
-
+            <div className="diary-main-page-buttons-container">
+                <button onClick={beginWithThisYear} className="btn btn-primary">2016</button>
+                <button onClick={handleChangeYear} className="btn btn-primary">2015</button>
+            </div>
+            
             {page?.content.map((item) => (
                 <div>
                     <DiaryCard diary={item}/>

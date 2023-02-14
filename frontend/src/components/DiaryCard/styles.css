@@ -14,7 +14,18 @@
     margin-bottom: 5px;
 }
 
+.diary-card-date-container{
+    display: flex;
+    justify-content: space-between;
+}
+
 .diary-card-date-container h2{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.diary-card-date-container h3{
     font-size: 18px;
     margin-top: 15px;
     margin-bottom: 0;

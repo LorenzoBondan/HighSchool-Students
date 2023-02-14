@@ -20,7 +20,7 @@ function Home() {
                         <button className='btn btn-primary'>Students</button>
                     </Link>
 
-                    <Link to="/students">
+                    <Link to="/thebest">
                         <button className='btn btn-primary'>The best of the year</button>
                     </Link>
 

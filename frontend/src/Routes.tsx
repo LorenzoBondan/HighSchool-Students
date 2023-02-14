@@ -10,6 +10,7 @@ import history from 'util/history';
 import Reviews from 'pages/Reviews';
 import CountDown from 'pages/CountDown';
 import DiaryPage from 'pages/Diary';
+import TheBest from 'pages/TheBest';
 
 
 const Routes = () => (
@@ -52,6 +53,11 @@ const Routes = () => (
         <Route path="/diary" exact>
           <DiaryPage/>
         </Route>
+
+        <Route path="/thebest" exact>
+          <TheBest/>
+        </Route>
+
   
       </Switch>
 

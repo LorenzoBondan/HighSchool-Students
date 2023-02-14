@@ -9,6 +9,7 @@ import Footer from 'components/Footer';
 import history from 'util/history';
 import Reviews from 'pages/Reviews';
 import CountDown from 'pages/CountDown';
+import Diary from 'pages/Diary';
 
 
 const Routes = () => (
@@ -46,6 +47,10 @@ const Routes = () => (
 
         <Route path="/countdown">
           <CountDown/>
+        </Route>
+
+        <Route path="/diary" exact>
+          <Diary/>
         </Route>
   
       </Switch>

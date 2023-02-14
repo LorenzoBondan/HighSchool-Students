@@ -24,8 +24,8 @@ function Home() {
                         <button className='btn btn-primary'>The best of the year</button>
                     </Link>
 
-                    <Link to="/students">
-                        <button className='btn btn-primary'>Unsolved Mysteries</button>
+                    <Link to="/diary">
+                        <button className='btn btn-primary'>The author's diary</button>
                     </Link>
 
                     <Link to="/countdown">

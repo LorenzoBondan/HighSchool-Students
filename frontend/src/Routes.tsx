@@ -9,9 +9,7 @@ import Footer from 'components/Footer';
 import history from 'util/history';
 import Reviews from 'pages/Reviews';
 import CountDown from 'pages/CountDown';
-import Diary from 'pages/Diary';
-import Diary2016 from 'pages/Diary/Diary2016';
-import Diary2015 from 'pages/Diary/Diary2015';
+import DiaryPage from 'pages/Diary';
 
 
 const Routes = () => (
@@ -52,15 +50,7 @@ const Routes = () => (
         </Route>
 
         <Route path="/diary" exact>
-          <Diary/>
-        </Route>
-
-        <Route path="/diary/2016" exact>
-          <Diary2016/>
-        </Route>
-
-        <Route path="/diary/2015" exact>
-          <Diary2015/>
+          <DiaryPage/>
         </Route>
   
       </Switch>

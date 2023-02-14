@@ -1,25 +1,42 @@
+import { AxiosRequestConfig } from "axios";
+import DiaryCard from "components/DiaryCard";
+import { useEffect, useState } from "react";
+import { Diary } from "types/diary";
+import { SpringPage } from "types/vendor/spring";
+import { requestBackend } from "util/requests";
 
-import { Link } from 'react-router-dom';
 import './styles.css';
 
-const Diary = () => {
-    return(
-       <div className='diary-page-container'>
-            <div className='base-card diary-page-buttons-container'>
-                <h1 className='text-primary'>Select the year</h1>
+const DiaryPage = () => {
 
-                <Link to='/diary/2016'>
-                    <button className='btn btn-primary'>2016</button>
-                </Link>
-                
-                <Link to='/diary/2015'>
-                    <button className='btn btn-primary'>2015</button>
-                </Link>
-                
-                
-            </div>
+    const [page, setPage] = useState<SpringPage<Diary>>();
+
+    useEffect(() => {
+        const params : AxiosRequestConfig = {
+          url: '/diaries',
+          params: {
+            page: 0,
+            size: 120,
+          },
+        };
+    
+        requestBackend(params).then((response) => {
+          setPage(response.data);
+        });
+      }, []);
+
+    return(
+       <div className='diary-main-page-container'>
+            <h1>2016</h1>
+
+            {page?.content.map((item) => (
+                <div>
+                    <DiaryCard diary={item}/>
+                </div>
+            ))}
+            
        </div>
     );
 }
 
-export default Diary;
+export default DiaryPage;

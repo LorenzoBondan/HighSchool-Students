@@ -1,0 +1,61 @@
+.diary-card-container{
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 260px;
+}
+
+.diary-card-description-container{
+    border-bottom: 1px solid silver;
+}
+
+.diary-card-description-container p{
+    font-family: 'Cabin';
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.diary-card-date-container h2{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+@media(min-width:576px){
+    .diary-card-container{
+        padding: 20px;
+        width: 450px;
+    }
+
+    .diary-card-description-container p{
+        font-size: 20px;
+    }
+    
+    .diary-card-date-container h2{
+        font-size: 20px;
+    }
+}
+
+@media(min-width:768px){
+    .diary-card-container{
+        width: 600px;
+    }
+
+    .diary-card-description-container p{
+        font-size: 22px;
+    }
+    
+    .diary-card-date-container h2{
+        font-size: 22px;
+    }
+}
+
+@media(min-width:1200px){
+    .diary-card-container{
+        width: 800px;
+        padding: 30px 20px;
+    }
+
+}
+
+
+

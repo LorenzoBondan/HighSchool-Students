@@ -1,0 +1,38 @@
+.diary-page-container{
+    margin: 30px;
+}
+
+.diary-page-buttons-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.diary-page-buttons-container h1{
+    margin-bottom: 50px;
+}
+
+.diary-page-buttons-container button{
+    flex: 1;
+    width: 220px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: 1px solid silver;
+}
+
+@media(min-width:1200px){
+    .diary-page-container{
+        margin: 110px 300px;
+    }
+
+    .diary-page-buttons-container{
+        padding: 40px;
+    }
+
+    .diary-page-buttons-container button{
+        width: 500px;
+        font-size: 30px;
+    }
+}

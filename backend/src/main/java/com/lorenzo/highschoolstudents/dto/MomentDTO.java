@@ -10,18 +10,20 @@ public class MomentDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	private Long id;
+	private String title;
 	private String description;
 	private String date;
 	private String imgUrl;
 	
 	public MomentDTO() {}
 
-	public MomentDTO(Long id, String description, String date, String imgUrl) {
+	public MomentDTO(Long id, String title,String description, String date, String imgUrl) {
 		super();
 		this.id = id;
 		this.description = description;
 		this.date = date;
 		this.imgUrl = imgUrl;
+		this.title = title;
 	}
 	
 	public MomentDTO(Moment entity) {
@@ -29,6 +31,7 @@ public class MomentDTO implements Serializable{
 		this.description=entity.getDescription();
 		this.date=entity.getDate();
 		this.imgUrl=entity.getImgUrl();
+		this.title = entity.getTitle();
 	}
 
 	public Long getId() {
@@ -61,6 +64,15 @@ public class MomentDTO implements Serializable{
 
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
+	}
+	
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	@Override

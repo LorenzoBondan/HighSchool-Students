@@ -334,3 +334,19 @@ INSERT INTO tb_diary (year, date, description) VALUES (2015, '25/11', 'Rodrigo z
 INSERT INTO tb_diary (year, date, description) VALUES (2015, '30/11', 'Texto zumbis, português');
 INSERT INTO tb_diary (year, date, description) VALUES (2015, '01/12', 'Altemir se despedindo, dizendo que tudo valeu a pena... -Ranzan: Ah, mas tem ano que vem ainda');
 INSERT INTO tb_diary (year, date, description) VALUES (2015, '07/12', 'Último dia de aula, fefa intrusa');
+
+
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('18/02', 'First day', 'Where we back to school with different cloethes and was the begin of the best year of the school time', 'https://i.ibb.co/Rb6NSX3/primeirodia.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('09/03', 'Scientific experiment', 'Where we opened an chicken and some students got bad (and other ones pretended to been bad)', 'https://i.ibb.co/2Y5D6s4/galinha.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('19/03', 'Choose of the paranymph of the class', 'Isabel was choosed as the paranymph of our class', 'https://i.ibb.co/XLPt193/paraninfa.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('04/06', 'Dance competition', 'A lot of dedication and training brought the result and we were the champions!', 'https://i.ibb.co/yftmK2m/danca.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('15/06', 'Visit to Cenecista', 'Where we saw dead people and some future medics weren´t there because they were afraid', 'https://i.ibb.co/9bQ6363/cenecista.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('24/08', 'Trip to São Paulo', 'The class spend five days in the biggest city of the country and were present in shows like Altas Horas', 'https://i.ibb.co/kQJyhRj/saopaulo.png');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('14/09', 'Arrival of t-shirts', 'A lot of crying and hugs have marked this day, followed by running away from the classroom and getting hide in the school', 'https://i.ibb.co/3djdHt5/camisetas.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('02/10', 'Awarding the medals of the school games', 'The class got a participation medal, wasn´t the best year in therms of sports', 'https://i.ibb.co/RH7ZhLg/medalha.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('11/10', 'Children´s day', 'Until then, the only time they let us dress up with different costumes and dye our hair', 'https://i.ibb.co/9H2Kc8Q/diadascriancas.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('23/11', 'Photos day', 'We went to Morro da Antena to take our photos and it was one of the best days in the year', 'https://i.ibb.co/GtLcbdM/fotos.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('25/11', 'Day of retreat', 'An other day marked by a lot of crying, with the cards and gifts from our parents! And also, one day in the middle of the nature with a great tranquility', 'https://i.ibb.co/PtfwyGd/retiro.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('26/11', 'Hunting and fishing', 'In the rictim of the end of the year, we did a barbecue, a secret friend and an water war!', 'https://i.ibb.co/7ry2tRx/caca.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('30/11', 'The last day in the school', 'The end of our journey, and also, a new begin in our lives, with the sensation that everything worth it!', 'https://i.ibb.co/hHcqpyQ/ultimodiaaula.jpg');
+INSERT INTO tb_moment (date, title, description, img_Url) VALUES ('08/12', 'The prom night', 'Our celebration night, with a lot of dance, music and unusual entrances!', 'https://i.ibb.co/2hPL3Rn/formatura.jpg');

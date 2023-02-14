@@ -19,6 +19,7 @@ public class Moment implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private String title;
 	@Column(columnDefinition = "TEXT")
 	private String description;
 	private String date;
@@ -27,12 +28,13 @@ public class Moment implements Serializable{
 	
 	public Moment() {}
 
-	public Moment(Long id, String description, String date, String imgUrl) {
+	public Moment(Long id, String title, String description, String date, String imgUrl) {
 		super();
 		this.id = id;
 		this.description = description;
 		this.date = date;
 		this.imgUrl = imgUrl;
+		this.title = title;
 	}
 
 	public Long getId() {
@@ -65,6 +67,15 @@ public class Moment implements Serializable{
 
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
+	}
+	
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	@Override

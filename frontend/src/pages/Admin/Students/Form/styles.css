@@ -1,0 +1,78 @@
+.students-card-form-card{
+    padding: 20px;
+}
+
+.students-card-form-card h1{
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+
+    color: #263238;
+
+    margin-bottom: 30px;
+}
+
+.margin-bottom-30{
+    margin-bottom: 30px;
+}
+
+.students-crud-inputs-container{
+    margin-bottom: 30px;
+}
+
+.students-crud-inputs-left-container{
+    margin-bottom: 30px;
+}
+
+.students-crud-buttons-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.students-crud-buttons{
+    height: 50px;
+    border-radius: 10px;
+    width: 110px;
+    font-weight: bold;
+}
+
+/* combobox -> cada parte é um parâmetro difente, pelo inspecionar dá pra ver */
+.students-crud-select__control{
+    border-radius: 10px !important;
+    font-size: 1em;
+    letter-spacing: -0.015em;
+    color: #263238;
+    height: 50px;
+    background-color: #F2F2F2 !important;
+}
+
+.students-crud-select__placeholder {
+    color: #9E9E9E !important;
+}
+
+/* separador antes da flecha */
+.students-crud-select__indicator-separator{
+    display: none;
+}
+
+@media(min-width:576px){
+    .students-crud-buttons-container{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .students-crud-buttons{
+        margin-left: 30px;
+        width: 270px;
+    }
+
+}
+
+@media(min-width:992px){
+    
+    .students-crud-inputs-left-container{
+        margin-bottom: 0;
+    }
+
+
+}

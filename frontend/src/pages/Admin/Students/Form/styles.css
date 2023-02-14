@@ -1,10 +1,12 @@
+
+
 .students-card-form-card{
     padding: 20px;
 }
 
 .students-card-form-card h1{
-    font-weight: 700;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 25px;
     letter-spacing: -0.015em;
 
     color: #263238;
@@ -74,5 +76,11 @@
         margin-bottom: 0;
     }
 
+}
 
+@media(min-width:1200px){
+
+    .students-crud-container{
+        float: left;
+    }
 }

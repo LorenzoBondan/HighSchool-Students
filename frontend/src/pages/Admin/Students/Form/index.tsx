@@ -24,7 +24,7 @@ const Form = () => {
 
     const { register, handleSubmit, formState: {errors}, setValue, control } = useForm<Student>();
 
-    //trazer as categorias pra povoar o combobox
+    //trazer os cursos pra povoar o combobox
     useEffect(() => {
         requestBackend({url: '/courses'})
             .then(response => {
@@ -32,7 +32,7 @@ const Form = () => {
             })
     }, []);
 
-    //carregar as textboxes com os valores do produto a ser editado
+    //carregar as textboxes com os valores do estudante a ser editado
     useEffect(() => {
         if (isEditing) {
             requestBackend({url:`/students/${studentId}`})
@@ -77,7 +77,7 @@ const Form = () => {
             console.log('SUCESSO', response.data);
             history.push("/admin/students");
 
-            toast.success('Student cadastrado com sucesso!');
+            /*toast.success('Student cadastrado com sucesso!');*/
         })
         .catch(() => {
             toast.error('Erro ao cadastrar o Student.');
@@ -101,6 +101,39 @@ const Form = () => {
                     <div className='row students-crud-inputs-container'>
                         <div className='col-lg-6 students-crud-inputs-left-container'>
 
+                            <div className='margin-bottom-30'>
+                                
+                                <input 
+                                    {...register("name", {
+                                    required: 'Campo obrigatório',
+                                    })}
+                                    type="text"
+                                    className={`form-control base-input ${errors.name ? 'is-invalid' : ''}`}
+                                    placeholder="Name"
+                                    name="name"
+                                />
+                                <div className='invalid-feedback d-block'>{errors.name?.message}</div>
+
+                            </div>
+                            
+                            <div className='margin-bottom-30'>
+                                
+                                <input 
+                                    {...register("nickname", {
+                                    required: 'Campo obrigatório',
+                                    })}
+                                    type="text"
+                                    className={`form-control base-input ${errors.nickname ? 'is-invalid' : ''}`}
+                                    placeholder="Nickname"
+                                    name="nickname"
+                                />
+                                <div className='invalid-feedback d-block'>{errors.nickname?.message}</div>
+
+                            </div>
+
+
+
+
 
                             <div className='margin-bottom-30 checkbox-graduated text-dark'> 
                                 <input 
@@ -114,8 +147,6 @@ const Form = () => {
                                  /> Graduated
 
                             </div>
-
-                            
 
 
                             <div className='margin-bottom-30'>
@@ -145,11 +176,27 @@ const Form = () => {
                             <div className='margin-bottom-30'>
                                 
                                 <input 
+                                    {...register("birthDate", {
+                                    required: 'Campo obrigatório',
+                                    })}
+                                    type="text"
+                                    className={`form-control base-input ${errors.birthDate ? 'is-invalid' : ''}`}
+                                    placeholder="BirthDate"
+                                    name="birthDate"
+                                />
+                                <div className='invalid-feedback d-block'>{errors.birthDate?.message}</div>
+
+
+                            </div>
+
+                            <div className='margin-bottom-30'>
+                                
+                                <input 
                                     {...register("location", {
                                     required: 'Campo obrigatório',
                                     })}
                                     type="text"
-                                    className={`form-control base-input ${errors.name ? 'is-invalid' : ''}`}
+                                    className={`form-control base-input ${errors.location ? 'is-invalid' : ''}`}
                                     placeholder="Location"
                                     name="location"
                                 />

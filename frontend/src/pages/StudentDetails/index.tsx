@@ -91,7 +91,7 @@ function StudentDetails(){
                         </Link>
                     )}
 
-                    { parseInt(studentId) < 30 && (
+                    { parseInt(studentId) < 32 && (
                     <Link to={`/students/${(parseInt(studentId) + 1).toString()}`}>
                         <div className='gonext-container'>
                             <h6>NEXT</h6>

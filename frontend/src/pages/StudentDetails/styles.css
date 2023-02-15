@@ -84,14 +84,14 @@
 .description-container h2 {
     color: #9E9E9E;
     letter-spacing: -0.015em;
-    font-size: 0.8em;
+    font-size: 1em;
     margin-bottom: 20px;
 }
 
 .description-container p {
     color: #9E9E9E;
     letter-spacing: -0.015em;
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 .contact-container {

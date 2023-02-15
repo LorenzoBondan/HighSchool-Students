@@ -4,7 +4,7 @@ import background from 'assets/images/turma.jpg';
 import logoTerceirao from 'assets/images/logo-terceirao.png';
 import logoSagrado from 'assets/images/logo-sagrado.png';
 
-import { FaUsers, FaTrophy, FaGraduationCap } from 'react-icons/fa';
+import { FaUsers, FaTrophy } from 'react-icons/fa';
 import { BsFillJournalBookmarkFill  } from 'react-icons/bs';
 import { TfiAlarmClock } from 'react-icons/tfi';
 import { MdAdminPanelSettings } from 'react-icons/md';

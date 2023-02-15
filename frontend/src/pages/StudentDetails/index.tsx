@@ -9,8 +9,12 @@ import Uncheck from 'assets/images/unchecked.png';
 import './styles.css';
 import StudentDetailsLoader from './StudentDetailsLoader';
 import Reviews from 'pages/Reviews';
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 
 import { TfiArrowCircleLeft } from 'react-icons/tfi';
+import { RxInstagramLogo } from 'react-icons/rx';
+import { ImWhatsapp } from 'react-icons/im';
+import { BsFacebook } from 'react-icons/bs';
 
 type UrlParams = {
     studentId: string;
@@ -75,7 +79,10 @@ function StudentDetails(){
 
 
     return(
+        
         <div className='student-details-container'>
+
+
 
             <div className='base-card student-details-card'>
             {isLoading ? <StudentDetailsLoader/> : 
@@ -160,9 +167,23 @@ function StudentDetails(){
                         </div>
                         
                         <div className='contact-container-imgs' >
-                                <a href={student?.contact.phone}><img src="https://cdn-icons-png.flaticon.com/512/1384/1384055.png" alt="whatsapp" /></a>
-                                <a href={student?.contact.instagram}><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram" /></a> 
-                                <a href={student?.contact.facebook}><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="facebook" /></a>  
+                            <a href={student?.contact.phone}>
+                                <button style={{ backgroundColor: '#25d366', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
+                                    <i style={{color:"white"}}><ImWhatsapp/></i>
+                                </button>
+                            </a>
+
+                            <a href={student?.contact.instagram}>
+                                <button style={{ backgroundColor: '#ac2bac', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
+                                    <i style={{color:"white"}}><RxInstagramLogo/></i>
+                                </button>
+                            </a>
+
+                            <a href={student?.contact.facebook}>
+                                <button style={{ backgroundColor: '#3b5998', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
+                                    <i style={{color:"white"}}><BsFacebook/></i>
+                                </button>
+                            </a>
                         </div>
                         
                     </div>
@@ -190,6 +211,8 @@ function StudentDetails(){
             <div className='student-details-reviews-container'>
                 <Reviews studentUsername={student?.nickname}/>
             </div>
+
+            
             
         </div>
         

@@ -9,6 +9,7 @@ import { Student } from 'types/student';
 import { SpringPage } from 'types/vendor/spring';
 import { requestBackend } from 'util/requests';
 import CardLoader from './CardLoader';
+import { FaUsers } from 'react-icons/fa';
 import './styles.css';
 
 type ControlComponentsData = {
@@ -69,7 +70,9 @@ function Students(){
         <div className="container my-4 catalog-container">
 
           <div className="catalog-title-container">
-            <h1>All Students from 3º1 class</h1>
+            <div className='students-page-logo'>
+              <FaUsers/>
+            </div>
 
             <div className='students-search-bar-container'>
               <StudentFilter onSubmitFilter={handleSubmitFilter} />

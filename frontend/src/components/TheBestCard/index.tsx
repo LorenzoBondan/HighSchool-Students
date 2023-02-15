@@ -1,4 +1,3 @@
-
 import { Moment } from 'types/Moment';
 import './styles.css';
 

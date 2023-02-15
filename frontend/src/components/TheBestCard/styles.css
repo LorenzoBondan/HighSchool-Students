@@ -1,6 +1,5 @@
 .the-best-card-container{
     padding: 15px;
-    color: black;
     margin-bottom: 40px;
     padding-bottom: 20px;
 }
@@ -12,11 +11,19 @@
     align-items: flex-start;
 }
 
+.the-best-card-top-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .the-best-card-content-container h1{
     color: #A00909;
-    width: 100%;
     border-bottom: 1px silver solid;
-    margin-bottom: 20px;
+    margin: 10px 0 20px 0;
+    width: 100%;
 }
 
 .the-best-card-content-container p{
@@ -24,8 +31,9 @@
     width: 100%;
     border: 1px silver solid;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0px 0px 15px silver;
+
 }
 
 .the-best-card-image-container h2{
@@ -42,4 +50,42 @@
     border-radius: 10px;
     border: 2px solid #A00909;
     margin-bottom: 10px;
+}
+
+@media(min-width:576px){
+    .the-best-card-container{
+        padding: 20px;
+    }
+    
+    .the-best-card-content-container h1{
+        margin-bottom: 20px;
+    }
+
+    .the-best-card-content-container p{
+        margin-bottom: 20px;
+    }
+}
+
+@media(min-width:768px){
+    .the-best-card-content-container p{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+}
+
+@media(min-width:992px){
+    .the-best-card-container{
+        padding: 30px 40px;
+        max-width: 900px;
+    }
+
+    .the-best-card-content-container h1{
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .the-best-card-content-container p{
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
 }

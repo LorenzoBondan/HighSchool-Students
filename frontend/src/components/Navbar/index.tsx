@@ -9,6 +9,10 @@ import { getTokenData, isAuthenticated } from 'util/auth';
 import { removeAuthData } from 'util/storage';
 import history from 'util/history';
 
+import { HiHome } from 'react-icons/hi';
+import { FaUsers } from 'react-icons/fa';
+import { MdAdminPanelSettings } from 'react-icons/md';
+
 import './styles.css';
 
 function Navbar() {
@@ -54,7 +58,7 @@ function Navbar() {
                         <img src={logoTerceirao} alt="logo" />
                     </div>
                     
-                    <h4>High School Students</h4>
+                    <h4>High School Class</h4>
                 </Link>
 
                 <button
@@ -73,15 +77,35 @@ function Navbar() {
                     <ul className='navbar-nav offset-md-2 main-menu'>
             
                         <li>
-                            <NavLink to="/" activeClassName='active' exact>HOME</NavLink>
+                            <NavLink to="/" activeClassName='active' exact>
+                                <i style={{
+                                    marginRight:"2px",
+                                }}>
+                                    <HiHome/>
+                                </i>
+                                HOME
+                                </NavLink>
                         </li>
 
                         <li>
-                            <NavLink to="/students" activeClassName='active'>STUDENTS</NavLink>
+                            <NavLink to="/students" activeClassName='active'>
+                                <i style={{
+                                    marginRight:"4px",
+                                }}>
+                                    <FaUsers/>
+                                </i>
+                                STUDENTS
+                                </NavLink>
                         </li>
 
                         <li>
-                            <NavLink to="/admin" activeClassName='active'>ADMIN</NavLink>
+                            <NavLink to="/admin" activeClassName='active'>
+                                <i style={{
+                                    marginRight:"2px",
+                                }}>
+                                    <MdAdminPanelSettings/>
+                                </i>
+                                ADMIN</NavLink>
                         </li>
 
                     </ul>

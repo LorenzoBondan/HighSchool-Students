@@ -249,7 +249,7 @@ INSERT INTO tb_diary (year, date, description) VALUES (2016, '26/10', 'Johny ace
 INSERT INTO tb_diary (year, date, description) VALUES (2016, '27/10', 'CJmarcao@gmail.com');
 INSERT INTO tb_diary (year, date, description) VALUES (2016, '28/10', 'Turma escondida na educ física, alguns ficando até o final e passando trote pra professora mandando a bruna descer pra ir embora');
 INSERT INTO tb_diary (year, date, description) VALUES (2016, '09/11', 'Tognon: O rato come a cobra. -Thomaz: e a mulher come o homem');
-INSERT INTO tb_diary (year, date, description) VALUES (2016, '21/11', 'Manequim Challange');
+INSERT INTO tb_diary (year, date, description) VALUES (2016, '21/11', 'Manequim Challenge');
 INSERT INTO tb_diary (year, date, description) VALUES (2016, '23/11', 'Lorenzo e bauce dizendo que o ranzan ia chegar e pedir de quem a gente tava falando e ele chegou e pediu');
 INSERT INTO tb_diary (year, date, description) VALUES (2016, '23/11', 'FOTOS NO MORRO DA ANTENA: MELHOR DIA DO ANO');
 INSERT INTO tb_diary (year, date, description) VALUES (2016, '24/11', 'Escondendo champanhe na mochila do rizzardo e estourando depois da aula');

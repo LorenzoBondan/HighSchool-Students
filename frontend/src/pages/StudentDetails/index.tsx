@@ -1,4 +1,3 @@
-import {ReactComponent as ArrowIcon} from 'assets/images/Seta.svg';
 import locationIcon from 'assets/images/location-icon.png';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -10,6 +9,8 @@ import Uncheck from 'assets/images/unchecked.png';
 import './styles.css';
 import StudentDetailsLoader from './StudentDetailsLoader';
 import Reviews from 'pages/Reviews';
+
+import { TfiArrowCircleLeft } from 'react-icons/tfi';
 
 type UrlParams = {
     studentId: string;
@@ -84,23 +85,20 @@ function StudentDetails(){
 
                     { parseInt(studentId) > 1 && (
                         <Link to={`/students/${(parseInt(studentId) - 1).toString()}`}>
-                            <div className='goback-container'>
-                                <ArrowIcon />
-                                <h6>PREVIOUS</h6>
+                            <div className='gonext-container'>
+                                <i><TfiArrowCircleLeft/></i>
                             </div>
                         </Link>
                     )}
 
                     { parseInt(studentId) < 32 && (
-                    <Link to={`/students/${(parseInt(studentId) + 1).toString()}`}>
-                        <div className='gonext-container'>
-                            <h6>NEXT</h6>
-                            <ArrowIcon className='next-arrow' />
-                        </div>
-                    </Link>
+                        <Link to={`/students/${(parseInt(studentId) + 1).toString()}`}>
+                            <div className='gonext-container' style={{transform:"rotate(-180deg)"}}>
+                                <i><TfiArrowCircleLeft/></i>
+                            </div>
+                        </Link>
                     )}
                 </div>
-                
                 
                 <div className='row'>
                     <div className='col-xl-6'>
@@ -180,6 +178,8 @@ function StudentDetails(){
                         </div>
                     </div>
                 </div>
+
+
                  
             </div>
 

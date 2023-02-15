@@ -3,62 +3,25 @@
     font-size: 20px;
 }
 
+.student-details-card {
+    padding: 0px 10px 10px 10px;
+}
+
 .student-details-buttons-container{
     display: flex;
     justify-content: space-between;
-}
-
-.student-details-card {
-    padding: 10px;
-}
-
-.student-details-card a {
-    text-decoration: none;
-}
-
-.goback-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.goback-container svg {
-    color: #407BFF;
-    transform: rotate(-180deg);
-    margin-left: 5px;
-}
-
-.goback-container h6 {
-    margin-left: 10px;
-    letter-spacing: -0.035em;
-    font-size: 1.20em;
-    color: #407BFF;
-    
-    margin-bottom: 0;
-    text-decoration: none;
 }
 
 .gonext-container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .gonext-container svg {
-    color: #407BFF;
-    margin-left: 5px;
-}
-
-.gonext-container h6 {
-    margin-right: 5px;
-    letter-spacing: -0.035em;
-    font-size: 1.20em;
-    color: #407BFF;
-    
-    margin-bottom: 0;
-    text-decoration: none;
+    color: #A00909;
 }
 
 .student-details-img-container {
@@ -206,7 +169,7 @@
 
     .student-details-card {
         margin: 20px;
-        padding: 20px;
+        padding: 0 20px 20px 20px 20px;
     }
 
     .current-location-container-imgs img{
@@ -221,7 +184,7 @@
     }
 
     .student-details-card {
-        padding: 40px;
+        padding: 0 40px 40px 40px; 
         margin: 0px 200px 0 200px;
     }
 
@@ -239,7 +202,6 @@
     }
 
     .student-details-card {
-        padding: 40px;
         margin: 0px 100px 0 100px;
     }
 
@@ -253,7 +215,6 @@
 @media(min-width : 1400px){
 
     .student-details-card {
-        padding: 40px;
         margin: 0px 200px 0 200px;
     }
 

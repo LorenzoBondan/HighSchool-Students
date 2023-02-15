@@ -4,7 +4,7 @@ import background from 'assets/images/turma.jpg';
 import logoTerceirao from 'assets/images/logo-terceirao.png';
 import logoSagrado from 'assets/images/logo-sagrado.png';
 
-import { FaUsers, FaTrophy } from 'react-icons/fa';
+import { FaUsers, FaTrophy, FaGraduationCap } from 'react-icons/fa';
 import { BsFillJournalBookmarkFill  } from 'react-icons/bs';
 import { TfiAlarmClock } from 'react-icons/tfi';
 import { MdAdminPanelSettings } from 'react-icons/md';
@@ -19,7 +19,9 @@ function Home() {
                                                             }}>
                                                                 
                 <div className="content-container">
-                    <h1>Terceirão 2016</h1>
+                    <div className='content-container-logo'>
+                        <img src={logoTerceirao} alt="" />
+                    </div>
                     <p>A summary of the class of 1999</p>
 
                     <Link to="/students">
@@ -34,7 +36,7 @@ function Home() {
                     </Link>
 
                     <Link to="/thebest">
-                        <button className='btn btn-primary'>
+                        <button className='btn btn-primary btn-content-container'>
                         <i style={{
                                 marginRight:"8px",
                                 }}>
@@ -80,7 +82,6 @@ function Home() {
 
                 <div className="image-container">
                     <img src={logoSagrado} alt="logosagrado" />
-                    <img src={logoTerceirao} alt="logo" />
                 </div>
 
             </div>

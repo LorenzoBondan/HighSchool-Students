@@ -70,7 +70,7 @@ function Students(){
         <div className="container my-4 catalog-container">
 
           <div className="catalog-title-container">
-            <div className='students-page-logo'>
+            <div className='students-page-logo' style={{borderRadius:"50%", border:"2px solid silver", marginRight:"10px", background:"white"}}>
               <FaUsers/>
             </div>
 

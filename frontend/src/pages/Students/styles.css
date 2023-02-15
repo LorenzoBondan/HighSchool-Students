@@ -7,9 +7,13 @@
     text-align: center;
 }
 
+.students-page-logo{
+    padding: 5px;
+}
+
 .students-page-logo svg{
-    height: 40px;
-    width: 90px;
+    height: 55px;
+    width: 55px;
     color: #A00909;
 }
 

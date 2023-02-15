@@ -9,7 +9,6 @@ import Uncheck from 'assets/images/unchecked.png';
 import './styles.css';
 import StudentDetailsLoader from './StudentDetailsLoader';
 import Reviews from 'pages/Reviews';
-import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 
 import { TfiArrowCircleLeft } from 'react-icons/tfi';
 import { RxInstagramLogo } from 'react-icons/rx';
@@ -29,7 +28,6 @@ function StudentDetails(){
         return Math.trunc(years).toString();
     }
 
-    
     const { studentId } = useParams<UrlParams>();
 
     const [student, setStudent] = useState<Student>();
@@ -77,12 +75,8 @@ function StudentDetails(){
 
     const getCity = currentCity(student?.location);
 
-
     return(
-        
         <div className='student-details-container'>
-
-
 
             <div className='base-card student-details-card'>
             {isLoading ? <StudentDetailsLoader/> : 
@@ -115,7 +109,6 @@ function StudentDetails(){
 
                         <div className='card-bottom-container'>
                         <>
-
                             <h3>{student?.nickname}</h3>
 
                             <h6>Name: {student?.name}</h6>
@@ -126,9 +119,6 @@ function StudentDetails(){
                                 <h6>{student?.birthDate.substring(0,10)}</h6>
                             </div>
 
-                            
-                            
-                            
                             <div className='graduated-zone'>
                                 {student?.graduated ? (
                                 <>
@@ -142,7 +132,6 @@ function StudentDetails(){
                                 </>
                                 )}
                             </div>
-                
 
                             <div className='courses-zone'>
                                 <h6>Courses: </h6>
@@ -150,7 +139,6 @@ function StudentDetails(){
                                     {student?.courses.map(course => (<h5>{course.name}</h5>))}
                                 </div>
                             </div>
-
                         </>
                     </div>
                 </div>
@@ -199,9 +187,7 @@ function StudentDetails(){
                         </div>
                     </div>
                 </div>
-
-
-                 
+  
             </div>
 
             </>
@@ -212,11 +198,7 @@ function StudentDetails(){
                 <Reviews studentUsername={student?.nickname}/>
             </div>
 
-            
-            
         </div>
-        
-        
     );
 }
 

@@ -1,4 +1,5 @@
 import { Moment } from 'types/Moment';
+import { GoCalendar } from 'react-icons/go';
 import './styles.css';
 
 type Props = {
@@ -6,11 +7,13 @@ type Props = {
 }
 
 const TheBestCard = ({moment} : Props) => {
+
     return(
         <div className='base-card the-best-card-container'>
             
             <div className='the-best-card-content-container'>
-                <h1>{moment.title}</h1>
+                
+                <h1><i style={{marginRight:"10px"}}><GoCalendar/></i>{moment.title}</h1>
                 <p>{moment.description}</p>
                 
             </div>

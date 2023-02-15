@@ -25,6 +25,10 @@ const TheBest = () => {
           });
       }, []);
 
+      const handleBackToTheTop = () => {
+        window.scrollTo(0, 0);
+      }
+
     return(
         <div className='the-best-page-container'>
 
@@ -37,6 +41,8 @@ const TheBest = () => {
                 ))}
                 </>
             </div>
+
+            <button onClick={handleBackToTheTop} className="btn btn-primary">Back to the top</button>
             
         </div>
 

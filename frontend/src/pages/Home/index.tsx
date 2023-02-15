@@ -31,7 +31,6 @@ function Home() {
                             </i>
                             Students
                         </button>
-                        
                     </Link>
 
                     <Link to="/thebest">
@@ -77,19 +76,14 @@ function Home() {
                         </button>
                     </Link>
 
-
                 </div>
 
-                
                 <div className="image-container">
                     <img src={logoSagrado} alt="logosagrado" />
                     <img src={logoTerceirao} alt="logo" />
                 </div>
 
-                
-
             </div>
-            
         </>
     );
 }

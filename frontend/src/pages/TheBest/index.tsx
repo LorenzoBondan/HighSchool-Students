@@ -27,16 +27,15 @@ const TheBest = () => {
 
     return(
         <div className='the-best-page-container'>
-            <div className='the-best-page-top-container'>
-                <h1>The best moments of the year</h1>
-            </div>
 
             <div className='the-best-page-content-container'>
+                <>
                 {page?.content.map((moment) => (
-                    <div>
+                    <div key={moment.id}>
                         <TheBestCard moment={moment}/>
                     </div>
                 ))}
+                </>
             </div>
             
         </div>

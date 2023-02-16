@@ -1,11 +1,20 @@
-import React from "react";
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
-} from "mdb-react-ui-kit";
+import { MDBFooter, MDBContainer, MDBRow, MDBCol} from "mdb-react-ui-kit";
+
+import { FaJava } from 'react-icons/fa';
+import { SiSpring } from 'react-icons/si';
+import { SiPostgresql } from 'react-icons/si';
+
+import { FaReact } from 'react-icons/fa';
+import { DiCss3 } from 'react-icons/di';
+import { SiTypescript } from 'react-icons/si';
+
+import { AiFillHome } from 'react-icons/ai';
+import { MdEmail } from 'react-icons/md';
+import { AiFillPhone } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
+
+import { BiDownload } from 'react-icons/bi';
+
 import "./styles.css";
 
 function Footer() {
@@ -30,38 +39,50 @@ function Footer() {
               <h6 className="text-uppercase fw-bold mb-4 mt-1">
                 Backend used Languages
               </h6>
-              <p>Java</p>
-              <p>Spring</p>
-              <p>SQL</p>
+              <p><i style={{marginRight:"8px"}}><FaJava/></i> Java</p>
+              <p><i style={{marginRight:"8px"}}><SiSpring/></i> Spring</p>
+              <p><i style={{marginRight:"8px"}}><SiPostgresql/></i>SQL</p>
             </MDBCol>
 
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-1">
               <h6 className="text-uppercase fw-bold mb-4 mt-1">
                 Frontend used Languages
               </h6>
-              <p>React</p>
-              <p>CSS</p>
-              <p>Typescript</p>
+              <p><i style={{marginRight:"8px"}}><FaReact/></i> React</p>
+              <p><i style={{marginRight:"8px"}}><DiCss3/></i> CSS</p>
+              <p><i style={{marginRight:"8px"}}><SiTypescript/></i> Typescript</p>
             </MDBCol>
 
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-md-0 mb-1">
               <h6 className="text-uppercase fw-bold mb-4 mt-1">Contact</h6>
               <p>
-                <MDBIcon icon="home" className="" />
+                <i style={{marginRight:"8px"}}><AiFillHome/></i>
                 Bento Gonçalves, BR
               </p>
               <p>
-                <MDBIcon icon="envelope" className="" />
+                <i style={{marginRight:"8px"}}><MdEmail/></i>
                 Lbbondan@gmail.com
               </p>
               <p>
-                <MDBIcon icon="phone" className="" /> +55 54 99657-0555
+                <i style={{marginRight:"8px"}}><AiFillPhone/></i> 
+                +55 54 99657-0555
               </p>
               <p className="github-logo">
-                Github
-                <a href="https://github.com/LorenzoBondan"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github" /></a>
+                  <a href="https://github.com/LorenzoBondan">
+                    <p style={{marginLeft:"0"}}>
+                      <i style={{marginRight:"8px"}}>
+                        <AiFillGithub/>
+                      </i>
+                      Github
+                    </p>
+                  </a>
               </p>
             </MDBCol>
+          </MDBRow>
+          <MDBRow>
+            <div className="footer-download-zone">
+              <p><i style={{marginRight:"2px"}}><BiDownload/></i> See the source code and download the project here:</p><a href="https://github.com/LorenzoBondan/HighSchool-Students"><p style={{color:"#A00909"}}>https://github.com/LorenzoBondan/HighSchool-Students</p></a>
+            </div>
           </MDBRow>
         </MDBContainer>
       </section>

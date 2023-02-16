@@ -64,7 +64,7 @@ const List = () => {
 
             <Link to="/admin/students/create">
                 <button className="btn btn-primary btn-crud-add">
-                    ADICIONAR
+                    ADD
                 </button>
             </Link>
             

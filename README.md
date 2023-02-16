@@ -7,19 +7,19 @@ This is a summary of the author's high school class.
 ## Layout desktop
 
 #### Home page
-![image](https://user-images.githubusercontent.com/105743965/219235354-b632782c-c047-4077-a9e7-51f59d452ad0.png)
+![image](https://user-images.githubusercontent.com/105743965/219481036-54df731c-5ce8-4fe0-9488-9a550a423519.png)
 #### Student's page
-![image](https://user-images.githubusercontent.com/105743965/219235974-c1ce0b6f-a9a9-4b78-a545-8ff570084b0b.png)
+![image](https://user-images.githubusercontent.com/105743965/219481235-82aca75f-0268-4bc3-b05b-311e568fdae4.png)
 #### Student details page
-![image](https://user-images.githubusercontent.com/105743965/219236694-59d78285-a09c-4694-95c2-3088913580f0.png)
+![image](https://user-images.githubusercontent.com/105743965/219481375-ebefca3a-fc5c-4e13-976c-de9eac83bd16.png)
 #### Insert review in student details page
 ![image](https://user-images.githubusercontent.com/105743965/219236963-0f92788b-1c9e-4fa1-ba4b-0d72c64d5e87.png)
 #### Page of the best moments in the year 
-![image](https://user-images.githubusercontent.com/105743965/219237391-3fbef03f-80ff-4d53-bb27-d4f91581aeeb.png)
+![image](https://user-images.githubusercontent.com/105743965/219481608-e693592a-b823-4d51-9fcb-7135c9ee7d41.png)
 #### Live countdown page
 ![image](https://user-images.githubusercontent.com/105743965/219237613-6a7855ac-755b-4514-8824-1598ae799e8a.png)
 #### Students CRUD page
-![image](https://user-images.githubusercontent.com/105743965/219237901-448a2c71-20d6-45b7-8c44-94e07c73e7a8.png)
+![image](https://user-images.githubusercontent.com/105743965/219481925-0cdacba1-7e25-4e68-8d3f-329555c45317.png)
 #### Login form
 ![image](https://user-images.githubusercontent.com/105743965/219239070-01269f97-f9d1-41cf-b8d6-4189464f2688.png)
 

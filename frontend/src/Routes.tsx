@@ -11,6 +11,7 @@ import Reviews from 'pages/Reviews';
 import CountDown from 'pages/CountDown';
 import DiaryPage from 'pages/Diary';
 import TheBest from 'pages/TheBest';
+import GraduationVideo from 'pages/GraduationVideo';
 
 
 const Routes = () => (
@@ -56,6 +57,10 @@ const Routes = () => (
 
         <Route path="/thebest" exact>
           <TheBest/>
+        </Route>
+
+        <Route path="/graduationvideo" exact>
+          <GraduationVideo/>
         </Route>
 
   

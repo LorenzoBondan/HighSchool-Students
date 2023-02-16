@@ -1,0 +1,55 @@
+.graduation-video-container{
+    margin: 10px;
+}
+
+.graduation-video-card{
+    padding: 10px;
+}
+
+.graduation-video-card iframe{
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 5px 5px 15px black;
+}
+
+@media(min-width:576px){
+    .graduation-video-container{
+        margin: 20px;
+    }
+    
+    .graduation-video-card{
+        padding: 20px;
+    }
+
+    .graduation-video-card iframe{
+        height: 400px;
+    }
+}
+
+@media(min-width:768px){
+    .graduation-video-container{
+        margin: 40px;
+    }
+    
+    .graduation-video-card{
+        padding: 30px;
+    }
+
+    .graduation-video-card iframe{
+        height: 500px;
+    }
+}
+
+@media(min-width:1200px){
+    .graduation-video-container{
+        margin: 40px 80px;
+    }
+    
+    .graduation-video-card{
+        padding: 40px;
+    }
+
+    .graduation-video-card iframe{
+        height: 720px;
+    }
+}

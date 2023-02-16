@@ -8,6 +8,7 @@ import { FaUsers, FaTrophy } from 'react-icons/fa';
 import { BsFillJournalBookmarkFill  } from 'react-icons/bs';
 import { TfiAlarmClock } from 'react-icons/tfi';
 import { MdAdminPanelSettings } from 'react-icons/md';
+import { AiFillYoutube } from 'react-icons/ai';
 
 function Home() {
     return (
@@ -64,6 +65,17 @@ function Home() {
                                     <TfiAlarmClock/>
                             </i>
                             Countdown to Isabel's party
+                        </button>
+                    </Link>
+
+                    <Link to="/graduationvideo">
+                        <button className='btn btn-primary'>
+                            <i style={{
+                                marginRight:"8px",
+                                }}>
+                                    <AiFillYoutube/>
+                            </i>
+                            Graduation Video
                         </button>
                     </Link>
 

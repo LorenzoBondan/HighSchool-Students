@@ -5,6 +5,7 @@
 
 .student-details-card {
     padding: 0px 10px 10px 10px;
+    background: linear-gradient(360deg, #E6E3D5, #FFF) !important;
 }
 
 .student-details-buttons-container{
@@ -45,16 +46,18 @@
 }
 
 .description-container h2 {
-    color: #9E9E9E;
+    color: #A00909;
     letter-spacing: -0.015em;
     font-size: 1em;
     margin-bottom: 20px;
+    text-decoration: underline;
 }
 
 .description-container p {
     color: #9E9E9E;
     letter-spacing: -0.015em;
-    font-size: 0.9em;
+    font-size: 1em;
+    font-family: 'Caveat';
 }
 
 .contact-container {
@@ -159,8 +162,9 @@
 @media(min-width : 576px){
 
     .student-details-img-container img {
-        max-height: 400px;
-        width: auto;
+        height: 400px;
+        width: 400px;
+
     }
 
     .student-details-container{
@@ -199,6 +203,10 @@
     /* borda até embaixo */
     .description-container {
         min-height: 312px;
+    }
+
+    .description-container P{
+        font-size: 1.1em;
     }
 
     .student-details-card {

@@ -1,5 +1,5 @@
 .diary-card-container{
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
     width: 260px;
 }
@@ -9,8 +9,8 @@
 }
 
 .diary-card-description-container p{
-    font-family: 'Cabin';
-    font-size: 18px;
+    font-family: 'Caveat';
+    font-size: 24px;
     margin-bottom: 5px;
 }
 
@@ -36,10 +36,6 @@
         padding: 20px;
         width: 450px;
     }
-
-    .diary-card-description-container p{
-        font-size: 20px;
-    }
     
     .diary-card-date-container h2{
         font-size: 20px;
@@ -52,7 +48,7 @@
     }
 
     .diary-card-description-container p{
-        font-size: 22px;
+        font-size: 26px;
     }
     
     .diary-card-date-container h2{

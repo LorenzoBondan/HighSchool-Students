@@ -22,7 +22,7 @@ function Home() {
                     <div className='content-container-logo'>
                         <img src={logoTerceirao} alt="" />
                     </div>
-                    <p>A summary of the class of 1999</p>
+                    <p>The Class of 1999</p>
 
                     <Link to="/students">
                         <button className='btn btn-primary'>

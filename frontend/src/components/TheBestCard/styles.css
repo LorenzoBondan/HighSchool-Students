@@ -26,18 +26,19 @@
     width: 100%;
 }
 
-.the-best-card-content-container p{
-    font-size: 14px;
-    color: #9E9E9E;
+.the-best-card-description-container p{
+    font-size: 20px;
+    color: black;
     width: 100%;
     border: 1px silver solid;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 0px 15px silver;
-    font-family: 'Raleway';
+    font-family: 'Caveat';
+    text-decoration: underline;
 }
 
-.the-best-card-image-container h2{
+.the-best-card-description-container h2{
     color: #080E1E;
     width: 100%;
     text-align: right;
@@ -50,7 +51,7 @@
     width: 100%;
     border-radius: 10px;
     border: 2px solid #A00909;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 @media(min-width:576px){
@@ -62,16 +63,14 @@
         margin-bottom: 20px;
     }
 
-    .the-best-card-content-container p{
-        margin-bottom: 20px;
-        font-size: 18px;
+    .the-best-card-description-container p{
+        font-size: 22px;
     }
 }
 
 @media(min-width:768px){
-    .the-best-card-content-container p{
-        font-size: 20px;
-        margin-bottom: 25px;
+    .the-best-card-description-container p{
+        font-size: 24px;
     }
 }
 
@@ -86,8 +85,7 @@
         margin-bottom: 30px;
     }
     
-    .the-best-card-content-container p{
-        margin-bottom: 40px;
+    .the-best-card-description-container p{
         padding: 25px;
     }
 }

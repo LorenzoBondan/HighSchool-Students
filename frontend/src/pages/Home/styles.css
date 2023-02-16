@@ -39,6 +39,8 @@
     font-size: 0.45em;
     font-family: 'Courier Prime';
     text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .content-container button {

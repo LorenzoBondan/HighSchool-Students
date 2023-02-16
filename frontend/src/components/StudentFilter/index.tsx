@@ -24,7 +24,7 @@ const StudentFilter = ( {onSubmitFilter} : Props) => {
     
     //trazer os cursos pra povoar o combobox
     useEffect(() => {
-        requestBackend({url: '/courses'})
+        requestBackend({url: '/courses', params: {page: 0, size: 50, },})
             .then(response => {
                 setSelectCourses(response.data.content)
             })

@@ -54,7 +54,7 @@ function StudentDetails(){
         if(city === "Bento Gonçalves"){
             cityImgs.push("https://a.cdn-hotels.com/gdcs/production190/d1867/ac8d42ca-cbb0-412c-80e8-21508dc41219.jpg");
             cityImgs.push("https://blog.123milhas.com/wp-content/uploads/2021/11/BANNER-PRINCIPAL-1920x1077-28.jpg");
-            cityImgs.push("https://vidasemparedes.com.br/wp-content/uploads/2020/06/bentogoncalvesrs-vidasemparedes-1.jpg");
+            cityImgs.push("https://www.tasteandfly.com.br/wp-content/uploads/2019/07/HOTEL-SPA-DO-VINHO1.jpg");
         } 
         else if(city === "Caxias do Sul") {
             cityImgs.push("https://gcpstorage.caxias.rs.gov.br/images/2020/06/f38b13be-346b-49a1-ac3c-545963eb36fc_1200.jpg");

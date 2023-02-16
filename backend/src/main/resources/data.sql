@@ -9,8 +9,8 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 
 
-INSERT INTO tb_course (name, area) VALUES ('Mechanical Engineering', 'Exact');
 INSERT INTO tb_course (name, area) VALUES ('Software Engineering', 'Exact');
+INSERT INTO tb_course (name, area) VALUES ('Mechanical Engineering', 'Exact');
 INSERT INTO tb_course (name, area) VALUES ('Civil Engineering', 'Exact');
 INSERT INTO tb_course (name, area) VALUES ('Production Engineering', 'Exact');
 INSERT INTO tb_course (name, area) VALUES ('Energy Engineering', 'Exact');
@@ -30,6 +30,7 @@ INSERT INTO tb_course (name, area) VALUES ('Visual Arts', 'Humans');
 INSERT INTO tb_course (name, area) VALUES ('Literature', 'Humans');
 INSERT INTO tb_course (name, area) VALUES ('Business', 'Humans');
 INSERT INTO tb_course (name, area) VALUES ('Design', 'Humans');
+INSERT INTO tb_course (name, area) VALUES ('Marketing', 'Humans');
 INSERT INTO tb_course (name, area) VALUES ('-', 'Humans');
 
 
@@ -65,11 +66,12 @@ INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99168-20
 INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99612-1643', 'https://www.instagram.com/viniciusguidolin/', 'https://www.facebook.com/vini.guido.56');
 INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99999-9999', 'https://www.instagram.com/iuri_engel/', 'https://www.facebook.com');
 INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99999-9999', 'https://www.instagram.com/raphapompermayer/', 'https://www.facebook.com');
+INSERT INTO tb_contact (phone, instagram, facebook) VALUES ('tel:+55(54)99999-9999', 'https://www.instagram.com/p/ChQg7UkJObx/', 'https://www.facebook.com/francine.perego');
 
 
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Ana Paula Reginatto Tubiana', 'Ana', 1, 'Porto Alegre', 'Always with a great performance and high QI level, and her way of being mad and laugh at the same time', TIMESTAMP WITH TIME ZONE '1999-06-04', false, 'https://i.ibb.co/wdYhvQt/ana.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Augusto Petroli', 'Guto', 2, 'Bento Gonçalves', 'Always making our meets happier with his tambourine', TIMESTAMP WITH TIME ZONE '1999-06-27', true, 'https://i.ibb.co/k2jL7Sz/augusto.jpg');
-INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Carla Dambroz Pelegrin', 'Carla', 3, 'Porto Alegre', 'Wonderful creativity and alternative humor sense', TIMESTAMP WITH TIME ZONE '1999-01-19', false, 'https://i.ibb.co/9vQ9D9V/carla.jpg');
+INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Carla Dambroz Pelegrin', 'Carla', 3, 'Florianópolis', 'Wonderful creativity and alternative humor sense', TIMESTAMP WITH TIME ZONE '1999-01-19', false, 'https://i.ibb.co/9vQ9D9V/carla.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Caroline Carraro', 'Carol', 4, 'Porto Alegre', 'Her way to call her friends of falsiane', TIMESTAMP WITH TIME ZONE '1999-11-04', false, 'https://i.ibb.co/km0gqsy/caroline.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Eduarda Pastorello', 'Duda', 5, 'Caxias do Sul', 'Always being mad and screaming: SILENCEEEE', TIMESTAMP WITH TIME ZONE '1999-12-13', false, 'https://i.ibb.co/Ny2jZRX/eduarda-pastorello.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Eduarda Zorzi Trevisan', 'Zorzi', 6, 'Bento Gonçalves', 'Her love for horses', TIMESTAMP WITH TIME ZONE '1999-10-29', true, 'https://i.ibb.co/vxxyF24/eduarda-zorzi.jpg');
@@ -78,6 +80,7 @@ INSERT INTO tb_student (name, nickname, contact_id, location, description, birth
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Emilly Vitória de Oliveira Freitas', 'Emilly', 9, 'Bento Gonçalves', 'Explosive humor sense like a bomb', TIMESTAMP WITH TIME ZONE '1999-03-25', true, 'https://i.ibb.co/YXjL08r/emilly.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Felipe Molinari Ranzan', 'Ranzan', 10, 'Porto Alegre', 'Also knew as Master Ranzan with his innocence', TIMESTAMP WITH TIME ZONE '1999-01-26', false, 'https://i.ibb.co/WkkWfFH/felipe-ranzan.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Felipe Rizzardo', 'Zardo', 11, 'Bento Gonçalves', 'His way to dont take nothing seriously', TIMESTAMP WITH TIME ZONE '1999-05-15', false, 'https://i.ibb.co/br2vnxV/felipe-rizzardo.jpg');
+INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Francine de Lima Pérego', 'Francine', 33, 'Bento Gonçalves', 'Our fellow that spend many years with us', TIMESTAMP WITH TIME ZONE '1999-10-31', true, 'https://i.ibb.co/Xsq9CMw/francine.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Gabriela Andreolla Locatelli', 'Gabi', 12, 'Bento Gonçalves', 'Perfectionist, fascinated for cleaning and dedicated', TIMESTAMP WITH TIME ZONE '1999-03-03', true, 'https://i.ibb.co/zVYZK9q/gabriela-locatelli.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Gabriela Ferronato', 'Ferronato', 13, 'Bento Gonçalves', 'Justifiable obsession with Xis Bocão', TIMESTAMP WITH TIME ZONE '1998-12-04', false, 'https://i.ibb.co/QC06Y3M/gabriela-ferronato.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Gabrielle Masutti Batisti', 'Batisti', 14, 'Bento Gonçalves', 'Also knew as Frozen, feared by her adversaries when serve on volley', TIMESTAMP WITH TIME ZONE '1999-09-22', true, 'https://i.ibb.co/G9fRsk5/gabrielle-batisti.png');
@@ -87,7 +90,7 @@ INSERT INTO tb_student (name, nickname, contact_id, location, description, birth
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Iuri Matheus Engel', 'Iuri', 31, 'Pelotas', 'Used to be mad when called by Iurinelson or Yuri Mamuth', TIMESTAMP WITH TIME ZONE '1999-01-01', false, 'https://i.ibb.co/LCtkqd7/iuri.png');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Jonathan Guidolin Franceschini', 'Johny', 18, 'Bento Gonçalves', 'Hacker skills and looks like the spider man actor', TIMESTAMP WITH TIME ZONE '1999-03-02', false, 'https://i.ibb.co/FVzRLXF/jonathan.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Julia Dalla Costa', 'Julia', 19, 'Porto Alegre', 'Always joked and went back saying HÃÃ. Fear of butterflies', TIMESTAMP WITH TIME ZONE '1999-10-04', false, 'https://i.ibb.co/hmLzWCT/julia-dc.jpg');
-INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Julia Gheno Pertile', 'Pertile', 20, 'Bento Gonçalves', 'Our girl from Garibaldi, also knew as piradinha', TIMESTAMP WITH TIME ZONE '1999-09-21', true, 'https://i.ibb.co/t4QPfb2/julia-pertile.jpg');
+INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Julia Gheno Pertile', 'Pertile', 20, 'Garibaldi', 'Our girl from Garibaldi, also knew as piradinha', TIMESTAMP WITH TIME ZONE '1999-09-21', true, 'https://i.ibb.co/t4QPfb2/julia-pertile.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Lorenzo Benatti Bondan', 'Lore', 21, 'Bento Gonçalves', 'The head of crime, always with ideas for kidding the other ones', TIMESTAMP WITH TIME ZONE '1999-07-17', false, 'https://i.ibb.co/KwJyNfM/lorenzo.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Lucas Fabichaki Tognon', 'Tognon', 22, 'Bento Gonçalves', 'The black sheep of the class', TIMESTAMP WITH TIME ZONE '1999-09-14', false, 'https://i.ibb.co/wQ2b2Dj/lucas.jpg');
 INSERT INTO tb_student (name, nickname, contact_id, location, description, birth_Date, graduated, img_Url) VALUES ('Luiz Eduardo Bordin', 'Bordin', 23, 'Porto Alegre', 'Always making the other ones mad when shaking his legs, or interrupting the teachers saying: I dont understood very well', TIMESTAMP WITH TIME ZONE '1999-08-08', false, 'https://i.ibb.co/Tvdj75b/luiz.jpg');
@@ -113,28 +116,29 @@ INSERT INTO tb_student_course (student_id, course_id) VALUES (8, 3);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (9, 13);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (10, 5);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (11, 4);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (12, 19);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (13, 9);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (14, 21);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (15, 20);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (16, 8);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (17, 16);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (18, 7);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (12, 22);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (13, 19);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (14, 9);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (15, 21);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (16, 20);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (17, 8);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (18, 16);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (19, 7);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (20, 6);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (21, 10);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (22, 2);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (22, 1);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (23, 22);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (24, 12);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (25, 18);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (26, 22);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (27, 1);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (28, 11);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (29, 8);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (20, 7);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (21, 6);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (22, 10);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (23, 1);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (23, 2);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (24, 23);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (25, 12);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (26, 18);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (27, 23);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (28, 2);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (29, 11);
 INSERT INTO tb_student_course (student_id, course_id) VALUES (30, 8);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (31, 21);
-INSERT INTO tb_student_course (student_id, course_id) VALUES (32, 1);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (31, 8);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (32, 21);
+INSERT INTO tb_student_course (student_id, course_id) VALUES (33, 2);
 
 
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('Very nice girl, with a great future', 1, 1);

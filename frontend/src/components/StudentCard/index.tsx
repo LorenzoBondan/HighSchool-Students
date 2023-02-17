@@ -25,7 +25,7 @@ function StudentCard( {student} : Props ) {
                 <img src={student.imgUrl} alt="Imagem do student" />
             </div>
 
-            <div className='card-bottom-container'>
+            <div className='card-bottom-container-student-card'>
               <>
                 <div className='card-title-button'>
                   <h3>{student.nickname}</h3>

@@ -31,26 +31,26 @@
     border: 3px solid rgba(156, 151, 151, 0.541);
 }
 
-.card-bottom-container{
+.card-bottom-container-student-card{
     padding: 15px 20px 30px 20px;
     text-align: left;
     text-decoration: none;
 }
 
-.card-bottom-container h3 {
+.card-bottom-container-student-card h3 {
     font-size: 30px;
     color: #263238;
     margin-bottom: 20px;
     text-decoration: none;
 }
 
-.card-bottom-container h6 {
+.card-bottom-container-student-card h6 {
     font-size: 18px;
     color: #263238;
     text-decoration: none;
 }
 
-.card-bottom-container h5 {
+.card-bottom-container-student-card h5 {
     font-size: 18px;
     color: #A00909;
     text-decoration: none;

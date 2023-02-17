@@ -11,5 +11,6 @@ export type Student = {
     location: string;
     description: string;
     contact : Contact;
+    postitUrl : string;
     courses: Course[];
 }

@@ -126,7 +126,7 @@ function StudentDetails(){
 
                         <div className='card-bottom-container'>
                         <>
-                            <div className='card-bottom-container-student-info'>
+                            <div className='card-bottom-container-student-info card-bottom-container-student-card'>
 
                                 <h3>{student?.nickname}</h3>
 
@@ -163,7 +163,7 @@ function StudentDetails(){
 
 
                             <div className='card-bottom-container-postit'>
-                                <img src="https://i.ibb.co/kBHXy6K/augusto-removebg-preview.png" alt="" />
+                                <img src={student?.postitUrl} alt="postit" />
                             </div>
                         </>
                     </div>

@@ -120,6 +120,7 @@ function StudentDetails(){
                 </div>
                 
                 <div className='row'>
+                    
                     <div className='col-xl-6'>
                         <div className='student-details-img-container'>
                             <img src={student?.imgUrl} alt={student?.nickname} />
@@ -163,6 +164,7 @@ function StudentDetails(){
                             </div>
 
                             <div style={{display:"flex", flexDirection:"column"}}>
+
                                 <div className='contact-container'>
                         
                                     <div className='contact-container-imgs' >
@@ -187,40 +189,37 @@ function StudentDetails(){
                         
                                 </div>
 
-                    <div className='main-music-container'>
-                        <div className='music-container' >
+                                <div className='main-music-container'>
+                                    <div className='music-container' >
                         
-                            <div className='music-container-img-container'>
-                                <img src="https://i.ytimg.com/vi/kOkQ4T5WO9E/maxresdefault.jpg" alt="" />
+                                        <div className='music-container-img-container'>
+                                            <img src="https://i.ytimg.com/vi/kOkQ4T5WO9E/maxresdefault.jpg" alt="" />
+                                        </div>
+
+                                        <div className='music-container-text-container'>
+                                            <h5 
+                                                style={{color:"#9E9E9E", fontSize:"0.7em"}}
+                                                ><i style={{marginRight:"2px"}}>
+                                                    <HiMusicalNote/>
+                                                </i>
+                                                Entrace music: 
+                                            </h5>
+
+                                            <h6 style={{marginLeft:"5px", color:"#A00909", fontFamily:"Roboto", fontSize:"0.7em"}}>Ultraje a rigor</h6>
+                                            <h6 style={{marginLeft:"5px", color:"black", fontFamily:"Roboto", fontSize:"0.6em", fontStyle:"italic"}}>Todo mundo gosta de mim</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-
-                            <div className='music-container-text-container'>
-                                <h5 
-                                    style={{color:"#9E9E9E", fontSize:"0.7em"}}
-                                    ><i style={{marginRight:"2px"}}>
-                                        <HiMusicalNote/>
-                                    </i>
-                                    Entrace music: 
-                                </h5>
-
-                                <h6 style={{marginLeft:"5px", color:"#A00909", fontFamily:"Roboto", fontSize:"0.7em"}}>Ultraje a rigor</h6>
-                                <h6 style={{marginLeft:"5px", color:"black", fontFamily:"Roboto", fontSize:"0.6em", fontStyle:"italic"}}>Todo mundo gosta de mim</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                            
-
-                            
-                            </div>
-
-
                         </>
                     </div>
                 </div>
 
                 <div className='col-xl-6'>
+
                     <div className='description-container'>
+
                         <div className='description-container-text'>
                             <h2><i><FaSlackHash/></i> Remembered by</h2>
                             <p>{student?.description}</p>
@@ -229,11 +228,11 @@ function StudentDetails(){
                         <div className='card-bottom-container-postit'>
                                 <img src={student?.postitUrl} alt="postit" />
                         </div>
+
                     </div>
 
-
-
                     <div className='current-location-container'>
+
                         <div className='current-location-container-text'>
                             <img src={locationIcon} alt="icon" />
                             <h6>Current Location:</h6>
@@ -242,10 +241,9 @@ function StudentDetails(){
                         <div className='current-location-container-imgs' key={student?.id}>
                             {getCity.map(city => <img src={city} alt="city" />)}
                         </div>
+
                     </div>
                     
-
-
                 </div>
   
             </div>

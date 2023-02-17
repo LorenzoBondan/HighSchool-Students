@@ -28,6 +28,10 @@ public class StudentDTO implements Serializable {
 	private String location;
 	private String postitUrl;
 	
+	private String musicName;
+	private String musicAuthor;
+	private String musicImgUrl;
+	
 	private Contact contact;
 	
 	private List<CourseDTO> courses = new ArrayList<>();
@@ -37,7 +41,8 @@ public class StudentDTO implements Serializable {
 
 
 	public StudentDTO(Long id, String name, String nickname, Integer age,
-			Boolean graduated, String imgUrl, String description, Instant birthDate, String location, String postitUrl, Contact contact) {
+			Boolean graduated, String imgUrl, String description, Instant birthDate, String location, String postitUrl, 
+			String musicName, String musicAuthor, String musicImgUrl, Contact contact) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -48,6 +53,9 @@ public class StudentDTO implements Serializable {
 		this.birthDate = birthDate;
 		this.location = location;
 		this.postitUrl = postitUrl;
+		this.musicName = musicName;
+		this.musicAuthor = musicAuthor;
+		this.musicImgUrl = musicImgUrl;
 		this.contact = contact;
 	}
 	
@@ -62,6 +70,9 @@ public class StudentDTO implements Serializable {
 		this.birthDate = entity.getBirthDate();
 		this.location = entity.getLocation();
 		this.postitUrl = entity.getPostitUrl();
+		this.musicName = entity.getMusicName();
+		this.musicAuthor = entity.getMusicAuthor();
+		this.musicImgUrl = entity.getMusicImgUrl();
 		this.contact = entity.getContact();
 	}
 	
@@ -160,6 +171,38 @@ public class StudentDTO implements Serializable {
 	public void setPostitUrl(String postitUrl) {
 		this.postitUrl = postitUrl;
 	}
+	
+	
+
+	public String getMusicName() {
+		return musicName;
+	}
+
+
+	public void setMusicName(String musicName) {
+		this.musicName = musicName;
+	}
+
+
+	public String getMusicAuthor() {
+		return musicAuthor;
+	}
+
+
+	public void setMusicAuthor(String musicAuthor) {
+		this.musicAuthor = musicAuthor;
+	}
+
+
+	public String getMusicImgUrl() {
+		return musicImgUrl;
+	}
+
+
+	public void setMusicImgUrl(String musicImgUrl) {
+		this.musicImgUrl = musicImgUrl;
+	}
+
 
 	public List<CourseDTO> getCourses() {
 		return courses;

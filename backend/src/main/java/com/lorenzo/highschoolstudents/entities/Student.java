@@ -48,6 +48,12 @@ public class Student implements Serializable{
 	@Column(columnDefinition = "TEXT")
 	private String postitUrl;
 	
+	private String musicName;
+	private String musicAuthor;
+	@Column(columnDefinition = "TEXT")
+	private String musicImgUrl;
+	
+	
 	@OneToOne
 	@JoinColumn(name = "contact_id")
 	private Contact contact;
@@ -64,7 +70,8 @@ public class Student implements Serializable{
 	
 	public Student() {}
 
-	public Student(Long id, String name, String nickname, Integer age, Boolean graduated, String imgUrl, String description, Instant birthDate, String location, String postitUrl, Contact contact) {
+	public Student(Long id, String name, String nickname, Integer age, Boolean graduated, String imgUrl, String description, Instant birthDate, String location, String postitUrl,
+			String musicName, String musicAuthor, String musicImgUrl, Contact contact) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -75,6 +82,9 @@ public class Student implements Serializable{
 		this.birthDate = birthDate;
 		this.location = location;
 		this.postitUrl = postitUrl;
+		this.musicName = musicName;
+		this.musicAuthor = musicAuthor;
+		this.musicImgUrl = musicImgUrl;
 		this.contact = contact;
 	}
 
@@ -150,6 +160,31 @@ public class Student implements Serializable{
 
 	public void setLocation(String location) {
 		this.location = location;
+	}
+	
+
+	public String getMusicName() {
+		return musicName;
+	}
+
+	public void setMusicName(String musicName) {
+		this.musicName = musicName;
+	}
+
+	public String getMusicAuthor() {
+		return musicAuthor;
+	}
+
+	public void setMusicAuthor(String musicAuthor) {
+		this.musicAuthor = musicAuthor;
+	}
+
+	public String getMusicImgUrl() {
+		return musicImgUrl;
+	}
+
+	public void setMusicImgUrl(String musicImgUrl) {
+		this.musicImgUrl = musicImgUrl;
 	}
 
 	public Set<Course> getCourses() {

@@ -87,7 +87,10 @@ public class StudentService {
 		entity.setBirthDate(dto.getBirthDate());
 		entity.setLocation(dto.getLocation());
 		entity.setPostitUrl(dto.getPostitUrl());
-
+		entity.setMusicName(dto.getMusicName());
+		entity.setMusicAuthor(dto.getMusicAuthor());
+		entity.setMusicImgUrl(dto.getMusicImgUrl());
+		
 		entity.getCourses().clear();
 
 		for (CourseDTO catDto : dto.getCourses()) {

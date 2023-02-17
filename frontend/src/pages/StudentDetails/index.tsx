@@ -109,7 +109,7 @@ function StudentDetails(){
                         </Link>
                     )}
 
-                    { parseInt(studentId) < 32 && (
+                    { parseInt(studentId) < 33 && (
                         <Link to={`/students/${(parseInt(studentId) + 1).toString()}`}>
                             <div className='gonext-container' style={{transform:"rotate(-180deg)"}}>
                                 <i><TfiArrowCircleLeft/></i>
@@ -126,35 +126,44 @@ function StudentDetails(){
 
                         <div className='card-bottom-container'>
                         <>
-                            <h3>{student?.nickname}</h3>
+                            <div className='card-bottom-container-student-info'>
 
-                            <h6>Name: {student?.name}</h6>
+                                <h3>{student?.nickname}</h3>
+
+                                <h6>Name: {student?.name}</h6>
                             
-                            <div className='birthdate-container'>
-                                <h6>Age: {ageCalc(student?.birthDate)}</h6>
-                                <img src="https://em-content.zobj.net/thumbs/160/apple/118/birthday-cake_1f382.png" alt="" />
-                                <h6>{student?.birthDate.substring(0,10)}</h6>
-                            </div>
-
-                            <div className='graduated-zone'>
-                                {student?.graduated ? (
-                                <>
-                                    <h6>Graduated:</h6>
-                                    <img src={Check} width="18" height="18" alt="checked" />
-                                </>
-                                ) : (
-                                <>
-                                    <h6>Graduated:</h6>
-                                    <img src={Uncheck} width="18" height="18" alt="unchecked" />
-                                </>
-                                )}
-                            </div>
-
-                            <div className='courses-zone'>
-                                <h6>Courses: </h6>
-                                <div className='courses-list-zone' key={student?.id}>
-                                    {student?.courses.map(course => (<h5>{course.name}</h5>))}
+                                <div className='birthdate-container'>
+                                    <h6>Age: {ageCalc(student?.birthDate)}</h6>
+                                    <img src="https://em-content.zobj.net/thumbs/160/apple/118/birthday-cake_1f382.png" alt="" />
+                                    <h6>{student?.birthDate.substring(0,10)}</h6>
                                 </div>
+
+                                <div className='graduated-zone'>
+                                    {student?.graduated ? (
+                                    <>
+                                        <h6>Graduated:</h6>
+                                        <img src={Check} width="18" height="18" alt="checked" />
+                                    </>
+                                    ) : (
+                                    <>
+                                        <h6>Graduated:</h6>
+                                        <img src={Uncheck} width="18" height="18" alt="unchecked" />
+                                    </>
+                                    )}
+                                </div>
+
+                                <div className='courses-zone'>
+                                    <h6>Courses: </h6>
+                                    <div className='courses-list-zone' key={student?.id}>
+                                        {student?.courses.map(course => (<h5>{course.name}</h5>))}
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div className='card-bottom-container-postit'>
+                                <img src="https://i.ibb.co/kBHXy6K/augusto-removebg-preview.png" alt="" />
                             </div>
                         </>
                     </div>
@@ -162,8 +171,10 @@ function StudentDetails(){
 
                 <div className='col-xl-6'>
                     <div className='description-container'>
-                        <h2><i><FaSlackHash/></i> Remembered by</h2>
-                        <p>{student?.description}</p>
+                        <div className='description-container-text'>
+                            <h2><i><FaSlackHash/></i> Remembered by</h2>
+                            <p>{student?.description}</p>
+                        </div>
                     </div>
 
                     <div className='contact-container'>

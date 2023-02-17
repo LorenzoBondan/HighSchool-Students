@@ -16,6 +16,7 @@ import { ImWhatsapp } from 'react-icons/im';
 import { BsFacebook } from 'react-icons/bs';
 
 import { FaSlackHash } from 'react-icons/fa';
+import { HiMusicalNote } from 'react-icons/hi2';
 
 type UrlParams = {
     studentId: string;
@@ -161,10 +162,59 @@ function StudentDetails(){
 
                             </div>
 
+                            <div style={{display:"flex", flexDirection:"column"}}>
+                                <div className='contact-container'>
+                        
+                                    <div className='contact-container-imgs' >
+                                        <a href={student?.contact.phone}>
+                                            <button style={{ backgroundColor: '#25d366', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
+                                                <i style={{color:"white"}}><ImWhatsapp/></i>
+                                            </button>
+                                        </a>
 
-                            <div className='card-bottom-container-postit'>
-                                <img src={student?.postitUrl} alt="postit" />
+                                        <a href={student?.contact.instagram}>
+                                            <button style={{ backgroundColor: '#ac2bac', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
+                                                <i style={{color:"white"}}><RxInstagramLogo/></i>
+                                            </button>
+                                        </a>
+
+                                        <a href={student?.contact.facebook}>
+                                            <button style={{ backgroundColor: '#3b5998', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
+                                                <i style={{color:"white"}}><BsFacebook/></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                        
+                                </div>
+
+                    <div className='main-music-container'>
+                        <div className='music-container' >
+                        
+                            <div className='music-container-img-container'>
+                                <img src="https://i.ytimg.com/vi/kOkQ4T5WO9E/maxresdefault.jpg" alt="" />
                             </div>
+
+                            <div className='music-container-text-container'>
+                                <h5 
+                                    style={{color:"#9E9E9E", fontSize:"0.7em"}}
+                                    ><i style={{marginRight:"2px"}}>
+                                        <HiMusicalNote/>
+                                    </i>
+                                    Entrace music: 
+                                </h5>
+
+                                <h6 style={{marginLeft:"5px", color:"#A00909", fontFamily:"Roboto", fontSize:"0.7em"}}>Ultraje a rigor</h6>
+                                <h6 style={{marginLeft:"5px", color:"black", fontFamily:"Roboto", fontSize:"0.6em", fontStyle:"italic"}}>Todo mundo gosta de mim</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                            
+
+                            
+                            </div>
+
+
                         </>
                     </div>
                 </div>
@@ -175,34 +225,13 @@ function StudentDetails(){
                             <h2><i><FaSlackHash/></i> Remembered by</h2>
                             <p>{student?.description}</p>
                         </div>
+
+                        <div className='card-bottom-container-postit'>
+                                <img src={student?.postitUrl} alt="postit" />
+                        </div>
                     </div>
 
-                    <div className='contact-container'>
-                        <div className='contact-container-text'>
-                            <h2>Contact</h2>
-                        </div>
-                        
-                        <div className='contact-container-imgs' >
-                            <a href={student?.contact.phone}>
-                                <button style={{ backgroundColor: '#25d366', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
-                                    <i style={{color:"white"}}><ImWhatsapp/></i>
-                                </button>
-                            </a>
 
-                            <a href={student?.contact.instagram}>
-                                <button style={{ backgroundColor: '#ac2bac', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
-                                    <i style={{color:"white"}}><RxInstagramLogo/></i>
-                                </button>
-                            </a>
-
-                            <a href={student?.contact.facebook}>
-                                <button style={{ backgroundColor: '#3b5998', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
-                                    <i style={{color:"white"}}><BsFacebook/></i>
-                                </button>
-                            </a>
-                        </div>
-                        
-                    </div>
 
                     <div className='current-location-container'>
                         <div className='current-location-container-text'>
@@ -214,6 +243,9 @@ function StudentDetails(){
                             {getCity.map(city => <img src={city} alt="city" />)}
                         </div>
                     </div>
+                    
+
+
                 </div>
   
             </div>

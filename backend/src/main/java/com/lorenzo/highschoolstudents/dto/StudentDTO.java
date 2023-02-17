@@ -26,6 +26,7 @@ public class StudentDTO implements Serializable {
 	private Instant birthDate;
 	private String description;
 	private String location;
+	private String postitUrl;
 	
 	private Contact contact;
 	
@@ -36,7 +37,7 @@ public class StudentDTO implements Serializable {
 
 
 	public StudentDTO(Long id, String name, String nickname, Integer age,
-			Boolean graduated, String imgUrl, String description, Instant birthDate, String location, Contact contact) {
+			Boolean graduated, String imgUrl, String description, Instant birthDate, String location, String postitUrl, Contact contact) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -46,6 +47,7 @@ public class StudentDTO implements Serializable {
 		this.description = description;
 		this.birthDate = birthDate;
 		this.location = location;
+		this.postitUrl = postitUrl;
 		this.contact = contact;
 	}
 	
@@ -59,6 +61,7 @@ public class StudentDTO implements Serializable {
 		this.description = entity.getDescription();
 		this.birthDate = entity.getBirthDate();
 		this.location = entity.getLocation();
+		this.postitUrl = entity.getPostitUrl();
 		this.contact = entity.getContact();
 	}
 	
@@ -148,7 +151,15 @@ public class StudentDTO implements Serializable {
 	public void setLocation(String location) {
 		this.location = location;
 	}
+	
 
+	public String getPostitUrl() {
+		return postitUrl;
+	}
+
+	public void setPostitUrl(String postitUrl) {
+		this.postitUrl = postitUrl;
+	}
 
 	public List<CourseDTO> getCourses() {
 		return courses;
@@ -163,8 +174,5 @@ public class StudentDTO implements Serializable {
 	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
-	
-
-	
 	
 }

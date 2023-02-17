@@ -45,6 +45,9 @@ public class Student implements Serializable{
 	
 	private String location;
 	
+	@Column(columnDefinition = "TEXT")
+	private String postitUrl;
+	
 	@OneToOne
 	@JoinColumn(name = "contact_id")
 	private Contact contact;
@@ -61,7 +64,7 @@ public class Student implements Serializable{
 	
 	public Student() {}
 
-	public Student(Long id, String name, String nickname, Integer age, Boolean graduated, String imgUrl, String description, Instant birthDate, String location, Contact contact) {
+	public Student(Long id, String name, String nickname, Integer age, Boolean graduated, String imgUrl, String description, Instant birthDate, String location, String postitUrl, Contact contact) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -71,6 +74,7 @@ public class Student implements Serializable{
 		this.description = description;
 		this.birthDate = birthDate;
 		this.location = location;
+		this.postitUrl = postitUrl;
 		this.contact = contact;
 	}
 
@@ -133,6 +137,15 @@ public class Student implements Serializable{
 
 	public String getLocation() {
 		return location;
+	}
+	
+
+	public String getPostitUrl() {
+		return postitUrl;
+	}
+
+	public void setPostitUrl(String postitUrl) {
+		this.postitUrl = postitUrl;
 	}
 
 	public void setLocation(String location) {

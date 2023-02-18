@@ -203,7 +203,7 @@ function StudentDetails(){
                                                 ><i style={{marginRight:"2px"}}>
                                                     <HiMusicalNote/>
                                                 </i>
-                                                Entrace music: 
+                                                Entrace music
                                             </h5>
 
                                             <h6 style={{marginLeft:"5px", color:"#A00909", fontFamily:"Roboto", fontSize:"0.7em"}}>{student?.musicAuthor}</h6>

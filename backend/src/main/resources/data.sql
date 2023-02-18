@@ -156,7 +156,7 @@ INSERT INTO tb_review (text, user_id, student_id) VALUES ('Missed her in the las
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('She´s my neighbor', 1, 13);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('She´s also my neighbor!', 1, 14);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('My favorite designer! (After Thommy)', 2, 15);
-INSERT INTO tb_review (text, user_id, student_id) VALUES ('Cuesta in the left sock, threatened, didnt hit, come to the backboard, Peglou took it to cuesta HIT CROSSED EDENÍLSOOOOOOON, 41 YEARSSSS', 1, 16);
+INSERT INTO tb_review (text, user_id, student_id) VALUES ('Cuesta in the left sock, threatened, didnt hit, come to the backboard, Peglow took it to cuesta HIT CROSSED EDENÍLSOOOOOOON, 41 YEARSSSS', 1, 16);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('She´s got a smile that it seems to me, Reminds me of childhood memories', 2, 17);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('The best Clash of Clans player of the boys', 2, 18);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('I dont see him since 1985', 2, 19);

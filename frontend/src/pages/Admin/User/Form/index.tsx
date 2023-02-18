@@ -31,6 +31,7 @@ const Form = () => {
 
                     setValue('name', user.name);
                     setValue('email', user.email);
+                    setValue('password', user.password);
                     
                     setValue('roles', user.roles);
                 })
@@ -96,6 +97,21 @@ const Form = () => {
                                     name="name"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.name?.message}</div>
+
+                            </div>
+
+
+                            <div className='margin-bottom-30'>
+                                
+                                <input 
+                                    {...register("password", {
+                                    })}
+                                    type="text"
+                                    className={`form-control base-input ${errors.password ? 'is-invalid' : ''}`}
+                                    placeholder="Password"
+                                    name="password"
+                                />
+                                <div className='invalid-feedback d-block'>{errors.password?.message}</div>
 
                             </div>
                             

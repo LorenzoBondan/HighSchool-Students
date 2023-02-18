@@ -46,7 +46,7 @@ function StudentCrudCard( {course, onDelete} : Props ) {
                   DELETE
                 </button>
 
-                <Link to={`/admin/students/${course.id}`}>
+                <Link to={`/admin/courses/${course.id}`}>
                   <button className='btn btn-outline-secondary student-crud-card-button'>
                     EDIT
                   </button>

@@ -112,14 +112,10 @@ const Login = () => {
                     </div>
 
 
-
-                    <Link to="/admin/auth/recover" className="login-link-recover">
-                        Forgot the password?
-                    </Link>
-
                     <div className="login-submit">
                         <button className='btn btn-primary'>LOGIN</button>
                     </div>
+                    
 
                     <div className="signup-container">
                         <span className="not-registered">Don't have an account?</span>

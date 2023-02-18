@@ -51,7 +51,7 @@ const RegisterForm = () => {
                         <div className='col-lg-6 students-crud-inputs-left-container'>
 
                             <div className='margin-bottom-30'>
-                                
+                                <label htmlFor="" style={{color:"black"}}>Name</label>
                                 <input 
                                     {...register("name", {
                                     required: 'Campo obrigatório',
@@ -65,23 +65,9 @@ const RegisterForm = () => {
 
                             </div>
 
-
-                            <div className='margin-bottom-30'>
-                                
-                                <input 
-                                    {...register("password", {
-                                    })}
-                                    type="text"
-                                    className={`form-control base-input ${errors.password ? 'is-invalid' : ''}`}
-                                    placeholder="Password"
-                                    name="password"
-                                />
-                                <div className='invalid-feedback d-block'>{errors.password?.message}</div>
-
-                            </div>
                             
                             <div className='margin-bottom-30'>
-                                
+                                <label htmlFor="" style={{color:"black"}}>Email</label>
                                 <input 
                                     {...register("email", {
                                     pattern: { 
@@ -95,6 +81,21 @@ const RegisterForm = () => {
                                     name="email"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.email?.message}</div>
+
+                            </div>
+
+
+                            <div className='margin-bottom-30'>
+                                <label htmlFor="" style={{color:"black"}}>Password</label>
+                                <input 
+                                    {...register("password", {
+                                    })}
+                                    type="text"
+                                    className={`form-control base-input ${errors.password ? 'is-invalid' : ''}`}
+                                    placeholder="Password"
+                                    name="password"
+                                />
+                                <div className='invalid-feedback d-block'>{errors.password?.message}</div>
 
                             </div>
                         </div>

@@ -12,5 +12,8 @@ export type Student = {
     description: string;
     contact : Contact;
     postitUrl : string;
+    musicName : string;
+    musicAuthor : string;
+    musicImgUrl : string;
     courses: Course[];
 }

@@ -120,7 +120,7 @@ function StudentDetails(){
                 </div>
                 
                 <div className='row'>
-                    
+
                     <div className='col-xl-6'>
                         <div className='student-details-img-container'>
                             <img src={student?.imgUrl} alt={student?.nickname} />
@@ -188,12 +188,13 @@ function StudentDetails(){
                                     </div>
                         
                                 </div>
-
+                                
                                 <div className='main-music-container'>
+                                    {student?.musicName != null && (
                                     <div className='music-container' >
                         
                                         <div className='music-container-img-container'>
-                                            <img src="https://i.ytimg.com/vi/kOkQ4T5WO9E/maxresdefault.jpg" alt="" />
+                                            <img src={student?.musicImgUrl} alt="" />
                                         </div>
 
                                         <div className='music-container-text-container'>
@@ -205,10 +206,11 @@ function StudentDetails(){
                                                 Entrace music: 
                                             </h5>
 
-                                            <h6 style={{marginLeft:"5px", color:"#A00909", fontFamily:"Roboto", fontSize:"0.7em"}}>Ultraje a rigor</h6>
-                                            <h6 style={{marginLeft:"5px", color:"black", fontFamily:"Roboto", fontSize:"0.6em", fontStyle:"italic"}}>Todo mundo gosta de mim</h6>
+                                            <h6 style={{marginLeft:"5px", color:"#A00909", fontFamily:"Roboto", fontSize:"0.7em"}}>{student?.musicAuthor}</h6>
+                                            <h6 style={{marginLeft:"5px", color:"black", fontFamily:"Roboto", fontSize:"0.6em", fontStyle:"italic"}}>{student?.musicName}</h6>
                                         </div>
                                     </div>
+                                    )}
                                 </div>
 
                             </div>

@@ -83,15 +83,18 @@ function Students(){
             <div className="row">
               
               {isLoading ? <CardLoader/> : ( // se o isLoading for verdadeiro, carregando, se for falso, o restante
-                page?.content.map(student => (
-                  <div className="col-sm-6 col-lg-4 col-xl-3 students-column" key={student.id}>
-                    <Link to={`/students/${student.id}`}>
-                      <StudentCard student={student}/>
-                    </Link>
-                  </div>
+                page?.content
+                  .sort((a,b) => a.name > b.name ? 1 : -1)
+                  .map(student => (
+                    <div className="col-sm-6 col-lg-4 col-xl-3 students-column" key={student.id}>
+                      <Link to={`/students/${student.id}`}>
+                        <StudentCard student={student}/>
+                      </Link>
+                    </div>
+                    )
+                  )
                 )
-              ))}
-
+              }
             </div>
 
             <Pagination 

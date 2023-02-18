@@ -77,7 +77,9 @@ const List = () => {
 
         <div className='row'>
 
-            {page?.content.map((item) => (
+            {page?.content
+              .sort((a,b) => a.name > b.name ? 1 : -1)
+              .map((item) => (
                 <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <StudentCrudCard student={item} onDelete={() => getStudents()} key={item.id}/>
                 </div>

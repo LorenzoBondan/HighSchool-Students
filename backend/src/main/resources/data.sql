@@ -158,10 +158,9 @@ INSERT INTO tb_review (text, user_id, student_id) VALUES ('She´s also my neighb
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('My favorite designer! (After Thommy)', 2, 15);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('Cuesta in the left sock, threatened, didnt hit, come to the backboard, Peglou took it to cuesta HIT CROSSED EDENÍLSOOOOOOON, 41 YEARSSSS', 1, 16);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('She´s got a smile that it seems to me, Reminds me of childhood memories', 2, 17);
-INSERT INTO tb_review (text, user_id, student_id) VALUES ('The best Clash of Clans player I´ve ever meet', 2, 18);
+INSERT INTO tb_review (text, user_id, student_id) VALUES ('The best Clash of Clans player of the boys', 2, 18);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('I dont see him since 1985', 2, 19);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('John, the viper', 1, 20);
-INSERT INTO tb_review (text, user_id, student_id) VALUES ('Is your degree like physical???', 2, 21);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('I KNOW WHO STOLE YOUR CELL PHONE', 1, 21);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('The ideia of piradinha came from the novel Avenida Brasil, once I was watching it and Carminha was mad, so Tufão asked if she was piradinha... Now you know', 1, 22);
 INSERT INTO tb_review (text, user_id, student_id) VALUES ('The creator of all this we are seeing!', 2, 23);

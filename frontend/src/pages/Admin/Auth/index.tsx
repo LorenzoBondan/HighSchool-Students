@@ -1,5 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import Login from "./Login";
+import RegisterForm from "./Register";
 import './styles.css';
 
 function Auth(){
@@ -14,7 +15,7 @@ function Auth(){
                     </Route>
 
                     <Route path="/admin/auth/signup">
-                        <h1>card de signup</h1>
+                        <RegisterForm />
                     </Route>
 
                     <Route path="/admin/auth/recover">

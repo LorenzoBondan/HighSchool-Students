@@ -37,6 +37,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	
 	private static final String[] OPERATOR_OR_ADMIN = { "/students/**", "/courses/**"  };
 	
+	private static final String[] REGISTER = {"/users/**"};
+	
 	private static final String[] ADMIN = { "/users/**"  };
 	
 	@Override
@@ -54,6 +56,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 		http.authorizeRequests()
 		.antMatchers(PUBLIC).permitAll() 
 		.antMatchers(HttpMethod.GET, OPERATOR_OR_ADMIN).permitAll() 
+		.antMatchers(HttpMethod.POST, REGISTER).permitAll()
 		.antMatchers(OPERATOR_OR_ADMIN).hasAnyRole("OPERATOR", "ADMIN") 
 		.antMatchers(ADMIN).hasRole("ADMIN") 
 		.anyRequest().authenticated();

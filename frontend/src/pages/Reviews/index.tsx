@@ -51,7 +51,7 @@ const Reviews = ( {studentUsername} : Props ) => {
     return (
         <div className="page-container text-primary">
 
-            {hasAnyRoles(["ROLE_OPERATOR"])?  ( // form de inserir avaliação SOMENTE PARA MEMBROS
+            {hasAnyRoles(["ROLE_MEMBER"])?  ( // form de inserir avaliação SOMENTE PARA MEMBROS
                 <ReviewForm studentId={studentId} onInsertReview={handleInsertReview} />
             ) 
             : (

@@ -2,6 +2,7 @@ import { AuthContext } from 'AuthContext';
 import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useHistory, useLocation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { getTokenData } from 'util/auth';
 import { requestBackendLogin } from 'util/requests';
 import { getAuthData, saveAuthData } from 'util/storage';
@@ -22,7 +23,7 @@ const Login = () => {
 
     // redirecionamento de rota
     const location = useLocation<LocationState>();
-    const {from} = location.state || { from: { pathname: '/admin'}}; // a rota que quis acessar, ou p rota /admin, que por sua vez, leva p admin/students
+    const {from} = location.state || { from: { pathname: '/'}}; // a rota que quis acessar, ou p rota /admin, que por sua vez, leva p admin/students
 
     // verificar autenticação
     const { setAuthContextData } = useContext(AuthContext);
@@ -53,6 +54,8 @@ const Login = () => {
             })
 
             history.replace(from); // faz o login e joga pra tela de admin, que por sua vez, entra direto na rota de admin/products
+
+            toast.info("Welcome!")
         })
         .catch(error => {
             setHasError(true);
@@ -121,7 +124,7 @@ const Login = () => {
                     <div className="signup-container">
                         <span className="not-registered">Don't have an account?</span>
 
-                        <Link to="/admin/auth/register" className="login-link-register">
+                        <Link to="/admin/auth/signup" className="login-link-register">
                             REGISTER NOW
                         </Link>
                     </div>

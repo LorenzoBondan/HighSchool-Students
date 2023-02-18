@@ -1,37 +1,20 @@
-import { AxiosRequestConfig } from 'axios';
-import { useEffect, useState } from 'react';
-import { Course } from 'types/course';
-import { SpringPage } from 'types/vendor/spring';
-import { requestBackend } from 'util/requests';
 
+import { Route, Switch } from 'react-router-dom';
+import Form from './Form';
+import List from './List';
 
 const Courses = () => {
-  const [page, setPage] = useState<SpringPage<Course>>();
-
-
-  useEffect(() => {
-    const params : AxiosRequestConfig = {
-      url: '/courses',
-      withCredentials: true,
-      params: {
-        page: 0,
-        size: 30,
-      },
-    };
-
-
-    requestBackend(params).then((response) => {
-      setPage(response.data);
-    });
-  }, []);
-
 
   return (
-    <div>
-      {page?.content.map((item) => (
-        <p key={item.id}>Course: {item.name}, Area: {item.area}</p>
-      ))}
-    </div>
+    <Switch>
+      <Route path="/admin/courses" exact>
+        <List/>
+      </Route>
+    
+      <Route path="/admin/courses/:courseId">
+        <Form/>
+      </Route>
+    </Switch>
   );
 };
 

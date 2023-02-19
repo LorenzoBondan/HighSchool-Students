@@ -1,7 +1,7 @@
 import { AxiosRequestConfig } from "axios";
 import ReviewCard from "components/ReviewCard";
 import ReviewForm from "components/ReviewForm";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Review } from "types/review";
 import { hasAnyRoles } from "util/auth";
@@ -23,22 +23,24 @@ const Reviews = ( {studentUsername} : Props ) => {
     const [page, setPage] = useState<Review[]>([]); //recebe a lista de reviews obtida na requisição.
     const { studentId } = useParams<UrlParams>();
 
+    const getReviews = useCallback(() => {
+        const params: AxiosRequestConfig = {
+            url: `/students/${studentId}/reviews`,
+            withCredentials: false,
+            params: {
+              page: 0,
+              size: 30,
+            },
+          }
+  
+          requestBackend(params).then((response) => {
+              setPage(response.data);
+            });
+    }, [studentId])
 
     useEffect(() => {
-        const params: AxiosRequestConfig = {
-          url: `/students/${studentId}/reviews`,
-          withCredentials: false,
-          params: {
-            page: 0,
-            size: 30,
-          },
-        };
-
-        requestBackend(params).then((response) => {
-            setPage(response.data);
-          });
-
-    }, [studentId]);
+        getReviews();
+    }, [getReviews]);
       
     const handleInsertReview = (review: Review) => {
         const clone = [...page]; // copia o conteúdo que já tem
@@ -68,7 +70,7 @@ const Reviews = ( {studentUsername} : Props ) => {
 
                 <div>
                     {page?.map((rev) => (
-                    <ReviewCard key={rev.id} review={rev} /> //uso a lista de reviews para renderizar card a card.
+                    <ReviewCard key={rev.id} review={rev} onDelete={() => getReviews()} /> //uso a lista de reviews para renderizar card a card.
                     ))}
                 </div>
                 </>

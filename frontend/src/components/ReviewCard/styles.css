@@ -31,12 +31,18 @@
     font-size: 16px;
 }
 
-.reviewer-name {
+.reviewer-name{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.reviewer-name-text {
     display: flex;
     align-items: center;
 }
 
-.reviewer-name img {
+.reviewer-name-text img {
     margin-top: 15px;
     margin-left: 7px;
     margin-right: 10px;
@@ -54,7 +60,7 @@
         font-size: 18px;
     }
 
-    .reviewer-name img {
+    .reviewer-name-text img {
         height: 35px;
     }
 }

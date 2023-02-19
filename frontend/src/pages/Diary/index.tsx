@@ -53,7 +53,7 @@ const DiaryPage = () => {
             </div>
             
             {page?.content.map((item) => (
-                <div>
+                <div key={item.id}>
                     <DiaryCard diary={item}/>
                 </div>
             ))}

@@ -36,7 +36,6 @@ const Reviews = ( {studentUsername} : Props ) => {
 
         requestBackend(params).then((response) => {
             setPage(response.data);
-            console.log(response.data);
           });
 
     }, [studentId]);

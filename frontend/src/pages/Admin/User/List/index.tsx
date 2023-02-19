@@ -49,8 +49,8 @@ const List = () => {
             {page?.content
                 .sort( (a,b) => a.name > b.name ? 1 : -1)
                 .map((item) => (
-                    <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12" >
-                        <UserCrudCard user={item} onDelete={() => getUsers()} key={item.id}/>
+                    <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12" key={item.id}>
+                        <UserCrudCard user={item} onDelete={() => getUsers()} />
                     </div>
                 ))
             }

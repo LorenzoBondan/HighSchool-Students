@@ -50,8 +50,8 @@ const List = () => {
             {page?.content
                 .sort( (a,b) => a.name > b.name ? 1 : -1)
                 .map((item) => (
-                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                        <CourseCrudCard course={item} onDelete={() => getCourses()} key={item.id}/>
+                    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4" key={item.id}>
+                        <CourseCrudCard course={item} onDelete={() => getCourses()}/>
                     </div>
                 ))
             }

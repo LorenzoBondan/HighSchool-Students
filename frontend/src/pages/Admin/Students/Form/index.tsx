@@ -54,6 +54,11 @@ const Form = () => {
                     setValue('contact.facebook', student.contact.facebook);
                     setValue('contact.instagram', student.contact.instagram);
 
+                    setValue('musicName', student.musicName);
+                    setValue('musicAuthor', student.musicAuthor);
+                    setValue('musicImgUrl', student.musicImgUrl);
+
+                    setValue('postitUrl', student.postitUrl);
                 })
         }
     }, [isEditing, studentId, setValue]);

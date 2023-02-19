@@ -58,7 +58,7 @@ function StudentCard( {student} : Props ) {
                 <div className='courses-zone'>
                   <h6>Courses: </h6>
                   <div className='courses-list-zone'>
-                    {student.courses.map(course => (<h5>{course.name}</h5>))}
+                    {student.courses.map(course => (<h5 key={course.id}>{course.name}</h5>))}
                   </div>
                 </div>
               

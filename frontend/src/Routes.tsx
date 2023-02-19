@@ -7,7 +7,7 @@ import Students from 'pages/Students';
 import StudentDetails from 'pages/StudentDetails';
 import Footer from 'components/Footer';
 import history from 'util/history';
-import Reviews from 'pages/Reviews';
+import Reviews from 'components/Reviews';
 import CountDown from 'pages/CountDown';
 import DiaryPage from 'pages/Diary';
 import TheBest from 'pages/TheBest';

@@ -8,7 +8,7 @@ import Check from 'assets/images/checked.png';
 import Uncheck from 'assets/images/unchecked.png';
 import './styles.css';
 import StudentDetailsLoader from './StudentDetailsLoader';
-import Reviews from 'pages/Reviews';
+import Reviews from 'components/Reviews';
 
 import { TfiArrowCircleLeft } from 'react-icons/tfi';
 import { RxInstagramLogo } from 'react-icons/rx';

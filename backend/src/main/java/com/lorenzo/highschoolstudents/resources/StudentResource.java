@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -76,5 +77,12 @@ public class StudentResource {
 	public ResponseEntity<List<ReviewDTO>> findReviewsByStudentId(@PathVariable Long id) {
 		List<ReviewDTO> reviewsDTO = reviewService.findReviewsByStudentId(id);
 		return ResponseEntity.ok(reviewsDTO);
+	}
+	
+	@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+	@DeleteMapping(value = "/{id}/reviews/{reviewId}")
+	public ResponseEntity<StudentDTO> delete(@PathVariable Long id, @PathVariable Long reviewId)	{
+		reviewService.delete(id);
+		return ResponseEntity.noContent().build(); 
 	}
 }

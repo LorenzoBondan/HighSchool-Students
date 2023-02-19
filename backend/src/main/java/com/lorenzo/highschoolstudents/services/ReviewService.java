@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,6 +15,8 @@ import com.lorenzo.highschoolstudents.entities.Student;
 import com.lorenzo.highschoolstudents.entities.User;
 import com.lorenzo.highschoolstudents.repositories.ReviewRepository;
 import com.lorenzo.highschoolstudents.repositories.StudentRepository;
+import com.lorenzo.highschoolstudents.services.exceptions.DataBaseException;
+import com.lorenzo.highschoolstudents.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class ReviewService {
@@ -43,5 +47,15 @@ public class ReviewService {
 			
 		repository.save(review);
 		return new ReviewDTO(review);
+	}
+	
+	public void delete(Long id) {
+		try {
+			repository.deleteById(id);
+		} catch (EmptyResultDataAccessException e) {
+			throw new ResourceNotFoundException("Id not found " + id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DataBaseException("Integrity Violation");
+		}
 	}
 }

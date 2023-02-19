@@ -8,7 +8,7 @@ This is a summary of the author's high school class.
 
 #### Home page
 ![image](https://user-images.githubusercontent.com/105743965/219481036-54df731c-5ce8-4fe0-9488-9a550a423519.png)
-#### Student's page
+#### Students page
 ![image](https://user-images.githubusercontent.com/105743965/219481235-82aca75f-0268-4bc3-b05b-311e568fdae4.png)
 #### Student details page
 ![image](https://user-images.githubusercontent.com/105743965/219907742-41ae429f-8d5b-41e2-a5e8-fcdbec9d663b.png)

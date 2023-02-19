@@ -5,7 +5,7 @@ import LeftNavbar from "./LeftNavbar";
 import Users from "./User";
 import Courses from "./Course";
 import Students from "./Students";
-import { hasAnyRoles } from "util/auth";
+import { hasAnyRoles, isAuthenticated } from "util/auth";
 import accessDenied from 'assets/images/access-denied.png';
 import { MdDangerous } from 'react-icons/md';
 
@@ -44,8 +44,12 @@ function Admin(){
                     <div className="access-text-container" style={{textAlign:"center"}}>
                         <h1 className="text-primary">
                             <i><MdDangerous/></i>
-                            Access denied!</h1>
-                        <p className="text-secondary">Ask for an Admin to give you permission</p>
+                            Access denied!
+                        </h1>
+                        {isAuthenticated() ? 
+                            <p className="text-secondary">Ask for an Admin to give you permission</p> 
+                            : <p className="text-secondary">Sign in to have access to this page</p>
+                        }
                     </div>
                 </div>
                 

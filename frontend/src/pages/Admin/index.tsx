@@ -1,4 +1,4 @@
-import { Switch } from "react-router-dom";
+import { Link, Switch } from "react-router-dom";
 import PrivateRoute from "components/PrivateRoute";
 import './styles.css';
 import LeftNavbar from "./LeftNavbar";
@@ -48,7 +48,10 @@ function Admin(){
                         </h1>
                         {isAuthenticated() ? 
                             <p className="text-secondary">Ask for an Admin to give you permission</p> 
-                            : <p className="text-secondary">Sign in to have access to this page</p>
+                            : 
+                            <Link to="/admin/auth">
+                                <p className="text-secondary">Sign in to have access to this page</p>
+                            </Link>
                         }
                     </div>
                 </div>

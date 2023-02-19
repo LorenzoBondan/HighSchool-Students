@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { User } from 'types/user';
 import { requestBackend } from 'util/requests';
+import partyPhoto from 'assets/images/party.png';
 import './styles.css';
 
 
@@ -99,6 +100,11 @@ const RegisterForm = () => {
                                 <div className='invalid-feedback d-block'>{errors.password?.message}</div>
 
                             </div>
+
+                        </div>
+
+                        <div className='col-lg-6 students-crud-inputs-rigth-container'>
+                            <img src={partyPhoto} alt="" />
                         </div>
 
 

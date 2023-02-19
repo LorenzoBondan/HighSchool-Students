@@ -18,6 +18,8 @@ import { BsFacebook } from 'react-icons/bs';
 import { FaSlackHash } from 'react-icons/fa';
 import { HiMusicalNote } from 'react-icons/hi2';
 
+import background from 'assets/images/linhas-caderno.png';
+
 type UrlParams = {
     studentId: string;
 }
@@ -45,6 +47,7 @@ function StudentDetails(){
         })
         .finally(() => {
             setIsLoading(false);
+            window.scrollTo(0,0);
         });
     }, [studentId]);
 
@@ -220,7 +223,10 @@ function StudentDetails(){
 
                 <div className='col-xl-6'>
 
-                    <div className='description-container'>
+                    <div className='description-container' style={{backgroundImage: `url(${background})`,
+                                                            backgroundRepeat: "no-repeat",
+                                                            backgroundSize: "cover",
+                                                            }}>
 
                         <div className='description-container-text'>
                             <h2><i><FaSlackHash/></i> Remembered by</h2>
@@ -228,7 +234,7 @@ function StudentDetails(){
                         </div>
 
                         <div className='card-bottom-container-postit'>
-                                <img src={student?.postitUrl} alt="postit" />
+                            <img src={student?.postitUrl} alt="postit" />
                         </div>
 
                     </div>

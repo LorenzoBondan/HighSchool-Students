@@ -38,7 +38,6 @@ function StudentCard( {student} : Props ) {
                   
                 </div>
                 
-                
                 <h6>Name: {student.name}</h6>
                 <h6>Age: {ageCalc(student?.birthDate)}</h6>
 
@@ -56,17 +55,13 @@ function StudentCard( {student} : Props ) {
                   )}
                 </div>
                 
-
                 <div className='courses-zone'>
                   <h6>Courses: </h6>
                   <div className='courses-list-zone'>
                     {student.courses.map(course => (<h5>{course.name}</h5>))}
                   </div>
                 </div>
-                
-
-                
-
+              
                 </>
             </div>
         </div>

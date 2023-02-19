@@ -26,13 +26,14 @@ This is a summary of the author's high school class.
 
 ## Class Diagram
 
-![image](https://user-images.githubusercontent.com/105743965/219907762-3d868681-1496-4383-8313-b5be4e0bdd7d.png)
+![image](https://user-images.githubusercontent.com/105743965/219909368-3522a592-44f7-4acb-94cf-53d03571293d.png)
 
 
 ## Used technologies
 
 - Java
 - Spring
+- SQL
 
 - TypeScript
 - React

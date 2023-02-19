@@ -1,5 +1,6 @@
 import { AxiosRequestConfig } from "axios";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import { Review } from "types/review";
 import { requestBackend } from "util/requests";
 import './styles.css';
@@ -33,6 +34,7 @@ const ReviewForm = ( {studentId, onInsertReview}: Props ) => {
             .then((response) => {
                 setValue("text", "");
                 onInsertReview(response.data);
+                toast.success("Review added!");
             })
             .catch((error) => {
                 console.log("Error", error);

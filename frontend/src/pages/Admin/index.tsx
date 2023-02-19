@@ -6,6 +6,8 @@ import Users from "./User";
 import Courses from "./Course";
 import Students from "./Students";
 import { hasAnyRoles } from "util/auth";
+import accessDenied from 'assets/images/access-denied.png';
+import { MdDangerous } from 'react-icons/md';
 
 function Admin(){
     return(
@@ -35,9 +37,16 @@ function Admin(){
                     </div></>
 
             ) : (
-                <div style={{margin:"40px", padding:"40px"}} className='base-card'>
-                    <h1 className="text-primary">You don't have access to this page!</h1>
-                    <p className="text-secondary">Ask for an Admin to give you permission</p>
+                <div className='base-card access-main-container'>
+                    <div className="access-img-container">
+                        <img src={accessDenied} alt="" />
+                    </div>
+                    <div className="access-text-container" style={{textAlign:"center"}}>
+                        <h1 className="text-primary">
+                            <i><MdDangerous/></i>
+                            Access denied!</h1>
+                        <p className="text-secondary">Ask for an Admin to give you permission</p>
+                    </div>
                 </div>
                 
             )}

@@ -29,6 +29,7 @@ const RegisterForm = () => {
             .then(response => {
                 console.log('Sucesso', response.data);
                 history.push("/admin/auth/login");
+                toast.success("User registered!");
             })
             .catch(() => {
                 toast.error('Erro ao cadastrar o User.');

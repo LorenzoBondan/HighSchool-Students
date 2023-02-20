@@ -11,6 +11,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +23,9 @@ import com.lorenzo.highschoolstudents.repositories.CourseRepository;
 import com.lorenzo.highschoolstudents.repositories.StudentRepository;
 import com.lorenzo.highschoolstudents.services.exceptions.DataBaseException;
 import com.lorenzo.highschoolstudents.services.exceptions.ResourceNotFoundException;
+
+import org.springframework.data.domain.Sort;
+
 
 @Service
 public class StudentService {

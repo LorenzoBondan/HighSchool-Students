@@ -11,7 +11,7 @@ This is a summary of the author's high school class.
 #### Students page
 ![image](https://user-images.githubusercontent.com/105743965/219481235-82aca75f-0268-4bc3-b05b-311e568fdae4.png)
 #### Student details page
-![image](https://user-images.githubusercontent.com/105743965/219907742-41ae429f-8d5b-41e2-a5e8-fcdbec9d663b.png)
+![image](https://user-images.githubusercontent.com/105743965/219984126-4d08a00e-a9f5-4b8a-a803-e8deefd8da9e.png)
 #### Insert review in student details page
 ![image](https://user-images.githubusercontent.com/105743965/219236963-0f92788b-1c9e-4fa1-ba4b-0d72c64d5e87.png)
 #### Page of the best moments in the year 

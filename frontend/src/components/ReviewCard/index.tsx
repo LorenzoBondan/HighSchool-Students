@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from "axios";
+import { toast } from "react-toastify";
 import { Review } from "types/review";
-import { Student } from "types/student";
 import { hasAnyRoles } from "util/auth";
 import { requestBackend } from "util/requests";
 import "./styles.css";
@@ -26,6 +26,7 @@ const ReviewCard = ({ review, onDelete }: Props) => {
 
     requestBackend(params).then(() => {
       onDelete();
+      toast.success("Review deleted");
     })
   }
 

@@ -25,6 +25,7 @@
     border-radius: 20px;
 
     background-color: rgba(0, 0, 0, 0.308);
+    /*height: 100%;*/
 }
 
 .content-container-logo img{
@@ -65,6 +66,11 @@
         margin: 20px;
         font-size: 48px;
     }
+
+    .content-container{
+        height: 100%;
+    }
+
     .content-container h1{
         margin-bottom: 20px;
     }
@@ -87,7 +93,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding-left: 0;
+        padding: 0 40px 0 0;
     }
 
     .image-container {
@@ -105,7 +111,7 @@
     }
 
     .content-container{
-        height: calc(90vh - 40px);
+        height: 820px;
         max-width: 300px;
         display: flex;
         border-radius: 10px 0px 0px 10px;
@@ -127,6 +133,7 @@
 
     .content-container{
         margin-left: 0;
+        height: 830px;
     }
 
 }

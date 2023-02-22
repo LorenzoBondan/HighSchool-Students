@@ -3,7 +3,7 @@ import qs from 'qs';
 import { getAuthData } from './storage';
 
 
-export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'http://localhost:8080';
+export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'test-backend-production-3797.up.railway.app';
 
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID ?? 'myclientid';
 const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET ?? 'myclientsecret';

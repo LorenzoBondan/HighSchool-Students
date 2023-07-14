@@ -23,11 +23,9 @@ This is a summary of the author's high school class.
 #### Login form
 ![image](https://user-images.githubusercontent.com/105743965/219239070-01269f97-f9d1-41cf-b8d6-4189464f2688.png)
 
-
 ## Class Diagram
 
 ![image](https://user-images.githubusercontent.com/105743965/219909368-3522a592-44f7-4acb-94cf-53d03571293d.png)
-
 
 ## Used technologies
 
@@ -38,7 +36,7 @@ This is a summary of the author's high school class.
 - TypeScript
 - React
 - CSS
-
+Spring Boot v4.15.3 | Node v14.18.2
 
 ## Author
 

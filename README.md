@@ -36,6 +36,7 @@ This is a summary of the author's high school class.
 - TypeScript
 - React
 - CSS
+
 Spring Boot v4.15.3 | Node v14.18.2
 
 ## Author

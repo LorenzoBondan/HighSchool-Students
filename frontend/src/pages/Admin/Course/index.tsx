@@ -10,7 +10,6 @@ const Courses = () => {
       <Route path="/admin/courses" exact>
         <List/>
       </Route>
-    
       <Route path="/admin/courses/:courseId">
         <Form/>
       </Route>

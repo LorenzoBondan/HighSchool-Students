@@ -1,4 +1,3 @@
-
 import { AxiosRequestConfig } from 'axios';
 import Pagination from 'components/Pagination';
 import StudentCard from 'components/StudentCard';
@@ -22,12 +21,10 @@ function Students(){
     const [page, setPage] = useState<SpringPage<Student>>();
     const [isLoading, setIsLoading] = useState(false);
 
-    //manter o estado de todos os componentes que fazem a listagem
     const [controlComponentsData, setControlComponentsData] = useState<ControlComponentsData>({activePage:0, filterData: { name: '', course: null },});
 
     const handlePageChange = (pageNumber : number) => {
       setControlComponentsData({activePage: pageNumber, filterData: controlComponentsData.filterData});
-      //mantém o que está no filtro e muda só a página
     }
 
     const getStudents = useCallback(() => {
@@ -43,14 +40,14 @@ function Students(){
         },
       }
   
-      setIsLoading(true); // antes da requisição, está carregando
-      requestBackend(params) // função criada no requests.ts
+      setIsLoading(true);
+      requestBackend(params) 
         .then(response => {
           setPage(response.data);
           window.scrollTo(0, 0);
         })
         .finally(() => {
-          setIsLoading(false); // terminou a requisição, isLoading = false
+          setIsLoading(false);
         });
     }, [controlComponentsData])
 
@@ -58,31 +55,22 @@ function Students(){
       getStudents();
     }, [getStudents]);
 
-    
-    // função do componente ProductFilter
     const handleSubmitFilter = (data : StudentFilterData) => {
       setControlComponentsData({activePage: 0, filterData: data});
-      // efetua o filtro e volta pra primeira página
     }
 
     return(
-        <>
         <div className="container my-4 catalog-container">
-
           <div className="catalog-title-container">
             <div className='students-page-logo'>
               <FaUsers style={{borderRadius:"50%", border:"2px solid silver", marginRight:"10px", background:"white", padding:"5px", height:"65px", width:"65px"}} />
             </div>
-
             <div className='students-search-bar-container'>
               <StudentFilter onSubmitFilter={handleSubmitFilter} />
             </div>
-            
           </div>
-
             <div className="row">
-              
-              {isLoading ? <CardLoader/> : ( // se o isLoading for verdadeiro, carregando, se for falso, o restante
+              {isLoading ? <CardLoader/> : (
                 page?.content
                   .sort((a,b) => a.name > b.name ? 1 : -1)
                   .map(student => (
@@ -96,16 +84,13 @@ function Students(){
                 )
               }
             </div>
-
             <Pagination 
-                pageCount={(page) ? page.totalPages : 0} 
-                range={2}
-                onChange={handlePageChange}
-                forcePage={page?.number}
-                />
+              pageCount={(page) ? page.totalPages : 0} 
+              range={2}
+              onChange={handlePageChange}
+              forcePage={page?.number}
+            />
         </div>
-        
-      </>
     );
 }
 

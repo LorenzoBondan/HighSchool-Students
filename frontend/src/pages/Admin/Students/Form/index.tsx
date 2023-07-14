@@ -1,16 +1,13 @@
 import { AxiosRequestConfig } from 'axios';
 import { useEffect, useState } from 'react';
-
 import { useForm, Controller } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router-dom';
 import Select from 'react-select';
-
 import { requestBackend } from 'util/requests';
 import { toast } from 'react-toastify';
-
-import './styles.css';
 import { Student } from 'types/student';
 import { Course } from 'types/course';
+import './styles.css';
 
 type UrlParams = {
     studentId: string;
@@ -24,7 +21,6 @@ const Form = () => {
 
     const { register, handleSubmit, formState: {errors}, setValue, control } = useForm<Student>();
 
-    //trazer os cursos pra povoar o combobox
     useEffect(() => {
         requestBackend({url: '/courses', params: {page: 0, size: 50, },})
             .then(response => {
@@ -32,7 +28,6 @@ const Form = () => {
             })
     }, []);
 
-    //carregar as textboxes com os valores do estudante a ser editado
     useEffect(() => {
         if (isEditing) {
             requestBackend({url:`/students/${studentId}`})
@@ -43,21 +38,17 @@ const Form = () => {
                     setValue('name', student.name);
                     setValue('nickname', student.nickname);
                     setValue('birthDate', student.birthDate);
-
                     setValue('graduated', student.graduated);
                     setValue('description', student.description);
                     setValue('imgUrl', student.imgUrl);
                     setValue('location', student.location);
                     setValue('courses', student.courses);
-
                     setValue('contact.phone', student.contact.phone);
                     setValue('contact.facebook', student.contact.facebook);
                     setValue('contact.instagram', student.contact.instagram);
-
                     setValue('musicName', student.musicName);
                     setValue('musicAuthor', student.musicAuthor);
                     setValue('musicImgUrl', student.musicImgUrl);
-
                     setValue('postitUrl', student.postitUrl);
                 })
         }
@@ -69,7 +60,6 @@ const Form = () => {
 
     const onSubmit = (formData : Student) => {
 
-        // data: formData
         const params : AxiosRequestConfig = {
             method: isEditing? "PUT" : "POST",
             url: isEditing? `/students/${studentId}` : "/students",
@@ -81,8 +71,6 @@ const Form = () => {
         .then(response => {
             console.log('SUCESSO', response.data);
             history.push("/admin/students");
-
-            /*toast.success('Student cadastrado com sucesso!');*/
         })
         .catch(() => {
             toast.error('Erro ao cadastrar o Student.');
@@ -90,24 +78,18 @@ const Form = () => {
         ;
     };
 
-    // botão de cancelar -> reenvia o usuário para a lista de produtos, saindo do form
     const handleCancel = () => {
         history.push("/admin/students")
     }
 
-    
     return(
         <div className="students-crud-container">
-
             <div className="base-card students-card-form-card">
                 <h1>ADD OR EDIT STUDENT</h1>
-
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='row students-crud-inputs-container'>
                         <div className='col-lg-6 students-crud-inputs-left-container'>
-
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("name", {
                                     required: 'Campo obrigatório',
@@ -118,11 +100,8 @@ const Form = () => {
                                     name="name"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.name?.message}</div>
-
                             </div>
-                            
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("nickname", {
                                     required: 'Campo obrigatório',
@@ -133,13 +112,7 @@ const Form = () => {
                                     name="nickname"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.nickname?.message}</div>
-
                             </div>
-
-
-
-
-
                             <div className='margin-bottom-30 checkbox-graduated text-dark'> 
                                 <input 
                                     type="checkbox"
@@ -148,14 +121,9 @@ const Form = () => {
                                     className='mx-3 checkbox-graduated text-dark'
                                     name="graduated"
                                     value='true'
-                            
                                  /> Graduated
-
                             </div>
-
-
                             <div className='margin-bottom-30'>
-
                                 <Controller 
                                     name = 'courses'
                                     rules = {{required: true}}
@@ -174,12 +142,9 @@ const Form = () => {
                                 />
                                 {errors.courses && (
                                     <div className='invalid-feedback d-block'>Campo obrigatório</div>
-                                )}
-                                
+                                )} 
                             </div>
-
-                            <div className='margin-bottom-30'>
-                                
+                            <div className='margin-bottom-30'> 
                                 <input 
                                     {...register("birthDate", {
                                     required: 'Campo obrigatório',
@@ -190,12 +155,8 @@ const Form = () => {
                                     name="birthDate"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.birthDate?.message}</div>
-
-
                             </div>
-
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("location", {
                                     required: 'Campo obrigatório',
@@ -206,12 +167,8 @@ const Form = () => {
                                     name="location"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.location?.message}</div>
-
                             </div>
-
-
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("imgUrl", {
                                     required: 'Campo obrigatório',
@@ -226,11 +183,8 @@ const Form = () => {
                                     name="imgUrl"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.imgUrl?.message}</div>
-
                             </div>
-
                         </div>
-
                         <div className='col-lg-6'>
                             <div>
                                 <textarea 
@@ -244,9 +198,7 @@ const Form = () => {
                                 />
                                 <div className='invalid-feedback d-block'>{errors.description?.message}</div>
                             </div>
-
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("contact.phone", {
                                     })}
@@ -255,11 +207,8 @@ const Form = () => {
                                     placeholder="Phone number"
                                     name="contact.phone"
                                 />
-
                             </div>
-
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("contact.instagram", {
                                     })}
@@ -268,11 +217,8 @@ const Form = () => {
                                     placeholder="Instagram URL"
                                     name="contact.instagram"
                                 />
-
                             </div>
-
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("contact.facebook", {
                                     })}
@@ -281,11 +227,9 @@ const Form = () => {
                                     placeholder="Facebook URL"
                                     name="contact.facebook"
                                 />
-
                             </div>
                         </div>
                     </div>
-
                     <div className='students-crud-buttons-container'>
                         <button 
                             className='btn btn-outline-danger students-crud-buttons'
@@ -293,13 +237,10 @@ const Form = () => {
                             >
                             CANCELAR
                         </button>
-
                         <button className='btn btn-primary text-white students-crud-buttons'>SALVAR</button>
-
                     </div>
                 </form>
             </div>
-            
         </div>
     );
 }

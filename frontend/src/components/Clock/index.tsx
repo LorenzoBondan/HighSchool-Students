@@ -1,5 +1,4 @@
-import React, {Fragment} from 'react';
-
+import {Fragment} from 'react';
 import './styles.css';
 
 type Props = {
@@ -13,7 +12,6 @@ const Clock = ({timerDays, timerHours, timerMinutes, timerSeconds} : Props) => {
     return<Fragment>
         <section className='timer-container'>
             <section className='timer'>
-
                 <div className='clock'>
                     <section>
                         <p>{timerDays}</p>
@@ -35,12 +33,9 @@ const Clock = ({timerDays, timerHours, timerMinutes, timerSeconds} : Props) => {
                         <small>Seconds</small>
                     </section>
                 </div>
-
             </section>
         </section>
     </Fragment>;
-
-
 }
 
 export default Clock;

@@ -7,8 +7,6 @@ import { Student } from 'types/student';
 import { SpringPage } from 'types/vendor/spring';
 import { requestBackend } from 'util/requests';
 import StudentCrudCard from '../StudentCrudCard';
-
-
 import './styles.css';
 
 type ControlComponentsData = {
@@ -23,7 +21,6 @@ const List = () => {
 
   const handlePageChange = (pageNumber : number) => {
     setControlComponentsData({activePage: pageNumber, filterData: controlComponentsData.filterData});
-    //mantém o que está no filtro e muda só a página
   }
 
   const getStudents = useCallback(() => {
@@ -49,34 +46,23 @@ const List = () => {
     getStudents();
   }, [getStudents]);
 
-
-  // função do componente ProductFilter
- const handleSubmitFilter = (data : StudentFilterData) => {
+  const handleSubmitFilter = (data : StudentFilterData) => {
     setControlComponentsData({activePage: 0, filterData: data});
-    // efetua o filtro e volta pra primeira página
    }
-
 
   return (
     <div className='students-crud-container'>
-
         <div className="student-crud-bar-container">
-
             <Link to="/admin/students/create">
                 <button className="btn btn-primary btn-crud-add">
                     ADD
                 </button>
             </Link>
-            
             <div className='students-crud-bar-filter-container'>
                 <StudentFilter onSubmitFilter={handleSubmitFilter} />
             </div>
-            
-
         </div>
-
         <div className='row'>
-
             {page?.content
               .sort((a,b) => a.name > b.name ? 1 : -1)
               .map((item) => (
@@ -84,19 +70,15 @@ const List = () => {
                     <StudentCrudCard student={item} onDelete={() => getStudents()} key={item.id}/>
                 </div>
             ))}
-
         </div>
-      
         <Pagination 
             pageCount = {(page) ? page.totalPages : 0} 
             range = {3}
             onChange = {handlePageChange}
             forcePage={page?.number}
         />
-      
     </div>
   );
 };
-
 
 export default List;

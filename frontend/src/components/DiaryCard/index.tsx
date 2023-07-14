@@ -1,4 +1,3 @@
-
 import { Diary } from 'types/diary';
 import './styles.css';
 
@@ -12,7 +11,6 @@ const DiaryCard = ( {diary} : Props) => {
             <div className='diary-card-description-container'>
                 <p className='text-secondary'>{diary.description}</p>
             </div>
-
             <div className='diary-card-date-container'>
                 <h2 className='text-primary'>{diary.date}</h2>
                 <h3 className='text-primary'>#{diary.year}</h3>

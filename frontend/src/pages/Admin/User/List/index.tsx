@@ -21,7 +21,6 @@ const List = () => {
             },
           };
       
-      
           requestBackend(params).then((response) => {
             setPage(response.data);
           });
@@ -31,32 +30,26 @@ const List = () => {
         getUsers();
     }, []);
 
-
     return(
         <div className='students-crud-container'>
-
-        <div className="student-crud-bar-container">
-
-            <Link to="/admin/users/create">
-                <button className="btn btn-primary btn-crud-add">
-                    ADD
-                </button>
-            </Link>
-            
+            <div className="student-crud-bar-container">
+                <Link to="/admin/users/create">
+                    <button className="btn btn-primary btn-crud-add">
+                        ADD
+                    </button>
+                </Link>
+            </div>
+            <div className='row'>
+                {page?.content
+                    .sort( (a,b) => a.name > b.name ? 1 : -1)
+                    .map((item) => (
+                        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12" key={item.id}>
+                            <UserCrudCard user={item} onDelete={() => getUsers()} />
+                        </div>
+                    ))
+                }
+            </div>
         </div>
-
-        <div className='row'>
-            {page?.content
-                .sort( (a,b) => a.name > b.name ? 1 : -1)
-                .map((item) => (
-                    <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12" key={item.id}>
-                        <UserCrudCard user={item} onDelete={() => getUsers()} />
-                    </div>
-                ))
-            }
-        </div>
-      
-    </div>
     );
 }
 

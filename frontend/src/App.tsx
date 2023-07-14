@@ -1,4 +1,3 @@
-
 import { AuthContext, AuthContextData } from 'AuthContext';
 import { useState } from 'react';
 import { ToastContainer } from 'react-toastify';

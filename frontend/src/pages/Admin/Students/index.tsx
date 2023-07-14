@@ -8,7 +8,6 @@ const Products = () => {
             <Route path="/admin/students" exact>
                 <List/>
             </Route>
-            
             <Route path="/admin/students/:studentId">
                 <Form/>
             </Route>

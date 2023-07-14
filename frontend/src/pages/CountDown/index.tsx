@@ -38,7 +38,6 @@ const CountDown = () => {
             setTimerHours(hours);
             setTimerMinutes(minutes);
             setTimerSeconds(seconds);
-
         })
     }
 
@@ -46,52 +45,41 @@ const CountDown = () => {
         startTimer();
     })
 
-
     return(
-        <>
             <div className='coutn-down-container'>
                 <video 
-                autoPlay
-                loop
-                //muted
-                style={{
-                    position: "absolute",
-                    width: "100%",
-                    left: "50%",
-                    top: "50%",
-                    height: "100%",
-                    objectFit: "cover",
-                    transform: "translate(-50%, -50%)",
-                    zIndex: "-1"
-                }}
-                src={boneless}>
-
+                    autoPlay
+                    loop
+                    //muted
+                    style={{
+                        position: "absolute",
+                        width: "100%",
+                        left: "50%",
+                        top: "50%",
+                        height: "100%",
+                        objectFit: "cover",
+                        transform: "translate(-50%, -50%)",
+                        zIndex: "-1"
+                    }}
+                    src={boneless}>
                 </video>
-            
-            <div className='base-card count-down-page-container'style={{backgroundImage: `url(${partyBackground})`,
-                                                            backgroundRepeat: "no-repeat",
-                                                            backgroundSize: "cover",
-                                                            }}>
-
-                <div className='count-down-page-title'>
-                    <h1>Countdown to Isabel's party of the 7 years later!</h1>
-                    <p className='text-secondary'>Where we'll see who got successed and who failed in life</p>
-                    
+                <div className='base-card count-down-page-container'style={{backgroundImage: `url(${partyBackground})`,
+                                                                backgroundRepeat: "no-repeat",
+                                                                backgroundSize: "cover",
+                                                                }}>
+                    <div className='count-down-page-title'>
+                        <h1>Countdown to Isabel's party of the 7 years later!</h1>
+                        <p className='text-secondary'>Where we'll see who got successed and who failed in life</p>
+                    </div>
+                    <div className='count-down-page-emojis'>
+                        <img src="https://em-content.zobj.net/thumbs/160/apple/325/partying-face_1f973.png" alt="" />
+                        <img src="https://em-content.zobj.net/thumbs/160/apple/325/party-popper_1f389.png" alt="" />
+                    </div>
+                    <div className='count-down-page-clock-container'>
+                        <Clock timerDays={timerDay} timerHours={timerHours} timerMinutes={timerMinutes} timerSeconds={timerSeconds}/>
+                    </div>
                 </div>
-
-                <div className='count-down-page-emojis'>
-                    <img src="https://em-content.zobj.net/thumbs/160/apple/325/partying-face_1f973.png" alt="" />
-                    <img src="https://em-content.zobj.net/thumbs/160/apple/325/party-popper_1f389.png" alt="" />
-                </div>
-
-                <div className='count-down-page-clock-container'>
-                    <Clock timerDays={timerDay} timerHours={timerHours} timerMinutes={timerMinutes} timerSeconds={timerSeconds}/>
-                </div>
-                
             </div>
-            </div>
-            
-        </>
     );
 }
 

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Moment } from "types/Moment";
 import { SpringPage } from "types/vendor/spring";
 import { requestBackend } from "util/requests";
-
 import "./styles.css";
 
 const TheBest = () => {
@@ -31,15 +30,12 @@ const TheBest = () => {
   return (
     <div className="the-best-page-container">
       <div className="the-best-page-content-container">
-        <>
         {page?.content.map((moment) => (
             <div key={moment.id}>
               <TheBestCard moment={moment} />
             </div>
           ))}
-        </>
       </div>
-
       <button onClick={handleBackToTheTop} className="btn btn-primary">
         Back to the top
       </button>

@@ -13,7 +13,6 @@ import DiaryPage from 'pages/Diary';
 import TheBest from 'pages/TheBest';
 import GraduationVideo from 'pages/GraduationVideo';
 
-
 const Routes = () => (
     <Router history={history}> 
       <Navbar />
@@ -62,7 +61,6 @@ const Routes = () => (
         <Route path="/graduationvideo" exact>
           <GraduationVideo/>
         </Route>
-
   
       </Switch>
 

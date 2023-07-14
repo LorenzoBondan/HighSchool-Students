@@ -1,5 +1,3 @@
-
-
 import { Link } from 'react-router-dom';
 import { requestBackend } from 'util/requests';
 import { AxiosRequestConfig } from 'axios';
@@ -11,7 +9,6 @@ type Props = {
 }
 
 function UserCrudCard( {user, onDelete} : Props ) {
-
 
   const handleDelete = (userId : number) => {
     
@@ -29,23 +26,17 @@ function UserCrudCard( {user, onDelete} : Props ) {
       onDelete();
     })
   }
-
-
     return (
-      <>
         <div className='base-card student-crud-card'>
-
             <div className='student-crud-card-bottom-container'>
               <h3>{user.name}</h3>
             </div>
-
             <div className='student-crud-card-buttons-container'>
               <button className='btn btn-outline-danger student-crud-card-button student-crud-card-button-first'
                 onClick={() => handleDelete(user.id)}
                 >
                   DELETE
                 </button>
-
                 <Link to={`/admin/users/${user.id}`}>
                   <button className='btn btn-outline-secondary student-crud-card-button'>
                     EDIT
@@ -53,8 +44,6 @@ function UserCrudCard( {user, onDelete} : Props ) {
                 </Link>
             </div>
         </div>
-        
-      </>
     );
   }
 

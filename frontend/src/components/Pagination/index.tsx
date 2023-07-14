@@ -11,36 +11,23 @@ type Props = {
 
 const Pagination = ({pageCount, range, onChange, forcePage} : Props) => {
     return(
-        <>
         <ReactPaginate 
-            pageCount = {pageCount} // a qte de páginas total
-            pageRangeDisplayed = {range} // quantas bolinhas da paginação irão aparecer no meio da paginação
-            marginPagesDisplayed = {1} // a bolinha que aparece no final
-        
+            pageCount = {pageCount} 
+            pageRangeDisplayed = {range} 
+            marginPagesDisplayed = {1} 
             //estilização
-
             containerClassName= 'pagination-container'
-            pageLinkClassName='pagination-item' // bolinhas
-            breakClassName='pagination-item' // ...
-
+            pageLinkClassName='pagination-item'
+            breakClassName='pagination-item' 
             previousClassName='arrow-previous'
             nextClassName='arrow-next'
-
-            previousLabel={<div className='pagination-arrow-container'><ArrowIcon/></div>} // anterior
-            nextLabel={<div className='pagination-arrow-container'><ArrowIcon/></div>} // próximo
-
+            previousLabel={<div className='pagination-arrow-container'><ArrowIcon/></div>} 
+            nextLabel={<div className='pagination-arrow-container'><ArrowIcon/></div>}
             activeLinkClassName='pagination-link-active'
             disabledClassName='arrow-inactive'
-
-            //renderiza um ul 
-
-            // evento troca de página
             onPageChange={(items) => onChange ? onChange(items.selected) : {}}
-
             forcePage={forcePage}
         />
-
-        </>
     );
 }
 

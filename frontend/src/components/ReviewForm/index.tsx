@@ -19,7 +19,6 @@ const ReviewForm = ( {studentId, onInsertReview}: Props ) => {
     
     const { register, handleSubmit, setValue} = useForm<FormData>();
 
-    // evento de enviar formulário
     const onSubmit = (formData : FormData) => {
         formData.studentId = parseInt(studentId);
 
@@ -41,12 +40,9 @@ const ReviewForm = ( {studentId, onInsertReview}: Props ) => {
             })
     };
 
-    
     return(
         <div className="review-submit-card">
-
             <form onSubmit={handleSubmit(onSubmit)}>
-
                 <input
                     {...register("text", {
                     required: "Required field,",
@@ -57,9 +53,7 @@ const ReviewForm = ( {studentId, onInsertReview}: Props ) => {
                     name="text"
                 />
                 <div style={{display: "flex", justifyContent: "center"}}>
-
                     <button>Save Review</button>
-        
                 </div>
             </form>
         </div>

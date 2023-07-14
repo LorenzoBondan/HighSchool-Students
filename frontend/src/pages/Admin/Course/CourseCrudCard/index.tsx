@@ -12,7 +12,6 @@ type Props = {
 
 function StudentCrudCard( {course, onDelete} : Props ) {
 
-
   const handleDelete = (courseId : number) => {
     
     if(!window.confirm("Are you sure that you want to delete the course?")){ // messagebox
@@ -30,22 +29,17 @@ function StudentCrudCard( {course, onDelete} : Props ) {
     })
   }
 
-
     return (
-      <>
         <div className='base-card student-crud-card'>
-
             <div className='student-crud-card-bottom-container'>
               <h3>{course.name}</h3>
             </div>
-
             <div className='student-crud-card-buttons-container'>
               <button className='btn btn-outline-danger student-crud-card-button student-crud-card-button-first'
                 onClick={() => handleDelete(course.id)}
                 >
                   DELETE
                 </button>
-
                 <Link to={`/admin/courses/${course.id}`}>
                   <button className='btn btn-outline-secondary student-crud-card-button'>
                     EDIT
@@ -53,8 +47,6 @@ function StudentCrudCard( {course, onDelete} : Props ) {
                 </Link>
             </div>
         </div>
-        
-      </>
     );
   }
 

@@ -1,4 +1,3 @@
-
 import { AxiosRequestConfig } from 'axios';
 import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
@@ -7,7 +6,6 @@ import Select from 'react-select';
 import { toast } from 'react-toastify';
 import { Role } from 'types/role';
 import { User } from 'types/user';
-
 import { requestBackend } from 'util/requests';
 import './styles.css';
 
@@ -43,7 +41,6 @@ const Form = () => {
 
     const [selectRoles, setSelectRoles] = useState<Role[]>();
 
-    //trazer os roles pra povoar o combobox
     useEffect(() => {
         requestBackend({url: '/roles', params: {page: 0, size: 50, }, withCredentials: true})
             .then(response => {
@@ -70,23 +67,18 @@ const Form = () => {
             })
     };
 
-    // botão de cancelar -> reenvia o usuário para a lista de produtos, saindo do form
     const handleCancel = () => {
         history.push("/admin/users")
     }
 
     return(
         <div className="students-crud-container">
-
             <div className="base-card students-card-form-card">
                 <h1>ADD OR EDIT USER</h1>
-
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='row students-crud-inputs-container'>
                         <div className='col-lg-6 students-crud-inputs-left-container'>
-
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("name", {
                                     required: 'Campo obrigatório',
@@ -97,12 +89,8 @@ const Form = () => {
                                     name="name"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.name?.message}</div>
-
                             </div>
-
-
-                            <div className='margin-bottom-30'>
-                                
+                            <div className='margin-bottom-30'>                          
                                 <input 
                                     {...register("password", {
                                     })}
@@ -112,11 +100,8 @@ const Form = () => {
                                     name="password"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.password?.message}</div>
-
                             </div>
-                            
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("email", {
                                     pattern: { 
@@ -130,12 +115,9 @@ const Form = () => {
                                     name="email"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.email?.message}</div>
-
                             </div>
                         </div>
-
                         <div className='margin-bottom-30'>
-
                                 <Controller 
                                     name = 'roles'
                                     rules = {{required: true}}
@@ -155,12 +137,7 @@ const Form = () => {
                                 {errors.roles && (
                                     <div className='invalid-feedback d-block'>Campo obrigatório</div>
                                 )}
-                                
                             </div>
-
-
-
-
                         <div className='students-crud-buttons-container'>
                             <button 
                                 className='btn btn-outline-danger students-crud-buttons'
@@ -168,15 +145,10 @@ const Form = () => {
                                 >
                                 CANCELAR
                             </button>
-
                             <button className='btn btn-primary text-white students-crud-buttons'>SALVAR</button>
-
                         </div>
-
-                
                     </div>
                 </form>
-            
             </div>
         </div>
     );

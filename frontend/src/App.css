@@ -38,9 +38,8 @@ ul {
     letter-spacing: -0.015em;
     color: #263238;
     height: 50px;
-  }
+}
   
-  
-  .base-input::placeholder {
+.base-input::placeholder {
     color: #9E9E9E;
-  }
+}

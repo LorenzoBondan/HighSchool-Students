@@ -6,19 +6,16 @@ import { Student } from 'types/student';
 import { BASE_URL } from 'util/requests';
 import Check from 'assets/images/checked.png';
 import Uncheck from 'assets/images/unchecked.png';
-import './styles.css';
 import StudentDetailsLoader from './StudentDetailsLoader';
 import Reviews from 'components/Reviews';
-
 import { TfiArrowCircleLeft } from 'react-icons/tfi';
 import { RxInstagramLogo } from 'react-icons/rx';
 import { ImWhatsapp } from 'react-icons/im';
 import { BsFacebook } from 'react-icons/bs';
-
 import { FaSlackHash } from 'react-icons/fa';
 import { HiMusicalNote } from 'react-icons/hi2';
-
 import background from 'assets/images/linhas-caderno.png';
+import './styles.css';
 
 type UrlParams = {
     studentId: string;
@@ -26,7 +23,6 @@ type UrlParams = {
 
 function StudentDetails(){
     
-    // Idade atual através da birthDate (time.now - birthDate)
     function ageCalc(date: string | undefined){
         var miliseconds = date? new Date().getTime() - new Date(date).getTime() : new Date().getTime();
         var years = miliseconds / (31556952000);
@@ -50,7 +46,6 @@ function StudentDetails(){
             window.scrollTo(0,0);
         });
     }, [studentId]);
-
 
     function currentCity(city: String | undefined){
         const cityImgs = [];
@@ -98,13 +93,10 @@ function StudentDetails(){
 
     return(
         <div className='student-details-container'>
-
             <div className='base-card student-details-card'>
             {isLoading ? <StudentDetailsLoader/> : 
-            
                 <>
                 <div className='student-details-buttons-container'>
-
                     { parseInt(studentId) > 1 && (
                         <Link to={`/students/${(parseInt(studentId) - 1).toString()}`}>
                             <div className='gonext-container'>
@@ -112,7 +104,6 @@ function StudentDetails(){
                             </div>
                         </Link>
                     )}
-
                     { parseInt(studentId) < 33 && (
                         <Link to={`/students/${(parseInt(studentId) + 1).toString()}`}>
                             <div className='gonext-container' style={{transform:"rotate(-180deg)"}}>
@@ -121,28 +112,21 @@ function StudentDetails(){
                         </Link>
                     )}
                 </div>
-                
                 <div className='row'>
-
                     <div className='col-xl-6'>
                         <div className='student-details-img-container'>
                             <img src={student?.imgUrl} alt={student?.nickname} />
                         </div>
-
                         <div className='card-bottom-container'>
                         <>
                             <div className='card-bottom-container-student-info card-bottom-container-student-card'>
-
                                 <h3>{student?.nickname}</h3>
-
                                 <h6>Name: {student?.name}</h6>
-                            
                                 <div className='birthdate-container'>
                                     <h6>Age: {ageCalc(student?.birthDate)}</h6>
                                     <img src="https://em-content.zobj.net/thumbs/160/apple/118/birthday-cake_1f382.png" alt="" />
                                     <h6>{student?.birthDate.substring(0,10)}</h6>
                                 </div>
-
                                 <div className='graduated-zone'>
                                     {student?.graduated ? (
                                     <>
@@ -156,50 +140,39 @@ function StudentDetails(){
                                     </>
                                     )}
                                 </div>
-
                                 <div className='courses-zone'>
                                     <h6>Courses: </h6>
                                     <div className='courses-list-zone' key={student?.id}>
                                         {student?.courses.map(course => (<h5>{course.name}</h5>))}
                                     </div>
                                 </div>
-
                             </div>
-
                             <div style={{display:"flex", flexDirection:"column"}}>
-
                                 <div className='contact-container'>
-                        
                                     <div className='contact-container-imgs' >
                                         <a href={student?.contact.phone}>
                                             <button style={{ backgroundColor: '#25d366', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
                                                 <i style={{color:"white"}}><ImWhatsapp/></i>
                                             </button>
                                         </a>
-
                                         <a href={student?.contact.instagram}>
                                             <button style={{ backgroundColor: '#ac2bac', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
                                                 <i style={{color:"white"}}><RxInstagramLogo/></i>
                                             </button>
                                         </a>
-
                                         <a href={student?.contact.facebook}>
                                             <button style={{ backgroundColor: '#3b5998', border:"none", borderRadius:"50%", boxShadow:"5px 10px 10px silver", padding:"5px 12px"}}>
                                                 <i style={{color:"white"}}><BsFacebook/></i>
                                             </button>
                                         </a>
                                     </div>
-                        
                                 </div>
-                                
                                 <div className='main-music-container'>
                                     {student?.musicName != null && (
                                     <div className='music-container' >
-                        
                                         <div className='music-container-img-container'>
                                             <img src={student?.musicImgUrl} alt="" />
                                         </div>
-
                                         <div className='music-container-text-container'>
                                             <h5 
                                                 style={{color:"#9E9E9E", fontSize:"0.7em"}}
@@ -208,39 +181,30 @@ function StudentDetails(){
                                                 </i>
                                                 Entrace music
                                             </h5>
-
                                             <h6 style={{marginLeft:"5px", color:"#A00909", fontFamily:"Roboto", fontSize:"0.7em"}}>{student?.musicAuthor}</h6>
                                             <h6 style={{marginLeft:"5px", color:"black", fontFamily:"Roboto", fontSize:"0.6em", fontStyle:"italic"}}>{student?.musicName}</h6>
                                         </div>
                                     </div>
                                     )}
                                 </div>
-
                             </div>
                         </>
                     </div>
                 </div>
-
                 <div className='col-xl-6'>
-
                     <div className='description-container' style={{backgroundImage: `url(${background})`,
                                                             backgroundRepeat: "no-repeat",
                                                             backgroundSize: "cover",
                                                             }}>
-
                         <div className='description-container-text'>
                             <h2><i><FaSlackHash/></i> Remembered by</h2>
                             <p>{student?.description}</p>
                         </div>
-
                         <div className='card-bottom-container-postit'>
                             <img src={student?.postitUrl} alt="postit" />
                         </div>
-
                     </div>
-
                     <div className='current-location-container'>
-
                         <div className='current-location-container-text'>
                             <img src={locationIcon} alt="icon" />
                             <h6>Current Location:</h6>
@@ -249,21 +213,15 @@ function StudentDetails(){
                         <div className='current-location-container-imgs' key={student?.id}>
                             {getCity.map(city => <img src={city} alt="city" />)}
                         </div>
-
                     </div>
-                    
                 </div>
-  
             </div>
-
             </>
             }
             </div>
-
             <div className='student-details-reviews-container'>
                 <Reviews studentUsername={student?.nickname}/>
             </div>
-
         </div>
     );
 }

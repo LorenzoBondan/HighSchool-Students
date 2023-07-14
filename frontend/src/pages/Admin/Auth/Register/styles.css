@@ -12,9 +12,12 @@
     border: 0.5px solid rgba(192, 192, 192, 0.466);
     border-radius: 20px;
     max-height: 230px;
-
     display: flex;
     justify-content: center;
+}
+
+.error-message{
+    color: darkred;
 }
 
 @media(min-width:992px){

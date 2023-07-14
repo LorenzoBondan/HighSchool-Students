@@ -6,7 +6,6 @@ import { Link, useParams } from "react-router-dom";
 import { Review } from "types/review";
 import { hasAnyRoles } from "util/auth";
 import { requestBackend } from "util/requests";
-
 import './styles.css';
 
 type UrlParams = {
@@ -17,20 +16,15 @@ type Props = {
     studentUsername?: string | undefined;
 }
 
-  //reviews
 const Reviews = ( {studentUsername} : Props ) => {
 
-    const [page, setPage] = useState<Review[]>([]); //recebe a lista de reviews obtida na requisição.
+    const [page, setPage] = useState<Review[]>([]);
     const { studentId } = useParams<UrlParams>();
 
     const getReviews = useCallback(() => {
         const params: AxiosRequestConfig = {
             url: `/students/${studentId}/reviews`,
-            withCredentials: false,
-            params: {
-              page: 0,
-              size: 30,
-            },
+            withCredentials: false
           }
   
           requestBackend(params).then((response) => {
@@ -43,16 +37,14 @@ const Reviews = ( {studentUsername} : Props ) => {
     }, [getReviews]);
       
     const handleInsertReview = (review: Review) => {
-        const clone = [...page]; // copia o conteúdo que já tem
-        clone.push(review); // insere o novo conteúdo naquele copiado
-        setPage(clone); // define o conteúdo copiado
+        const clone = [...page]; 
+        clone.push(review); 
+        setPage(clone); 
     };
-
         
     return (
         <div className="page-container text-primary">
-
-            {hasAnyRoles(["ROLE_MEMBER", "ROLE_OPERATOR"])?  ( // form de inserir avaliação SOMENTE PARA MEMBROS
+            {hasAnyRoles(["ROLE_MEMBER", "ROLE_OPERATOR"])?  ( 
                 <ReviewForm studentId={studentId} onInsertReview={handleInsertReview} />
             ) 
             : (
@@ -62,15 +54,13 @@ const Reviews = ( {studentUsername} : Props ) => {
                     </Link>
                 </div>
             )}
-
-            {page.length===0 ? <div className="reviews-main-title"><h1 style={{fontSize: "18px"}}>This student still don't have any reviews.</h1></div>
+            {page.length === 0 ? <div className="reviews-main-title"><h1 style={{fontSize: "18px"}}>This student still don't have any reviews.</h1></div>
              : 
                 <>
                 <h1>{studentUsername}'s reviews:</h1>
-
                 <div>
                     {page?.map((rev) => (
-                    <ReviewCard key={rev.id} review={rev} onDelete={() => getReviews()} /> //uso a lista de reviews para renderizar card a card.
+                    <ReviewCard key={rev.id} review={rev} onDelete={() => getReviews()} /> 
                     ))}
                 </div>
                 </>

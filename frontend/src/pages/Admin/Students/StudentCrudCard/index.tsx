@@ -1,5 +1,4 @@
 import './styles.css';
-
 import { Student } from 'types/student';
 import { Link } from 'react-router-dom';
 import { requestBackend } from 'util/requests';
@@ -12,10 +11,9 @@ type Props = {
 
 function StudentCrudCard( {student, onDelete} : Props ) {
 
-
   const handleDelete = (studentId : number) => {
     
-    if(!window.confirm("Are you sure that you want to delete the studant?")){ // messagebox
+    if(!window.confirm("Are you sure that you want to delete the studant?")){ 
       return;
     }
 
@@ -30,26 +28,20 @@ function StudentCrudCard( {student, onDelete} : Props ) {
     })
   }
 
-
     return (
-      <>
         <div className='base-card student-crud-card'>
-
             <div className='student-crud-card-top-container'>
                 <img src={student.imgUrl} alt="Imagem do student" />
             </div>
-
             <div className='student-crud-card-bottom-container'>
               <h3>{student.nickname}</h3>
             </div>
-
             <div className='student-crud-card-buttons-container'>
               <button className='btn btn-outline-danger student-crud-card-button student-crud-card-button-first'
                 onClick={() => handleDelete(student.id)}
                 >
                   EXCLUIR
                 </button>
-
                 <Link to={`/admin/students/${student.id}`}>
                   <button className='btn btn-outline-secondary student-crud-card-button'>
                     EDITAR
@@ -57,8 +49,6 @@ function StudentCrudCard( {student, onDelete} : Props ) {
                 </Link>
             </div>
         </div>
-        
-      </>
     );
   }
 

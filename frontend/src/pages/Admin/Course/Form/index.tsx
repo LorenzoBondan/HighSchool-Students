@@ -54,23 +54,18 @@ const Form = () => {
             })
     };
 
-    // botão de cancelar -> reenvia o usuário para a lista de produtos, saindo do form
     const handleCancel = () => {
         history.push("/admin/courses")
     }
 
     return(
         <div className="students-crud-container">
-
             <div className="base-card students-card-form-card">
                 <h1>ADD OR EDIT COURSE</h1>
-
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='row students-crud-inputs-container'>
                         <div className='col-lg-6 students-crud-inputs-left-container'>
-
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("name", {
                                     required: 'Campo obrigatório',
@@ -81,11 +76,8 @@ const Form = () => {
                                     name="name"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.name?.message}</div>
-
                             </div>
-                            
                             <div className='margin-bottom-30'>
-                                
                                 <input 
                                     {...register("area", {
                                     required: 'Campo obrigatório',
@@ -96,12 +88,8 @@ const Form = () => {
                                     name="area"
                                 />
                                 <div className='invalid-feedback d-block'>{errors.area?.message}</div>
-
                             </div>
                         </div>
-
-
-
                         <div className='students-crud-buttons-container'>
                             <button 
                                 className='btn btn-outline-danger students-crud-buttons'
@@ -109,15 +97,10 @@ const Form = () => {
                                 >
                                 CANCELAR
                             </button>
-
                             <button className='btn btn-primary text-white students-crud-buttons'>SALVAR</button>
-
                         </div>
-
-                
                     </div>
                 </form>
-            
             </div>
         </div>
     );

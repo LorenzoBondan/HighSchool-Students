@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Diary } from "types/diary";
 import { SpringPage } from "types/vendor/spring";
 import { requestBackend } from "util/requests";
-
 import './styles.css';
 
 const DiaryPage = () => {
@@ -30,7 +29,6 @@ const DiaryPage = () => {
       }, []);
 
       const handleChangeYear = () => {
-
             const params : AxiosRequestConfig = {
               url: '/diaries',
               params: {
@@ -42,7 +40,6 @@ const DiaryPage = () => {
             requestBackend(params).then((response) => {
               setPage(response.data);
             });
-
       }
 
     return(
@@ -51,13 +48,11 @@ const DiaryPage = () => {
                 <button onClick={beginWithThisYear} className="btn btn-primary">2016</button>
                 <button onClick={handleChangeYear} className="btn btn-primary">2015</button>
             </div>
-            
             {page?.content.map((item) => (
                 <div key={item.id}>
                     <DiaryCard diary={item}/>
                 </div>
             ))}
-            
        </div>
     );
 }
